@@ -1,0 +1,6 @@
+footer{ /* Le rectangle gris du botom*/
+		position : relative; 
+		background-color:#666666;
+		height: 60px;
+		padding-botom: 50;
+	 } 
