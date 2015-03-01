@@ -39,34 +39,43 @@ body{
 	font-weight: lighter;
 	float : right;
 	color:#FFF;
-	padding-left: 30px;
+	padding-bottom: 13px;
 	margin-top:25px;
 	margin-right: 40px;
+	margin-left: 30px
 
 }
-	a:hover {color: gray;
+	a:hover {
+		color: gray;
+		border-bottom: 5px solid #e56262;
 		 -webkit-transition-duration: 0.5s; 
 		 -moz-transition-duration: 0.5s; 
 		 -ms-transition-duration: 0.5s; 
 		 -o-transition-duration: 0.5s; 
 		 transition-duration: 0.5s;
 	}
-	a:active {color: #e56262;}	
+	a:active {color: white;
+		border-bottom: 5px solid #e56262;
+	}	
 
 input{
-	margin-left: 370px;
+	/*margin-left: 370px;*/
 	margin-top: 200px;
 }
+
+
 input:hover{color: gray;
 		 -webkit-transition-duration: 0.5s; 
 		 -moz-transition-duration: 0.5s; 
 		 -ms-transition-duration: 0.5s; 
 		 -o-transition-duration: 0.5s; 
-		 transition-duration: 0.5s;}
+		 transition-duration: 0.5s;
+		}
 
 .image-loupe{
-	margin-left: 370px;
+	margin-left: 400px;
 	margin-top: 200px;
+	width: 45%;
 }
 
 label {
@@ -75,13 +84,12 @@ label {
     float: left;  
 	}
 
-#inscription{
+#inscription{ /*/// rectangle orange en haut à droite pour l'inscription et connexion///*/
 	
 	margin-top: 10px;
-	margin-left: 1060px;
+	margin-left: 1061px;
 	position: absolute; 
 	z-index: 1;
-
 }
 
 #inscription-txt{
@@ -89,7 +97,7 @@ label {
 	font-family: helvetica;
 	font-weight: lighter;
 	color: white;
-	margin-left: 1070px;
+	margin-left: 1071px;
 	margin-top: 35px;
 	position: absolute; 
 	z-index: 2;
@@ -122,9 +130,18 @@ a:hover {color: gray;
 	padding-left: 30px;
 	margin-bottom: 5px;
 
-
 }
-	
+/*
+.AR-logo:hover {color: #e56262;
+		 -webkit-transition-duration: 0.5s; 
+		 -moz-transition-duration: 0.5s; 
+		 -ms-transition-duration: 0.5s; 
+		 -o-transition-duration: 0.5s; 
+		 transition-duration: 0.5s;
+	}
+
+*/
+
 #global {
 margin-left: 35px;
 padding-bottom: 150px;
@@ -140,6 +157,7 @@ padding-bottom: 150px;
 		border-radius:20px;
 		float: left;
 		margin-left: 30px;
+		/*text-align: center;*/
 }
 
 div h3{
@@ -148,15 +166,16 @@ div h3{
 	font-weight: lighter;
 	color: white;
 	text-align: center;
-	padding-bottom: 30px;
+	/*padding-bottom: 30px;*/
+	line-height: 5px;    /* ////  PERMET DE CENTRER "VOIR l'offre" dans le rectangle gris - à revoir  ////  */
 }
 
 
-footer{
+footer{  /*/// barre grise du footer ///*/
 		position: relative; 
 		background-color:#666666;
 		height: 60px;
-		padding-bottom: 0;		
+		padding-bottom: 0;
 }
 
 .footer-txt{
@@ -164,8 +183,19 @@ footer{
 		font-weight: lighter;
 		font-size: 16px;
 		color:white;
-		margin-right: 0px;
-		margin-left: 20px;
-		position: relative;
 		text-align: center;
+		padding-right: 180px;
+		padding-left: 180px;
+		
 }
+
+.tabcenter-footer { /*/// Pour centrer les élement dans le footer ///*/
+margin-left:auto;
+   margin-right:auto;
+   vertical-align: middle;
+   line-height: 55px;
+  
+}
+
+ style="width: 430px; height: 20px "
+
