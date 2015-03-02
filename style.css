@@ -19,6 +19,8 @@ body{
 	clear: both;
 }
 
+/* /// LE HEADER///*/
+
  header{ /* Le rectangle gris du top*/
 		position: relative; 
 		background-color:#666666;
@@ -42,7 +44,7 @@ body{
 	padding-bottom: 13px;
 	margin-top:25px;
 	margin-right: 40px;
-	margin-left: 30px
+	margin-left: 30px;
 
 }
 	.menu-item:hover {
@@ -55,12 +57,13 @@ body{
 		 transition-duration: 0.5s;
 	}
 	a:active {color: white;
-		border-bottom: 5px solid #e56262;
+		border-bottom: 15px solid #e56262;
 	}	
 
 input{
 	/*margin-left: 370px;*/
 	margin-top: 200px;
+
 }
 
 
@@ -104,6 +107,8 @@ label {
 	z-index: 2;
 }
 
+
+/* /// SECTION AJOUTS RECENTS///*/
 h1{
 	font-size: 26px;
 	font-family: helvetica;
@@ -112,13 +117,13 @@ h1{
 	color: #393939;
 	text-align: center;
 	margin-top: 800px;
-	margin-bottom: 80px;
+	margin-bottom: 50px;
 }
 	
 h1 span {
 	border-bottom: solid 5px #e56262;
 }
-/*
+
 a:hover {color: gray;
 		 -webkit-transition-duration: 0.5s; 
 		 -moz-transition-duration: 0.5s; 
@@ -126,17 +131,23 @@ a:hover {color: gray;
 		 -o-transition-duration: 0.5s; 
 		 transition-duration: 0.5s;
 	}
-*/
-.AR-logo{
-	display: inline-block;
-	padding-left: 0px;
-	padding-right: 10px;
-	margin-bottom: 5px;
 
 
+
+#global {    /*/// permet de déplacer toutes les photos et “voir offre“///*/
+padding-bottom: 10px;
+padding-top: 10px;
 }
 
-.AR-logo:hover {color: #e56262;
+
+.AR-logo{   /*/// les images d'ajouts récents///*/
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-bottom: 5px;
+}
+
+.AR-logo:hover {color: #e56262;   /* /// effet sur les images qui fonctionne pas pour le moment///*/
 		 -webkit-transition-duration: 0.5s; 
 		 -moz-transition-duration: 0.5s; 
 		 -ms-transition-duration: 0.5s; 
@@ -144,25 +155,26 @@ a:hover {color: gray;
 		 transition-duration: 0.5s;
 	}
 
-
-	
-
-.recement-mis-ligne{
-	border-color: black;
-	border-style: solid;
-	border-width: 5px;
+.recement-mis-ligne {
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 5px solid #e56262;
+	border-right: 5px solid #e56262 ;
+	width: 1200px;
 	height: 200px;
+	overflow: hidden;
 	overflow: scroll;
-
+	/*background-color: #cec4bb;*/
+	background: #00AEEF;
+background: -moz-linear-gradient(top, #e9e5e7 0%, #cec4bb 100%);
+/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00AEEF), color-stop(100%,#7D7E7D));
+background: -webkit-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
+background: -o-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
+background: -ms-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeef', endColorstr='#7d7e7d',GradientType=0 );
+background: linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);   /// Gère l'effet background pour les autres navigateur///*/   
 }
 
-
-
-#global {
-margin-left: 20px;
-padding-bottom: 10px;
-padding-top: 10px;
-}
 
 .rectangle{
 		height:35px; 
@@ -170,13 +182,12 @@ padding-top: 10px;
 		/*border-color: #565656; */
 		background-color:#565656; 
 		/*border-style:solid;*/ 
-		border-width: 2px; 
+		/*border-width: 2px;*/
 		border-radius:20px;
 		float: left;
-		margin-left: 30px;
+		margin-left: 10px;
+		margin-right: 10px;
 		/*text-align: center;*/
-
-
 }
 
 div h3{
@@ -189,13 +200,47 @@ div h3{
 	line-height: 5px;    /* ////  PERMET DE CENTRER "VOIR l'offre" dans le rectangle gris - à revoir  ////  */
 }
 
+#bouton-voir-toutes-les-offres{
+	font-family: helvetica,sans-serif; 
+	font-size: 16px;
+	font-weight: lighter; 
+	
+	width: 200px; 
+	height: 43px; 
+
+	text-align: center; color: #FFF; 
+	background: #e56262;
+	float: right;
+	margin-right: 50px;
+	margin-top: 20px;
+	vertical-align: middle;
+
+	border-radius: 8px;
+
+	text-shadow: 0px 1px 0px #b04c4c;
+	box-shadow:  0 0 5px #b04c4c;
+}
+
+#bouton-voir-toutes-les-offres:hover{ 
+	color: white; 
+	background: #c45555;
+}
+
+
+#bouton-voir-toutes-les-offres:active{ 
+	color: gray; 
+	background: #833838;  
+	box-shadow: 1px 1px 10px black inset, 0 1px 0 white; 
+}
+
+/* /// LE FOOTER///*/
 
 footer{  /*/// barre grise du footer ///*/
 		position: relative; 
 		background-color:#666666;
 		height: 60px;
 		padding-bottom: 0;
-
+		margin-top: 100px;
 }
 
 .footer-txt{
@@ -205,16 +250,14 @@ footer{  /*/// barre grise du footer ///*/
 		color:white;
 		text-align: center;
 		padding-right: 180px;
-		padding-left: 180px;
-		
+		padding-left: 180px;	
 }
 
 .tabcenter-footer { /*/// Pour centrer les élement dans le footer ///*/
 margin-left:auto;
    margin-right:auto;
    vertical-align: middle;
-   line-height: 55px;
-  
+   line-height: 55px; 
 }
 
  style="width: 430px; height: 20px "

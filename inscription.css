@@ -1,10 +1,14 @@
+a{  
+	color : inherit;
+	text-decoration: none;
+}
 
 body{
  	margin: 0;
 	padding: 0;
 	margin-bottom: 0px;
 	background-color: #e9e5e7;
-	background-image:url(images/panier_fruits_legumes.jpg);
+	/*background-image:url(images/panier_fruits_legumes.jpg);*/
  	background-repeat:no-repeat;
  	background-position: center top;
  	overflow-X:hidden
@@ -34,11 +38,24 @@ body{
 	font-weight: lighter;
 	float : right;
 	color:#FFF;
-	padding-left: 30px;
+	padding-bottom: 13px;
 	margin-top:25px;
 	margin-right: 40px;
+	margin-left: 30px;
 
 }
+	.menu-item:hover {
+		color: gray;
+		border-bottom: 5px solid #e56262;
+		 -webkit-transition-duration: 0.5s; 
+		 -moz-transition-duration: 0.5s; 
+		 -ms-transition-duration: 0.5s; 
+		 -o-transition-duration: 0.5s; 
+		 transition-duration: 0.5s;
+	}
+	a:active {color: white;
+		border-bottom: 15px solid #e56262;
+	}
 
 
 
@@ -46,7 +63,6 @@ body{
 	border-width: 5px;
 	border-color: black;
 	margin-bottom: 150px;
-	margin-left: 117px;
 	margin-top: 100px;
 	height: 250px;
 	width: 600px;
@@ -62,12 +78,12 @@ body{
 
 }
 
-footer{
+footer{  /*/// barre grise du footer ///*/
 		position: relative; 
-		top: 198px;
 		background-color:#666666;
 		height: 60px;
-		padding-bottom: ;		
+		padding-bottom: 0;
+		margin-top: 100px;
 }
 
 .footer-txt{
@@ -75,8 +91,15 @@ footer{
 		font-weight: lighter;
 		font-size: 16px;
 		color:white;
-		margin-right: 0px;
-		margin-left: 20px;
-		position: relative;
-		text-align: center;
+		text-align: right;
+		padding-right: 180px;
+		padding-left: 180px;	
 }
+
+.tabcenter-footer { /*/// Pour centrer les élement dans le footer ///*/
+   margin-left:auto;
+   margin-right:auto;
+   vertical-align: middle;
+   line-height: 55px; 
+}
+
