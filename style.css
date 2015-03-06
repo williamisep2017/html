@@ -164,6 +164,7 @@ padding-top: 10px;
 	height: 200px;
 	overflow: hidden;
 	overflow: scroll;
+
 	/*background-color: #cec4bb;*/
 	background: #00AEEF;
 background: -moz-linear-gradient(top, #e9e5e7 0%, #cec4bb 100%);
@@ -173,6 +174,10 @@ background: -o-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
 background: -ms-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeef', endColorstr='#7d7e7d',GradientType=0 );
 background: linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);   /// Gère l'effet background pour les autres navigateur///*/   
+
+	max-width:800px;
+
+
 }
 
 
