@@ -1,5 +1,5 @@
 body{
-	background-color: gray;
+	background-color: #e9e5e7;
 }
 
 
@@ -7,34 +7,48 @@ body{
 	z-index: 1;
 	display: block;
 	float: top;
-	height: 250px;
-	margin-left: 530px;
+	height: 25%;
+	width: 25%;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 0px;
+
+	
 }
 
-.zone-inscription{
+.zone-connexion{
+	border-width: 0px;
+	background-color:White;
 	z-index: 2;
-	border-width: 5px;
-	border-color: green;
-	border-radius: 30px;
-	margin-bottom: 450px;
+	margin-bottom: 650px;
 	margin-top: 50px;
-	height: 250px;
-	width: 600px;
-	box-shadow: 10px 10px 0px black;
-
+	height: 450px;
+	width: 400px;
+	
 	}
+.bienvenue{
+	font-family:;
+	font-style: italic;
+	font-size: 150%;
+}
 
 .bouton_connexion{
-	width:200px;
-	height: 30px;
+
+	background-color: #009900;
+	width:350px;
+	height: 50px;
 	margin-top: 20px;
-	border-color: green;
 	border-style: solid;
 	border-width: 2,5px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 100%;
+	color:white;
+
 }
 
 .aide_connexion{
+
 	color: #99FF99;
 	margin-left: 450px;
 	padding-top: 100px;
@@ -44,3 +58,8 @@ body{
 	z-index: 3;
 	margin-top: 5px;
 }
+.mail{
+	width: 300px;
+	height: 40px;
+}
+
