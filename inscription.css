@@ -7,7 +7,7 @@ body{
  	margin: 0;
 	padding: 0;
 	margin-bottom: 0px;
-	background-color: #e9e5e7;
+	background-color: white ;
 	/*background-image:url(images/panier_fruits_legumes.jpg);*/
  	background-repeat:no-repeat;
  	background-position: center top;
@@ -60,12 +60,13 @@ body{
 
 
 .zone-inscription{
-	border-width: 5px;
-	border-color: black;
+	background-color: #e9e5e7;
 	margin-bottom: 150px;
 	margin-top: 100px;
 	height: 250px;
 	width: 600px;
+	border-color: white;
+	border-width: 0px;
 	
 
 }

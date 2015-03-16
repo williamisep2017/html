@@ -13,9 +13,10 @@ body{
 	margin-bottom: 80px;
 	background-color: #e9e5e7;
 	background-image:url(images/tomate1200x750.jpg);
+	background-size: 94%;
  	background-repeat:no-repeat;
  	background-position: center top;
- 	overflow-X:hidden
+ 	overflow-X:hidden;
  	
  }
 .cb{  /* cb qui sert à éviter que le header déscende*/
@@ -94,7 +95,7 @@ label {
 #inscription{ /*/// rectangle orange en haut à droite pour l'inscription et connexion///*/
 	
 	margin-top: 10px;
-	margin-left: 1061px;
+	margin-left: 83.2%;
 	position: absolute; 
 	z-index: 1;
 }

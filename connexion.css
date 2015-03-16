@@ -18,11 +18,11 @@ body{
 
 .zone-connexion{
 	border-width: 0px;
-	background-color:White;
+	background-color:white;
 	z-index: 2;
-	margin-bottom: 650px;
+	margin-bottom: 750px;
 	margin-top: 50px;
-	height: 450px;
+	height: 400px;
 	width: 400px;
 	
 	}
