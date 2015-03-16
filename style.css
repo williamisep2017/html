@@ -1,3 +1,8 @@
+#container{
+	width: 100%;
+}
+
+
 a{  
 	color : inherit;
 	text-decoration: none;
@@ -95,7 +100,7 @@ label {
 #inscription{ /*/// rectangle orange en haut à droite pour l'inscription et connexion///*/
 	
 	margin-top: 10px;
-	margin-left: 83.2%;
+	margin-left: 83.2% ; /*1061px*/
 	position: absolute; 
 	z-index: 1;
 }
@@ -178,10 +183,6 @@ background: -o-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
 background: -ms-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeef', endColorstr='#7d7e7d',GradientType=0 );
 background: linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);   /// Gère l'effet background pour les autres navigateur///*/   
-
-	max-width:800px;
-
-
 }
 
 
