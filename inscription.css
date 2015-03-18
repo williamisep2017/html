@@ -14,6 +14,73 @@ body{
  	overflow-X:hidden
  	
  }
+
+ .h1-inscription{
+color : gray;
+margin-top: 40px;
+font-family: helvetica;
+font-weight: normal;
+opacity: 0.5;
+ }
+
+ .h2-inscription{
+ 	font-weight: normal;
+ }
+
+#num-rue{
+	width: 30px;
+	height: 25px;
+}
+
+#nom-rue{
+	width: 400px;
+	height: 25px;
+}
+
+#code-postale{
+	width: 70px;
+	height:25px;
+}
+
+.bouton_localisation{
+	width:250px;
+	height: 30px;
+	background-color: gray;
+	color: white;
+	cursor: pointer;
+	font-size: 100%;
+	border-radius: 10px;
+}
+
+#prenom{
+	width: 40%;
+ 	height: 40%;
+ 	margin-right: 50%;
+
+}
+
+#nom{
+	width: 40%;
+ 	height: 40%;
+	margin-left: 50%;
+	margin-bottom: 10%;
+}
+
+#mail{
+	width: 400px;
+	height: 25px;
+}
+
+#password1{
+	width: 400px;
+	height: 25px;
+}
+
+#password2{
+	width: 400px;
+	height: 25px;
+}
+
 .cb{  /* cb qui sert à éviter que le header déscende*/
 	clear: both;
 }
@@ -57,35 +124,38 @@ body{
 		border-bottom: 15px solid #e56262;
 	}
 
-
-
 .zone-inscription{
 	background-color: #e9e5e7;
 	margin-bottom: 150px;
-	margin-top: 100px;
-	height: 250px;
-	width: 600px;
+	margin-top: 40px;
+	height: 750px;
+	width: 400px;
 	border-color: white;
 	border-width: 0px;
-	
+	}
 
-}
 .bouton_inscrire{
-	width: 75px;
-	height: 20px;
-	border-width: 2px;
-	border-color: black;
-	margin-left: 300px;
-
+	background-color: #009900;
+	width:350px;
+	height: 50px;
+	margin-top: 20px;
+	border-style: solid;
+	border-width: 2,5px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 100%;
+	color:white;
 }
+
 
 footer{  /*/// barre grise du footer ///*/
 		position: relative; 
 		background-color:#666666;
 		height: 60px;
 		padding-bottom: 0;
-		margin-top: 100px;
+		margin-top: 300px;
 }
+
 
 .footer-txt{
 	 	font-family: helvetica;
