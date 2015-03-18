@@ -1,0 +1,17 @@
+body{
+	background-color: #e9e5e7;
+}
+
+
+.header-logo{
+	z-index: 1;
+	display: block;
+	float: top;
+	height: 25%;
+	width: 25%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+
+	
+}
