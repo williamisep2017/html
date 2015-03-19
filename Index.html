@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-<div id="container">
+
     <head>
         <meta charset="utf-8" />
         <title>Proxipotage</title>
@@ -12,19 +12,36 @@
 
 
 <header class = "header">
+
 	<a href="index.html" >
 		<img src="images/pp_blanc.png" class="header-logo"/>
 	</a>
+	
+		
+			<nav class="nav-header">
 
-			<nav>
 					<a href="#" class="menu-item">Forum</a>
 					<a href="#" class="menu-item">Déposer une annonce</a>
 					<a href="Lesoffres.html" class="menu-item">Les offres</a>
 					<a href="#" class="menu-item">Près de chez vous</a>
 					<a href="index.html" class="menu-item">Accueil</a>
+					
+		<form class="barre-recherchetxt" method="post" action="traitement.php">
+			   <p>
+				   	<label for ="recherche">
+				   		<!--<img src="images/loupe.png" <class="image-loupe">-->
+				   	</label> <input type="text" name="recherche" id="recherche" placeholder="Recherche" />
+			   </p>
+		</form>
+
 			</nav>
-			<div class="cb"></div>
-		<div align="center">
+
+
+
+			
+
+			<!--<div class="cb"></div>
+			<div align="center">
 		<form class="barre-recherchetxt" method="post" action="traitement.php">
 			   <p>
 				   	<label for ="recherche">
@@ -32,23 +49,36 @@
 				   	</label> <input type="text" name="recherche" id="recherche" placeholder="Chercher un fruit, un légume, un producteur..." style="width: 430px; height: 20px "/>
 			   </p>
 		</form>
-		</div>
+		</div>-->
 </header>
 
-	
-
-<div id="inscription">
-		<img src="images/rectangleinsco.png"/>
-</div>
-
+<section class="header-accroche">
+<h1>Bienvenue sur ProxiPotage,</h1>
+<p>votre potager à proximité de chez vous !</p>
 <div id="inscription-txt">
 					<a href="connexion.html">Se Connecter  | </a>
 					<a href="inscription.html">S'inscrire</a> 
 </div>
+</section>
+<!--<section class="header-image_backgroundTOP">
+	<img src="images/tomate1200x750.jpg"/>
+	</section>-->
+<!--<div class="cb">-->
+			
+	
+
+<!--<div id="inscription">
+		<img src="images/rectangleinsco.png"/>
+</div>-->
 
 
+<!--</div>-->
+<div class="wrap">
+<div class="content">
+	<h1><span><a href="#">Parcourir les offres récemment mis en ligne </a></span></h1>
+	<p>ProxiPotage vous permet en un clin d'oeil de voir les derniers offres mis en ligne par les internautes ! De nouvelles récoltes qui vous raviront les papilles.</p>
+</div>
 
-	<h1><span><a href="#">Ajoutés récemment</a></span></h1>
 <section class="recement-mis-ligne">
 						
 			<div id="global" >
@@ -158,10 +188,9 @@
 
 <a href="#">
 	<div id="bouton-voir-toutes-les-offres"> 
-		<p>Voir toutes les offres </p> 
+		<p>Voir toutes les offres</p> 
 	</div>
-
-	
+</div>	
 <footer>
 	<table class="tabcenter-footer"><tr>
 		<td> <a href="#" class="footer-txt">Plan du site</a> </td>
@@ -170,11 +199,7 @@
 	</tr></table>
 </footer>
 
-<div>
 
    	</body>
-
-<div>
-
 </html>
 
