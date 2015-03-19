@@ -17,7 +17,7 @@ body{
 
  .h1-inscription{
 color : gray;
-margin-top: 40px;
+margin-top: 10px;
 font-family: helvetica;
 font-weight: normal;
 opacity: 0.5;
@@ -43,27 +43,31 @@ opacity: 0.5;
 }
 
 .bouton_localisation{
-	width:250px;
+	width:150px;
 	height: 30px;
 	background-color: gray;
 	color: white;
 	cursor: pointer;
 	font-size: 100%;
 	border-radius: 10px;
+	margin-left: 10%;
 }
 
-#prenom{
-	width: 40%;
- 	height: 40%;
- 	margin-right: 50%;
+/*#prenom{
+	width: 40px;
+ 	height: 25px;
+ 	margin-right: 50%;*/
 
 }
 
-#nom{
-	width: 40%;
- 	height: 40%;
-	margin-left: 50%;
-	margin-bottom: 10%;
+#identite1{
+	width: 60px;
+	height: 25px;
+}
+
+#identite2{
+	width: 193px;
+	height: 25px;
 }
 
 #mail{
@@ -124,11 +128,16 @@ opacity: 0.5;
 		border-bottom: 15px solid #e56262;
 	}
 
+.centrage{
+	margin-left: 35%;
+	padding: auto;
+}
+
 .zone-inscription{
 	background-color: #e9e5e7;
-	margin-bottom: 150px;
+	margin-bottom: 80px;
 	margin-top: 40px;
-	height: 750px;
+	height: 700px;
 	width: 400px;
 	border-color: white;
 	border-width: 0px;
@@ -139,12 +148,22 @@ opacity: 0.5;
 	width:350px;
 	height: 50px;
 	margin-top: 20px;
+	margin-left: 8%;
 	border-style: solid;
 	border-width: 2,5px;
 	border-radius: 10px;
 	cursor: pointer;
 	font-size: 100%;
 	color:white;
+}
+
+#conditions{
+	font-style: italic;
+	color: blue;
+}
+
+#label{
+	margin-right: 50%;
 }
 
 
