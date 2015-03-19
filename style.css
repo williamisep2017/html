@@ -7,21 +7,42 @@
 .content{
 	padding: 1.25em 5em;  /*Pb dans .content mais pas dans . content p*//*PAS METTRE DE WIDTH 100%!!!!!*/
     text-align: justify;
-    
 }
+
+/*  //////////Permet d'ajouter une image en before/////////
+.content h1::before { 
+  content:url(images/potfleur.png);
+  width: 20%;
+}*/
+
 .content p{
 	margin-bottom: 1.25rem;
 	font-weight: 300;
     line-height: 1.6em;
-  
 }
+.presentation-site div{
+	text-align: right justify;
+	padding-right: 2em;
+	margin-right:50%; 
+	float: left;
+}
+.presentation-site td img{
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	float right;
+}
+
+h2{
+	font-size: 1.3em;
+}
+
 h1{
 	font-size: 1.8rem;
 	font-family: Titillium Web; /*oxygen;*/
 	font-weight: 300;
 	color:#0eb377;
 	margin: 0px;
-
 }
 /* /// LES COULEURS UTILISES///
 	Texte en gris clair #616972
@@ -80,7 +101,7 @@ body{
     
 }
 .header-image_backgroundTOP{
-position: relative;
+position: relativme;
 margin: auto;
 padding: auto;
 text-align: center;
@@ -93,7 +114,7 @@ box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.35) inset;
 	font-weight: lighter;
 	float : right;
 	color:#FFF;
-	padding-bottom: 13px;
+	padding-bottom: 0.938em;
 	margin-top:1.250em;
 	margin-right: 40px;
 	margin-left: 30px;
@@ -101,7 +122,7 @@ box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.35) inset;
 
 	.menu-item:hover {
 		color: gray;
-		border-bottom: 5px solid #0eb377;
+		border-bottom: 6px solid #0eb377;
 		 -webkit-transition-duration: 0.5s; 
 		 -moz-transition-duration: 0.5s; 
 		 -ms-transition-duration: 0.5s; 
@@ -214,7 +235,6 @@ a:hover {color: gray;
 
 #global {    /*/// permet de déplacer toutes les photos et “voir offre“///*/
 padding-bottom: 10px;
-padding-top: 10px;
 }
 
 
