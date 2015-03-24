@@ -7,6 +7,8 @@
 		<link rel = "stylesheet" href="style.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/png" href="favicon.png" />
+			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     </head>
 
     <body>
@@ -25,14 +27,16 @@
 					<a href="Lesoffres.html" class="menu-item">Les offres</a>
 					<a href="#" class="menu-item">Près de chez vous</a>
 					<a href="index.html" class="menu-item">Accueil</a>
-							
+						<div id="search">	
 					<form class="barre-recherchetxt" method="post" action="traitement.php">
 					   <p>
 					 	<label for ="recherche">
 						   		<!--<img src="images/loupe.png" <class="image-loupe">-->
 						</label> <input type="text" name="recherche" id="recherche" placeholder="Recherche" />
+							<input type="submit" value="">
 					   </p>
 					</form>
+				</div>
 				</nav>
 
 		</header>
@@ -67,7 +71,7 @@
 <section class="presentation">
 			<div class="presentation-text">
 				<h2>ProxiPotage : Achat, Echange de fruits et légumes entre particulier</h2>
-				<p>Avec Porxipotage acheter, échanger ou vendez des fruits et légumes fraichement rammassés. 
+				<p>Avec Proxipotage acheter, échanger ou vendez des fruits et légumes fraichement rammassés. 
 				Que ça soit votre propre culture ou celle d'un autre, profiter d'internet pour acheter, échanger ou vendre
 				des produits sains. 
 				</p>
@@ -213,7 +217,7 @@
 				<tr>
 					<td> <a href="#" class="footer-txt">Plan du site</a> </td>
 					<td> <a href="#" class="footer-txt">A Propos</a> </td>
-					<td> <a href="#" class="footer-txt">Aide</a> </td>
+					<td> <a href="Aide.html" class="footer-txt">Aide</a> </td>
 				</tr>
 			</table>
 		</footer>

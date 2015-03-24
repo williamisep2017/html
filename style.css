@@ -76,7 +76,7 @@ a:hover {
 	font-weight: 300;
 	float : right;
 	color:#FFF;
-	padding-bottom: 0.83em;
+	padding-bottom: 0.80em;
 	margin-top:1.250em;
 	margin-right: 40px;
 	margin-left: 30px;
@@ -84,7 +84,7 @@ a:hover {
 
 .menu-item:hover {
 	color: gray;
-	border-bottom: 6px solid #0eb377;
+	border-bottom: 5px solid #0eb377;
 	 -webkit-transition-duration: 0.5s; 
 	 -moz-transition-duration: 0.5s; 
 	 -ms-transition-duration: 0.5s; 
@@ -94,22 +94,48 @@ a:hover {
 		
 
 /*///La barre de recherche///*/
-input{
+#search{
+  width:;
+}
+.barre-recherchetxt input[type="submit"]{
+
+	background: url("images/loupe2.png");
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #0eb377;
+	position: relative;
+	border: 1px solid #565656;
+	border-left: 0px solid;
+
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+	float: left;
+	margin-top: 18px;
+
+}
+
+input[type="text"]{
 	margin-top: 18px;
 	margin-left: 5.6em;
 
     background-color: #e9e5e7;
-	border: 1px;
-	border-style: solid;
-	border-color: #565656;
+	border-left: 1px solid #565656;
+	border-top: 1px solid #565656;
+	border-bottom: 1px solid #565656;
+	border-right: 0px solid;
+
 
 	outline-color: none;
 	outline-width: thin;
 	width:150px;
 	height: 1.8em;
     transition:width .5s;
-    position: absolute;
+    position: relative;
+    float: left;
 }
+
 input:hover{
 	color: #0eb377;
 	-webkit-transition-duration: 0.5s; 
@@ -118,11 +144,13 @@ input:hover{
 	-o-transition-duration: 0.5s; 
 	transition-duration: 0.5s;
 }
+
 input:focus {
 	color:black;
-   width:320px;
+   width:290px;
    background-color: white;
 }
+
 .image-loupe{
 	margin-left: 304;
 	margin-top: 18px;
