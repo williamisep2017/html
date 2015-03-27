@@ -1,190 +1,162 @@
-.wrap{    /* SERT a faire un rail de 960 le tout centrer au millieu de page*/
+								/* ///////// LES COULEURS UTILISES//////////
+								/////Texte en gris clair #616972
+								/////Le vert #0eb377
+								/////Le rouge #e56262*/
 
-    position: relative;
-    width: 960px;
-    margin: 0px auto;	
-}
-.content{
-	padding: 1.25em 5em;  /*Pb dans .content mais pas dans . content p*//*PAS METTRE DE WIDTH 100%!!!!!*/
-    text-align: justify;
-}
+											/*  //////////Permet d'ajouter une image en before/////////
+											.content h1::before { 
+											  content:url(images/potfleur.png);
+											  width: 20%;
+											}*/
 
-/*  //////////Permet d'ajouter une image en before/////////
-.content h1::before { 
-  content:url(images/potfleur.png);
-  width: 20%;
-}*/
-
-.content p{
-	margin-bottom: 1.25rem;
-	font-weight: 300;
-    line-height: 1.6em;
-}
-#presentation{
-	max-width: 960px;
-	margin: 0px auto;
-	position: relative;
-}
-.presentation-text{
-	text-align: right justify;
-	padding-right: 2em;
-	margin-right:50%; 
-	float: left;
-	
-}
-.presentation-text h2{
-border-bottom: 1px solid;
-}
-.presentation-picture {
-	height: 220px;
-	float: right;
-	margin-top: -231px;
-	padding-bottom: 50px;
-}
-
-h2{
-	font-size: 1.3em;
-}
-
-h1{
-	font-size: 1.8rem;
-	font-family: "Titillium Web", helvetica, Arial, sans-serif; /*oxygen;*/
-	font-weight: 300;
-	color:#0eb377;
-	margin: 0px;
-}
-/* /// LES COULEURS UTILISES///
-	Texte en gris clair #616972
-   	Le vert #0eb377
-   	Le rouge #e56262*/
-
-a{color : inherit; text-decoration: none;}
-
+/* /////////////////////////////////////////////////////////////////////////
+////////////////////////////    STYLE GLOBAL   /////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/										
 body{
   
     font-family: "oxygen" ,helvetica, Arial, sans-serif;
-    font-weight: lighter;
     color:  #616972;
+    font-weight: 300;
  	margin: 0;
 	padding: 0;
 	margin-bottom: 80px;
-	background-color: #F4F4F7; /*#e9e5e7;*/
-	/*background-image:url(images/tomate1200x750.jpg);
-	background-size: 94%;
- 	background-repeat:no-repeat;
- 	background-position: center top;*/
+	background-color: #F4F4F7;
  	overflow-X:hidden;
  	
  }
+h1{
+	font-size: 1.8rem;
+	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
+	font-weight: 400;
+	color:#0eb377;
+	margin: 0px;
+}
+h2{
+	font-size: 1.3em;
+	font-weight: 700;
+	margin: 0px;
+}
+h3{
+	margin: 0px;
+}
+
+a{color : inherit; text-decoration: none;}
+
+a:hover {
+	color: gray;
+	-webkit-transition-duration: 0.5s; 
+	-moz-transition-duration: 0.5s; 
+	-ms-transition-duration: 0.5s; 
+	-o-transition-duration: 0.5s; 
+	 transition-duration: 0.5s;
+}
+
+
 .cb{  /* cb qui sert à éviter que le header déscende*/
 	clear: both;
 }
 
-/* ////////////////////////////////////////////////////////
- /////////LE HEADER////////////////////////////////*/
 
+/* /////////////////////////////////////////////////////////////////////////
+/////////////////////////////// HEADER /////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+
+ 
  header{ /* Le rectangle gris du top*/
 		position: relative; 
 		background-color:#666666;
 		height: 60px;
-		
 		/*border-bottom: 5px solid #565656;*/
 		margin-top: -16px;
 	 } 
-
-.header-logo{
-	display: block;
-	float: left;
-	height: 100%;
-	margin-left: 40px;
-}
-.header-accroche{
-	position: relative;
-	color:white;
-	color:#616972;
-    padding-left: 10em;
-    padding-top: 1.3em;
-    padding-bottom: 1.3em;
-    background-color: #e9e5e7;
-    box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.35) inset;
-    
-}
-.header-image_backgroundTOP{
-position: relativme;
-margin: auto;
-padding: auto;
-text-align: center;
-box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.35) inset;
-}
 .menu-item{  
 	 /* Le menu*/
 	font-size: 16px;
-	font-family: Oxygen; 
-	font-weight: lighter;
+	font-family: 'Oxygen', helvetica, Verdana, sans-serif; 
+	font-weight: 300;
 	float : right;
 	color:#FFF;
-	padding-bottom: 0.938em;
+	padding-bottom: 0.80em;
 	margin-top:1.250em;
 	margin-right: 40px;
 	margin-left: 30px;
 }
 
-	.menu-item:hover {
-		color: gray;
-		border-bottom: 6px solid #0eb377;
-		 -webkit-transition-duration: 0.5s; 
-		 -moz-transition-duration: 0.5s; 
-		 -ms-transition-duration: 0.5s; 
-		 -o-transition-duration: 0.5s; 
-		 transition-duration: 0.5s;
-	}
-	a:active {color: white;
-		border-bottom: 15px solid #e56262;
-	}	
+.menu-item:hover {
+	color: gray;
+	border-bottom: 5px solid #0eb377;
+	 -webkit-transition-duration: 0.5s; 
+	 -moz-transition-duration: 0.5s; 
+	 -ms-transition-duration: 0.5s; 
+	 -o-transition-duration: 0.5s; 
+	 transition-duration: 0.5s;
+}
+		
 
-input{
-	/*margin-left: 370px;*/
-	/*margin-top: 200px;*/
+/*///La barre de recherche///*/
+#search{
+  width:;
+}
+.barre-recherchetxt input[type="submit"]{
+
+	background: url("images/loupe2.png");
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #0eb377;
+	position: relative;
+	border: 1px solid #565656;
+	border-left: 0px solid;
+
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+	float: left;
+	margin-top: 18px;
+
+}
+
+input[type="text"]{
 	margin-top: 18px;
 	margin-left: 5.6em;
 
     background-color: #e9e5e7;
-	border: 1px;
-	border-style: solid;
-	border-color: #565656;
+	border-left: 1px solid #565656;
+	border-top: 1px solid #565656;
+	border-bottom: 1px solid #565656;
+	border-right: 0px solid;
+
 
 	outline-color: none;
 	outline-width: thin;
 	width:150px;
 	height: 1.8em;
     transition:width .5s;
-    position: absolute;
+    position: relative;
+    float: left;
 }
 
-input:hover{color: #0eb377;
-	/*background-color: #565656;
-	border-color: #565656;*/
-		 -webkit-transition-duration: 0.5s; 
-		 -moz-transition-duration: 0.5s; 
-		 -ms-transition-duration: 0.5s; 
-		 -o-transition-duration: 0.5s; 
-		 transition-duration: 0.5s;
-		}
+input:hover{
+	color: #0eb377;
+	-webkit-transition-duration: 0.5s; 
+	-moz-transition-duration: 0.5s; 
+	-ms-transition-duration: 0.5s; 
+	-o-transition-duration: 0.5s; 
+	transition-duration: 0.5s;
+}
 
 input:focus {
 	color:black;
-   width:320px;
+   width:290px;
    background-color: white;
 }
 
 .image-loupe{
-	margin-left: 304;/*400px*/
+	margin-left: 304;
 	margin-top: 18px;
 	background-color: #565656;
 	border-right: 4px solid #565656;
 	border-left:4px solid #565656;
-	 /*200px*/
-
 	width: 35%;
 }
 
@@ -193,32 +165,126 @@ label {
     width: 50px;
     float: left;
 	}
-/*;
-#inscription{ //// rectangle orange en haut à droite pour l'inscription et connexion///
-	
-	margin-top: 10px;
-	margin-left: 83.2% ; /*1061px
-	position: absolute; 
-	z-index: 1;
-}
-*/
-#inscription-txt{
 
+.header-logo{
+	display: block;
+	float: left;
+	height: 100%;
+	margin-left: 40px;
+}
+
+.header-bottom{	
+	height: 9em;
+    background-color: #e9e5e7;
+    box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.35) inset;   
+}
+
+.header-bottom_bienvenue{
+	color:#616972;
+	padding-left: 10em;
+    padding-top: 1.3em;
+    /*padding-bottom: 1.3em;*/
+    text-align: justify;
+    width:500px;
+    float: left;
+}
+
+#header-bottom_inscription-txt{
+	position: relative;
+	float: right;
 	font-size: 16px;
-	font-family: Oxygen, helvetica, Arial, sans-serif;
-	font-weight: lighter;
+	font-family: 'Oxygen', helvetica, Verdana, Arial, sans-serif;
+	font-weight: 300;
 	color: white;
-	float:right;
-	z-index: 1;
-    position: relative;
 	background: #0eb377;
 	padding: 1.5em;
-	margin-right: 2.4em;
-	margin-top: -7.375em;
+	margin-right: 2.5em;
 }
 
 
-/* /// SECTION AJOUTS RECENTS///*//* /// SECTION AJOUTS RECENTS///*//* /// SECTION AJOUTS RECENTS///*/
+.clic{
+	position: relative;
+
+margin: 0 auto;
+text-align: center;
+background-color: #e9e5e7;
+padding-bottom: 3em;
+}
+
+.clic_bouton{
+	display: inline-block;
+	border: 1px solid #0eb377;
+	color:#0eb377;
+	border-radius: 8px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-bottom: 0.6em;
+	padding-top: 0.6em;
+	width: 220px;
+}
+.clic_bouton:hover{
+	background-color: rgba(14, 179, 119, 1);
+	color: #e9e5e7;
+
+}
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////
+//////////////////////////       SECTION CONTENU       ///////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+.presentation{
+	max-width: 800px;
+	margin: 0px auto;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+.presentation-text{
+	text-align: justify;
+	width: 400px;
+	margin-right:1.5em;
+	float:left;	
+}
+.presentation-text h2{
+	border-bottom: 1px solid gray;
+	padding-bottom: 3px;
+}
+
+.presentation-text_bouton{
+	text-align: center;
+	border: 1px solid gray;
+	border-radius: 8px;
+	margin-right: 50px;
+	margin-left: 50px;
+	padding-bottom: 0.6em;
+	padding-top: 0.6em;
+}
+.presentation-text_bouton:hover{
+	background-color: rgba(14, 179, 119, 0.3);
+
+}
+.presentation-picture{
+	height: 220px;
+	margin-left: 1.5em;
+}
+
+
+
+/* /////////////////////////////////////////////////////////////////////////
+////////////////////////// SECTION AJOUTS RECENTS     ///////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+
+.wrap{    /* SERT a faire un rail de 960 le tout centrer au millieu de page*/
+    position: relative;
+    width: 960px;
+    margin: 0px auto;	
+}
+.content{
+	padding: 1.25em 5em;  /*Pb dans .content mais pas dans . content p*//*PAS METTRE DE WIDTH 100%!!!!!*/
+    text-align: justify;
+}
 .content h1{
 	
 	color: #0eb377; /*393939*/
@@ -227,25 +293,15 @@ label {
 	font-size: 2.5em;
 	font-weight: bold;
 }
-	
-h1 span {
-	/*border-bottom: solid 5px #e56262;*/
+.content p{
+	margin-bottom: 1.25rem;
+	font-weight: 300;
+    line-height: 1.6em;
 }
-
-a:hover {color: gray;
-		 -webkit-transition-duration: 0.5s; 
-		 -moz-transition-duration: 0.5s; 
-		 -ms-transition-duration: 0.5s; 
-		 -o-transition-duration: 0.5s; 
-		 transition-duration: 0.5s;
-	}
-
-
 
 #global {    /*/// permet de déplacer toutes les photos et “voir offre“///*/
-padding-bottom: 10px;
+	padding-bottom: 10px;
 }
-
 
 .AR-logo{   /*/// les images d'ajouts récents///*/
 	display: inline-block;
@@ -271,72 +327,61 @@ padding-bottom: 10px;
 	overflow: scroll;
 
 	/*background-color: #cec4bb;*/
-	background: #00AEEF;
-background: -moz-linear-gradient(top, #F4F4F7 0%, #cec4bb 100%);
-/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00AEEF), color-stop(100%,#7D7E7D));
-background: -webkit-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
-background: -o-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
-background: -ms-linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00aeef', endColorstr='#7d7e7d',GradientType=0 );
-background: linear-gradient(top, #00AEEF 0%,#7D7E7D 100%);   /// Gère l'effet background pour les autres navigateur///*/   
+	background: #F4F4F7;
+	background: -moz-linear-gradient(top, #F4F4F7 0%, #cec4bb 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4F4F7), color-stop(100%,#cec4bb));
+	background: -webkit-linear-gradient(top, #F4F4F7 0%,#cec4bb 100%);
+	background: -o-linear-gradient(top, #F4F4F7 0%,#cec4bb 100%);
+	background: -ms-linear-gradient(top, #F4F4F7 0%,#cec4bb 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F4F4F7', endColorstr='#cec4bb',GradientType=0 );
+	background: linear-gradient(top, #F4F4F7 0%,#cec4bb 100%);   /*/// Gère l'effet background pour les autres navigateur///*/  
 }
-
 
 .rectangle{
 		height:35px; 
 		width:200px; 
-		/*border-color: #565656; */
 		background-color:#565656; 
-		/*border-style:solid;*/ 
-		/*border-width: 2px;*/
 		border-radius:20px;
-		float: left;
 		margin-left: 10px;
 		margin-right: 10px;
-		/*text-align: center;*/
+		float: left;
 }
 
-div h3{
+.rectangle h3{
 	font-size: 16px;
 	font-family: helvetica;
 	font-weight: lighter;
 	color: white;
 	text-align: center;
-	/*padding-bottom: 30px;*/
-	line-height: 5px;    /* ////  PERMET DE CENTRER "VOIR l'offre" dans le rectangle gris - à revoir  ////  */
+	line-height: 35px;    /* ////  PERMET DE CENTRER "VOIR l'offre" dans le rectangle gris - à revoir  ////  */
 }
 
 #bouton-voir-toutes-les-offres{
 	width: 200px; 
 	height: 43px;
-	font: Oxygen, helvetica, Arial, sans-serif;
+	font: "Oxygen", helvetica, Arial, sans-serif;
 	text-align: center; 
-	color: white; 
-	font-weight: lighter;
+	color: white;
 	background: #0eb377;
 	float: right;
 	margin-top: 20px;
 	margin-bottom: 20px;
     border-radius: 8px;
+    border: 1px solid #0eb377;
     line-height: 1em;
-
 	/*text-shadow: 0px 1px 0px #b04c4c;*/
 	/*box-shadow:  0 0 5px #0eb377;*/
 }
-
 #bouton-voir-toutes-les-offres:hover{ 
 	color: white; 
 	background: #0a905f;
 }
 
-/*
-#bouton-voir-toutes-les-offres:active{ 
-	color: white; 
-	background: #833838;  
-	box-shadow: 1px 1px 10px black inset, 0 1px 0 white; 
-}
-*/
-/* /// LE FOOTER///*//* /// LE FOOTER///*//* /// LE FOOTER///*//* /// LE FOOTER///*//* /// LE FOOTER///*//* /// LE FOOTER///*/
+
+
+/* /////////////////////////////////////////////////////////////////////////
+////////////////////////// LE FOOTER   /////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
 
 footer{  /*/// barre grise du footer ///*/
 		position: relative; 
@@ -360,5 +405,7 @@ footer{  /*/// barre grise du footer ///*/
    vertical-align: middle;
    line-height: 55px; 
 }
+
+
  style="width: 430px; height: 20px "
 

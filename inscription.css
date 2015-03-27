@@ -144,12 +144,11 @@ opacity: 0.5;
 	}
 
 .bouton_inscrire{
-	background-color: #009900;
+	background-color: #0eb377;
 	width:350px;
 	height: 50px;
 	margin-top: 20px;
 	margin-left: 8%;
-	border-style: solid;
 	border-width: 2,5px;
 	border-radius: 10px;
 	cursor: pointer;
