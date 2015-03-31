@@ -1,7 +1,9 @@
-a{  
-	color : inherit;
-	text-decoration: none;
-}
+.wrap {position: relative;
+  		width: 980px;
+  		margin: 0px auto;}
+
+a{  color : inherit;
+	text-decoration: none;}
 
 body{
  	margin: 0;
@@ -11,31 +13,28 @@ body{
 	/*background-image:url(images/panier_fruits_legumes.jpg);*/
  	background-repeat:no-repeat;
  	background-position: center top;
- 	overflow-X:hidden
- 	
+ 	overflow-X:hidden	
  }
-
- /*.sousproduit{
- 	  position: relative;
-   color: #666666;
-  padding-left: 10em;
-  padding-top: 1.3em;
-  padding-bottom: 1.3em;
-  
-  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.35) inset;
- } */
-
- .rectangle {
-  height: 35px;
-  width: 200px;
-  text-align : center;
-  line-height:35px;
-  background-color: #565656;
-  border-radius: 20px;
-  margin-right: 10px;
-  margin-top: 30px;
-  
+h1{
+	font-size: 1.8rem;
+	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
+	font-weight: 400;
+	color:#0eb377;
+	margin: 0px;
 }
+h2{
+	font-size: 1.3em;
+	font-weight: 700;
+	font-family: 'Oxygen', helvetica, Verdana, sans-serif;
+	color:#0eb377;
+	margin: 0px;
+}
+
+
+/*///////////////////////////////////////////////////////////////
+//////////////////////////////     HEADER   /////////////////////
+/////////////////////////////////////////////////////////////////*/
+
 
 header{ /* Le rectangle gris du top*/
 		position: relative; 
@@ -51,66 +50,6 @@ header{ /* Le rectangle gris du top*/
 	margin-left: 40px;
 } 
 
-.recherche-avance {
-  position: relative;
-  color: white;
-  color: #616972;
-  padding-left: 10em;
-  padding-top: 1.3em;
-  padding-bottom: 1.3em;
-  background-color: #e9e5e7;
-  box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.35) inset;
-
-}
-
-.produi {
-	
-	margin:0 auto;
-	margin-top: 50px;
-	width: 88%;
-	height: 200px;
-	background-color: #F4EBC3;
-	margin-bottom: 10px;
-}
-
-.produi2 {
-
-	margin:0 auto;
-	margin-top: 55px;
-	width: 88%;
-	height: 200px;
-	background-color: #F4EBC3;
-	margin-bottom: 10px;
-}
-
-.produi3 {
-	margin:0 auto;
-	margin-top: 60px;
-	width: 88%;
-	height: 200px;
-	background-color: #F4EBC3;
-	margin-bottom: 10px;
-}
-
-.produi4 {
-	margin:0 auto;
-	margin-top: 60px;
-	width: 88%;
-	height: 200px;
-	background-color: #F4EBC3;
-	margin-bottom: 10px;
-}
-/*
-.produi{
-	position: relative;
- 
-
-  padding-left: 10em;
-  padding-top: 1.3em;
-  padding-bottom: 1.3em;
-  box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.35) inset;
-	  color: #616972;
-} */
 .menu-item{  
 	 /* Le menu*/
 	font-size: 16px;
@@ -125,13 +64,7 @@ header{ /* Le rectangle gris du top*/
 
 }
 
-/*.wrap {
-  position: relative;
-  width: 960px;
-  margin: 0px auto;
-} */
-
-	.menu-item:hover {
+.menu-item:hover {
 		color: gray;
 		border-bottom: 5px solid #e56262;
 		 -webkit-transition-duration: 0.5s; 
@@ -139,11 +72,11 @@ header{ /* Le rectangle gris du top*/
 		 -ms-transition-duration: 0.5s; 
 		 -o-transition-duration: 0.5s; 
 		 transition-duration: 0.5s;
-	}
+}
 
-	a:active {color: white;
+a:active {color: white;
 		border-bottom: 15px solid #e56262;
-	}
+}
 
 a {
   font-size: 16px;
@@ -155,7 +88,124 @@ a {
   line-height: 5px;
 }
 
-	.cb{  /* cb qui sert à éviter que le header déscende*/
+
+
+
+
+
+
+/*/////////////////////////////////////////////////////////////
+//////////////////////////////     Bloc recherche avancée   /////////////////////
+/////////////////////////////////////////////////////////////////*/
+
+.recherche-avance {
+  position: relative;
+  color: white;
+  color: #616972;
+  padding-right:1em; 
+  padding-left: 1em;
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+  background-color: #e9e5e7;
+  box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.35) inset;
+  margin-bottom: 20px;
+}
+
+.liste{
+	display: table;
+}
+.liste-left{
+	display: table-cell;
+	width: 490px;
+}
+.liste-lieu{
+	width: 150px;
+	float: left;
+	margin-right: 20px;
+}
+.liste-producteur{
+	width: 150px;
+}
+.liste-right{
+	display: table-cell;
+	width: 490px;
+}
+
+.liste-fruit{
+	width: 150px;
+	position: relative;
+	float: left;
+}
+.liste-legume{
+	margin-left: 20px;
+	width: 150px;
+}
+
+
+
+
+
+/*/////////////////////////////////////////////////////////////
+//////////////////////////////     les produits   /////////////////////
+/////////////////////////////////////////////////////////////////*/
+.produit {
+	
+display: table;
+margin: 0px;
+position: relative;
+table-layout: fixed;
+width: 960px;
+}
+
+
+.AR-logo{
+	padding-top: 1.6em;
+	padding-left: 1.6em;
+	padding-right:1.6em;
+}
+
+
+ .rectangle {
+  height: 25px;
+  width: 200px;
+  text-align : center;
+  line-height:25px;
+  background-color: #565656;
+  border-radius: 5px;
+  margin-right: 0px;
+  margin-top: 5px;
+  margin-left: 1.6em;
+}
+
+ .rectangle-offre {
+  height: 25px;
+  width: 200px;
+  text-align : center;
+  line-height:25px;
+  background-color: orange;
+  border-radius: 5px;
+  margin-right: 0px;
+  margin-top: 5px;
+  margin-left: 1.6em;
+  float:right;
+}
+
+.column-right {
+ background-color: gray;
+  display: table-cell;
+  width:708px;
+  vertical-align: top;
+}
+.column-left{
+	background-color: #e9e5e7;
+	width: 252;
+	display: table-cell;
+}
+
+
+
+
+.cb{  /* cb qui sert à éviter que le header déscende*/
 	clear: both;
 }
 
@@ -190,10 +240,3 @@ a:active {color: white;
 
 
 
-.column-right {
-  background-color: #FFFFFF;
-  background-color: rgba(255,255,255,0.9);
-  display: table-cell;
-  padding: 30px;
-  vertical-align: top;
-}
