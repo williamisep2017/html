@@ -1,5 +1,5 @@
 .wrap {position: relative;
-  		width: 980px;
+  		width: 960px;
   		margin: 0px auto;}
 
 a{  color : inherit;
@@ -19,15 +19,23 @@ h1{
 	font-size: 1.8rem;
 	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
 	font-weight: 400;
-	color:#0eb377;
+	color: rgba(0, 0, 0, 0.4);
 	margin: 0px;
 }
 h2{
 	font-size: 1.3em;
 	font-weight: 700;
 	font-family: 'Oxygen', helvetica, Verdana, sans-serif;
-	color:#0eb377;
+	color: rgba(0, 0, 0, 0.4);
 	margin: 0px;
+}
+
+p{
+	font-size: 1em;
+	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
+	font-weight: 400;
+	padding-left: 2em;
+
 }
 
 
@@ -49,7 +57,6 @@ header{ /* Le rectangle gris du top*/
 	height: 100%;
 	margin-left: 40px;
 } 
-
 .menu-item{  
 	 /* Le menu*/
 	font-size: 16px;
@@ -61,9 +68,7 @@ header{ /* Le rectangle gris du top*/
 	margin-top:25px;
 	margin-right: 40px;
 	margin-left: 30px;
-
 }
-
 .menu-item:hover {
 		color: gray;
 		border-bottom: 5px solid #e56262;
@@ -73,11 +78,9 @@ header{ /* Le rectangle gris du top*/
 		 -o-transition-duration: 0.5s; 
 		 transition-duration: 0.5s;
 }
-
 a:active {color: white;
 		border-bottom: 15px solid #e56262;
 }
-
 a {
   font-size: 16px;
   font-family: helvetica;
@@ -94,9 +97,12 @@ a {
 
 
 
-/*/////////////////////////////////////////////////////////////
-//////////////////////////////     Bloc recherche avancée   /////////////////////
-/////////////////////////////////////////////////////////////////*/
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////
+//////////////////////////////     BLOC RECHERCEH AVANCEE   /////////////////////
+/////////////////////////////////////////////////////////////////////////////////*/
 
 .recherche-avance {
   position: relative;
@@ -111,12 +117,17 @@ a {
   margin-bottom: 20px;
 }
 
+
+/*//////////////////////////////////////////
+///////////////     LES LISTES   ///////////
+////////////////////////////////////////////*/
 .liste{
 	display: table;
 }
 .liste-left{
 	display: table-cell;
 	width: 490px;
+
 }
 .liste-lieu{
 	width: 150px;
@@ -143,13 +154,31 @@ a {
 
 
 
+.offres{
+	background-color: #0eb377;
+	height: 96px;
+	margin-bottom: 2em;
+	position: relative;
+
+}
+
+h3{	font-size: 2.3em;
+	font-weight: 700;
+	font-family: 'Oxygen', helvetica, Verdana, sans-serif;
+	color: rgba(0, 0, 0, 0.3);
+	margin-left: 2em;
+	line-height: 96px;
+
+}
 
 
-/*/////////////////////////////////////////////////////////////
-//////////////////////////////     les produits   /////////////////////
-/////////////////////////////////////////////////////////////////*/
+
+
+
+/*/////////////////////////////////////////////////////////////////////
+//////////////////////////////     LES PRODUITS   /////////////////////
+///////////////////////////////////////////////////////////////////////*/
 .produit {
-	
 display: table;
 margin: 0px;
 position: relative;
@@ -157,13 +186,10 @@ table-layout: fixed;
 width: 960px;
 }
 
-
 .AR-logo{
-	padding-top: 1.6em;
 	padding-left: 1.6em;
 	padding-right:1.6em;
 }
-
 
  .rectangle {
   height: 25px;
@@ -184,30 +210,38 @@ width: 960px;
   line-height:25px;
   background-color: orange;
   border-radius: 5px;
-  margin-right: 0px;
-  margin-top: 5px;
+  margin-right: 10px;
   margin-left: 1.6em;
+  margin-bottom: 10px;
   float:right;
 }
 
 .column-right {
- background-color: gray;
+ background-color: rgba(0,0 , 0, 0.3);;
   display: table-cell;
   width:708px;
   vertical-align: top;
 }
 .column-left{
-	background-color: #e9e5e7;
+	background-color: rgba(0, 0, 0, 0);;
 	width: 252;
 	display: table-cell;
 }
 
-
-
-
 .cb{  /* cb qui sert à éviter que le header déscende*/
 	clear: both;
 }
+
+
+
+
+
+
+
+
+/*/////////////////////////////////////////////////////////////////////
+//////////////////////////////     FOOTER   ///////////////////////////
+///////////////////////////////////////////////////////////////////////*/
 
 footer{  /*/// barre grise du footer ///*/
 		position: relative; 
@@ -234,7 +268,7 @@ footer{  /*/// barre grise du footer ///*/
 }
 
 
-a:active {color: white;
+/*a:active {color: white;
 		border-bottom: 15px solid #e56262;
 	}
 
