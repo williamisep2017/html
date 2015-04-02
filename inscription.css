@@ -89,44 +89,7 @@ opacity: 0.5;
 	clear: both;
 }
 
- header{ /* Le rectangle gris du top*/
-		position: relative; 
-		background-color:#666666;
-		height: 60px;
-		padding-top: 0;
-	 } 
 
-.header-logo{
-	display: block;
-	float: left;
-	height: 100%;
-	margin-left: 40px;
-}
-.menu-item{  
-	 /* Le menu*/
-	font-size: 16px;
-	font-family: helvetica; 
-	font-weight: lighter;
-	float : right;
-	color:#FFF;
-	padding-bottom: 13px;
-	margin-top:25px;
-	margin-right: 40px;
-	margin-left: 30px;
-
-}
-	.menu-item:hover {
-		color: gray;
-		border-bottom: 5px solid #e56262;
-		 -webkit-transition-duration: 0.5s; 
-		 -moz-transition-duration: 0.5s; 
-		 -ms-transition-duration: 0.5s; 
-		 -o-transition-duration: 0.5s; 
-		 transition-duration: 0.5s;
-	}
-	a:active {color: white;
-		border-bottom: 15px solid #e56262;
-	}
 
 .centrage{
 	margin-left: 35%;

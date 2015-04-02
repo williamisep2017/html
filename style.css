@@ -113,8 +113,8 @@ a:hover {
 	cursor: pointer;
 	float: left;
 	margin-top: 18px;
-
 }
+
 
 input[type="text"]{
 	margin-top: 18px;
@@ -225,7 +225,6 @@ padding-bottom: 3em;
 .clic_bouton:hover{
 	background-color: rgba(14, 179, 119, 1);
 	color: #e9e5e7;
-
 }
 
 
