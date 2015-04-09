@@ -14,32 +14,14 @@
     <body>
 
 
-<!--/////////////////////////////////////////////////////////////
-//////////////////////////////     HEADER   /////////////////////
-/////////////////////////////////////////////////////////////////-->
-		<header class = "header">
-			<a href="index.html" >
-				<img src="images/pp_blanc.png" class="header-logo"/>
-			</a>
-				<nav class="nav-header">
-					<a href="#" class="menu-item">Forum</a>
-					<a href="depot_offre.php" class="menu-item">Déposer une annonce</a>
-					<a href="Lesoffres.php" class="menu-item">Les offres</a>
-					<a href="#" class="menu-item">Près de chez vous</a>
-					<a href="index.html" class="menu-item">Accueil</a>
-						<div id="search">	
-					<form class="barre-recherchetxt" method="post" action="traitement.php">
-					   <p>
-					 	<label for ="recherche">
-						   		<!--<img src="images/loupe.png" <class="image-loupe">-->
-						</label> <input type="text" name="recherche" id="recherche" placeholder="Recherche" />
-							<input type="submit" value="">
-					   </p>
-					</form>
-				</div>
-				</nav>
+<!--////////////////////////////////////////////////////////////////
+//////////////////////////////     HEADER.php  /////////////////////
+////////////////////////////////////////////////////////////////////-->
+<?php include("header1.php"); ?>
 
-		</header>
+<!--/////////////////////////////////////////////////////////////
+//////////////////////////////     HEADER-BOTTOM  ///////////////
+/////////////////////////////////////////////////////////////////-->
 
 		<section class="header-bottom">
 			<div class="header-bottom_bienvenue">
@@ -48,26 +30,28 @@
 
 			</div>
 				<div id="header-bottom_inscription-txt">
-				<a href="connexion.html">Se Connecter  | </a>
+				<a href="connexion.php">Se Connecter  | </a>
 				<a href="inscription.php">S'inscrire</a> 
 				</div>
 					
 		</section>
 
 		<section class="clic">
-			<a href="#">
+			<a href="Lesoffres.php">
 						<div class="clic_bouton"> 
 							Consulter les offres
 						</div>
 					</a>
-					<a href="#">
+					<a href="depot_offre.php">
 						<div class="clic_bouton"> 
 							Déposer une annonce
 						</div>
 					</a>
 		</section>
 
-
+<!--/////////////////////////////////////////////////////////////
+//////////////////////////////     MAIN-CONTENT  ///////////////
+/////////////////////////////////////////////////////////////////-->
 <section class="presentation">
 			<div class="presentation-text">
 				<h2>ProxiPotage : Achat, Echange de fruits et légumes entre particulier</h2>
@@ -85,9 +69,10 @@
 			</div>
 			
 	    	<img src="images/tomate1200x750.jpg" class="presentation-picture"/>
-
-	    	
+   	
 </section>
+
+
 
 <div class="wrap">
 	<div class="content">	
@@ -217,7 +202,7 @@
 				<tr>
 					<td> <a href="#" class="footer-txt">Plan du site</a> </td>
 					<td> <a href="#" class="footer-txt">A Propos</a> </td>
-					<td> <a href="Aide.html" class="footer-txt">Aide</a> </td>
+					<td> <a href="Aide.php" class="footer-txt">Aide</a> </td>
 				</tr>
 			</table>
 		</footer>

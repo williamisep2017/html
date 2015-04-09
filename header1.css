@@ -60,7 +60,7 @@
 	border-top: 1px solid #565656;
 	border-bottom: 1px solid #565656;
 	border-right: 0px solid;
-
+height: 24px;
 	outline-color: none;
 	outline-width: thin;
 	width:150px;
@@ -68,6 +68,7 @@
     transition:width .5s;
     position: relative;
     float: left;
+    box-sizing:border-box;
 }
 
 

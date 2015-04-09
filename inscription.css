@@ -1,3 +1,6 @@
+/* /////////////////////////////////////////////////////////////////////////
+////////////////////////////    STYLE GLOBAL   /////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/		
 a{  
 	color : inherit;
 	text-decoration: none;
@@ -7,41 +10,72 @@ body{
  	margin: 0;
 	padding: 0;
 	margin-bottom: 0px;
-	background-color: white ;
+	background-color: #F4F4F7 ;
 	/*background-image:url(images/panier_fruits_legumes.jpg);*/
  	background-repeat:no-repeat;
  	background-position: center top;
- 	overflow-X:hidden
- 	
+ 	overflow-X:hidden	
  }
+h1{
+	font-size: 1.8rem;
+	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
+	font-weight: 400;
+	color:#0eb377;
+	margin: 0px;
+	text-align: center;
+	width: 430px;
+	background-color: #666666;
+	margin-top: 30px;
+}
+h2{
+	font-size: 1.3em;
+	font-family:"Oxygen", helvetica, Arial, sans-serif;
+	font-weight: 700;
+	margin: 0px;
+}
+p{
+	margin: 0px;
+}
+label{
+font-family:'Oxygen',helvetica, Verdana, sans-serif;
+height: 25px;
+}
 
- .h1-inscription{
-color : gray;
-margin-top: 10px;
-font-family: helvetica;
-font-weight: normal;
-opacity: 0.5;
- }
-
- .h2-inscription{
- 	font-weight: normal;
- }
-
-#num-rue{
-	width: 30px;
+ input{
+	padding-left: 5px;
+	margin: 0;
+	border: none;
+	border-radius: 2px;
 	height: 25px;
 }
 
-#nom-rue{
-	width: 400px;
-	height: 25px;
+
+
+/* /////////////////////////////////////////////////////////////////////////
+//////////////////////////       SECTION CONTENU       ///////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
+ .centrage{ margin-top: 20px; margin:  auto; width: 430px;}
+
+.wrap{
+	margin: 0 auto;
 }
 
-#code-postale{
-	width: 70px;
-	height:25px;
-}
-
+.zone-inscription{
+	background-color: #e9e5e7;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 420px;
+	border-color: white;
+	border-width: 0px;
+	}
+.identite{width: 202px;}
+#localisation{width: 414px;}
+#code-postale{ width: 70px; height:25px;}
+#mail{width: 414px;}
+#password1{width: 414px; height: 25px;}
+#password2{width: 414px; height: 25px;}
+/*
 .bouton_localisation{
 	width:150px;
 	height: 30px;
@@ -52,106 +86,30 @@ opacity: 0.5;
 	border-radius: 10px;
 	margin-left: 10%;
 }
-
 /*#prenom{
 	width: 40px;
  	height: 25px;
  	margin-right: 50%;*/
-
-}
-
-#identite1{
-	width: 60px;
-	height: 25px;
-}
-
-#identite2{
-	width: 193px;
-	height: 25px;
-}
-
-#mail{
-	width: 400px;
-	height: 25px;
-}
-
-#password1{
-	width: 400px;
-	height: 25px;
-}
-
-#password2{
-	width: 400px;
-	height: 25px;
-}
-
-.cb{  /* cb qui sert à éviter que le header déscende*/
-	clear: both;
-}
-
-
-
-.centrage{
-	margin-left: 35%;
-	padding: auto;
-}
-
-.zone-inscription{
-	background-color: #e9e5e7;
-	margin-bottom: 80px;
-	margin-top: 40px;
-	height: 700px;
-	width: 400px;
-	border-color: white;
-	border-width: 0px;
-	}
-
 .bouton_inscrire{
 	background-color: #0eb377;
-	width:350px;
+	width:419px;
 	height: 50px;
 	margin-top: 20px;
-	margin-left: 8%;
 	border-width: 2,5px;
 	border-radius: 10px;
 	cursor: pointer;
 	font-size: 100%;
 	color:white;
 }
-
-#conditions{
-	font-style: italic;
-	color: blue;
-}
-
-#label{
-	margin-right: 50%;
+.condition{
+	color: #0eb377;
 }
 
 
-footer{  /*/// barre grise du footer ///*/
-		position: relative; 
-		background-color:#666666;
-		height: 60px;
-		padding-bottom: 0;
-		margin-top: 300px;
-}
 
 
-.footer-txt{
-	 	font-family: helvetica;
-		font-weight: lighter;
-		font-size: 16px;
-		color:white;
-		text-align: right;
-		padding-right: 180px;
-		padding-left: 180px;	
-}
 
-.tabcenter-footer { /*/// Pour centrer les élement dans le footer ///*/
-   margin-left:auto;
-   margin-right:auto;
-   vertical-align: middle;
-   line-height: 55px; 
-}
+/* /////////////////////////////////////////////////////////////////////////
+////////////////////////// LE FOOTER   /////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////*/
 

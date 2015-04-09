@@ -13,21 +13,12 @@
 <a href="index.html" >
 	
     <body>
-    	
-    	<header class = "header">
-	<a href="index.html" >
-		<img src="images/pp_blanc.png" class="header-logo"/>
-	</a>
-
-			<nav>
-					<a href="#" class="menu-item">Forum</a>
-					<a href="#" class="menu-item">Déposer une annonce</a>
-					<a href="#" class="menu-item">Les offres</a>
-					<a href="#" class="menu-item">Près de chez vous</a>
-					<a href="index.html" class="menu-item">Accueil</a>
-			</nav>
-			<div class="cb"></div>
-</header>
+ <!--/////////////////////////////////////////////////////////////
+//////////////////////////////     HEADER.php  /////////////////////
+/////////////////////////////////////////////////////////////////-->
+<?php include("header1.php"); ?>
+<div class="cb"></div>  	
+  
 
 
 <!--/////////////////////////////////////////////////////////////////////////////
