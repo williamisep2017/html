@@ -20,8 +20,7 @@
 				<img src="images/pp_blanc.png" class="header-logo"/>
 			</a>
 				<nav class="nav-header">
-					<a href="#" class="menu-item">Forum</a>
-					<a href="depot_offre.php" class="menu-item">Déposer une annonce</a>
+					<a href="connexion.php" class="menu-item2">Connexion</a>
 					<a href="Lesoffres.php" class="menu-item">Les offres</a>
 					<a href="Pres_chez_vous.php" class="menu-item">Près de chez vous</a>
 					<a href="index.php" class="menu-item">Accueil</a>
