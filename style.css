@@ -88,6 +88,18 @@ a:hover {
 	margin-right: 2.5em;
 }
 
+#header-bottom_inscription-txt1{
+	position: relative;
+	float: right;
+	font-size: 16px;
+	font-family: 'Oxygen', helvetica, Verdana, Arial, sans-serif;
+	font-weight: 300;
+	color: white;
+	background: #f90;
+	padding: 1.5em;
+	margin-right: 2.5em;
+}
+
 .clic{
 	position: relative;
 
