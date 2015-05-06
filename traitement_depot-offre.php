@@ -59,7 +59,7 @@
 			</tr>
 		<tr>
 			<td><h3>Le produits a été ramasé le :</h3> </td>
-			<td><?php echo htmlspecialchars($_POST['date']); ?></td>
+			<td><?php echo htmlspecialchars($_POST['date-ramassage']); ?></td>
 		</tr>
 
 		<tr>
@@ -98,7 +98,7 @@
 			<form>
 				<p>
 				<input class="submit2" type="reset" value="< Précedent " />
-				<input class="submit1" type="submit" value="Valider >" />
+				<input name="envoyer" class="submit1" type="submit" value="Valider >" />
 				
 			</p>
 			</form>
@@ -107,5 +107,83 @@
 
 </div>
 
+
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// Enregistrement de l'annonce dans la basse de donnée   //////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<?php 
+//Connection au serveur de base de donnée
+include("connexion_bdd.php");
+
+// Vérification de la validité des informations
+if(isset($_POST['envoyer'])) {
+	if(isset($_POST['choix_vente']) AND !empty($_POST['choix_vente'])
+		AND isset($_POST['choix_produits']) AND !empty($_POST['choix_produits'])
+		AND isset($_POST['NOM']) AND !empty($_POST['NOM'])
+		AND isset($_POST['pdsKg']) AND !empty($_POST['pdsKg'])
+		AND isset($_POST['pdsG']) AND !empty($_POST['pdsG'])
+		AND isset($_POST['qte']) AND !empty($_POST['qte'])
+		AND isset($_POST['date-ramassage']) AND !empty($_POST['date-ramassage']))
+
+	
+	{
+		//Tous les champs sont remplis
+		$pseudo=mysql_escape_string($_POST['pseudo']);
+		$mail=mysql_escape_string($_POST['adresse_mail']);
+		$password1=mysql_escape_string($_POST['password1']);
+		$password2=mysql_escape_string($_POST['password2']);
+
+		// Hachage du mot de passe
+		$pass_hache = sha1($_POST['password1']);
+		
+		$longueur_pseudo = strlen($pseudo);
+
+		if($longueur_pseudo >3 and $longueur_pseudo <=30)
+		{
+		//le pseudo respect le format
+		if($password1 == $password2)
+		{
+
+		//les mots de passe sont identique
+		$req = $bdd->prepare('INSERT INTO utilisateurs(pseudo, mot_de_passe, adresse_mail) VALUES(:pseudo, :mot_de_passe, :adresse_mail)');
+		$req->execute(array(
+   			 	'pseudo' => $pseudo,
+    			'mot_de_passe' => $pass_hache,
+    			'adresse_mail' => $mail));
+		echo 'Votre inscription a été pris en compte';
+		//include("index.php");
+		}
+
+		else {
+			$erreur='Le mot de passe et le mot de pase de confirmation de corresponde pas';
+		}
+		}
+
+else{
+		$erreur="La longueur du Pseudo ou Nom complé n'a pas la bonne taille (minimum 3 et maximum 30)" ;
+}
+}
+else{
+		$erreur='Tous les champs sont obligatoire.';
+}
+}
+?>
+
+<?php
+if(isset($erreur)) {
+	echo 'Erreur : '. $erreur;
+}
+?>
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// Fin de l'enregistrement de l'annonce dans la basse de donnée   //////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
 	</body>

@@ -80,11 +80,10 @@ function surligne(champ, erreur)
       champ.style.backgroundColor = "";
 }
 
-
-
-
 -->
 </script>
+
+
     </head>
    
 
@@ -112,7 +111,7 @@ function surligne(champ, erreur)
 							<!--<label>Localisation automatique:</label>    <input href="#" type="checkbox" /><label>autoriser</label>  </br></br>-->
 							<!--<label>Adresse:</label> <input id="localisation" type="text" name="localisation" placeholder="Adresse exemple : 52 Avenue du Général Leclerc"></br></br>-->
 
-							<!-- <label>Adresse mail:</label></br>--> <input id="mail" type="email" name="mail" placeholder="Adresse Mail"  onblur="verifMail(this)" required> 
+							<!-- <label>Adresse mail:</label></br>--> <input id="mail" type="email" name="adresse_mail" placeholder="Adresse Mail"  onblur="verifMail(this)" required> 
 							<!--<label>Mot de passe:</label></br>--> <input id="password1" type="password" name= "password1" placeholder="Mot de passe (6 carractères minimum)" onblur="verifPass(this)" required> 
 							<!--<label>Confirmation Mot de passe:</label></br>--> <input id="password2" type="password" name= "password2" placeholder="Confirmation mot de passe"required>  
 							<!--<label>Numéros de téléphone</label>:<input id="number" type="tel" name="numéros" placeholder="Télephone">--></br>  

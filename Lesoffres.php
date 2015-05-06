@@ -113,15 +113,15 @@
 		</div>
 				<div class="column-right">
 			<p>
-				Information sur le produit</br>
-	Tomate Cerise</br>
-	Quantité : 5 kg</br>
+				Information sur le produit :</br>
+	Petit pois</br>
+	Quantité : 2 kg</br>
 	Quotas : 1 kg</br>
 	Prix (au killo) : 5 € le killo</br>
 	Rammassé le ../../..</br>
  
 Description:</br>
-Tomates cerise rammassé ce matin dans mon jardin, sans traitement...</br>
+Petit pois rammassées ce matin dans mon jardin, sans traitement...</br>
 			</p>
 			<div class="rectangle-offre">
 		<a href="pageoffre.html"> voir l'offre
@@ -130,6 +130,54 @@ Tomates cerise rammassé ce matin dans mon jardin, sans traitement...</br>
 		</div>
 
 </div>
+
+<!--///////////////////////////////////////////////////////////////////////////////
+//////////////////////////////      annonces 2  /////////////////////
+///////////////////////////////////////////////////////////////////////////////////-->
+</br>
+</br>
+</br>
+
+
+
+
+<div class="produit">
+	<div class="column-left">
+	<td>
+		<img src="images/FRAISE.jpg" class="AR-logo"/></td>
+		
+		<div class="rectangle">
+			<a href="pageoffre.html"> Achat
+		</a>
+		</div>
+		<div class="rectangle">
+			<a href="pageoffre.html"> Echange
+		</a>
+		</div>
+
+
+		</div>
+				<div class="column-right">
+			<p>
+				Information sur le produit :</br>
+	Fraise</br>
+	Quantité : 5 kg</br>
+	Quotas : 1 kg</br>
+	Prix (au killo) : 5 € le killo</br>
+	Rammassé le ../../..</br>
+ 
+Description:</br>
+Fraises rammassées ce matin dans mon jardin, sans traitement...</br>
+			</p>
+			<div class="rectangle-offre">
+		<a href="pageoffre.html"> voir l'offre
+		</a>
+		</div>
+		</div>
+
+</div>
+
+
 
 <div class="cb"></div>
 

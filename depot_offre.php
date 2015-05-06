@@ -65,14 +65,14 @@
 											<input type="radio" name="choix_produits" value="Légumes"> légume </br>
 										<label for"NOM"> Nom :</label> 
 											<input type="text" name="NOM" id="NOM-detail_offre" placeholder="ex: Tomate" /> </br>
-										<label for:"VAR"> Variété : </label> 
-											<input type="text" name="VAR" id="VAR-detail_offre" placeholder="ex:Cerise" /> </br>
+										<!-- <label for:"VAR"> Variété : </label> 
+											<input type="text" name="VAR" id="VAR-detail_offre" placeholder="ex:Cerise" /> </br> -->
 										<label for:"Poids"> Poids : </label> 
 											<input name="pdsKg" id="Pds-detail_offre" type="number" min="0"/> <span> : Kilogrammes</span>
 											<input name="pdsG" id="Pds-detail_offre" type="number" step="100" min="0"/> <span> : Grammes</span></br>
 										<label for:"Poids"> Quantité : </label> 
 											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="0")/></br>
-										<label for:"Date"> Rammassé le : </label> <input id="NOM-detail_offre" type="date" name="date"></br>
+										<label for:"Date"> Rammassé le : </label> <input id="NOM-detail_offre" type="date" name="date-ramassage"></br>
 									</p>
 								</fieldset>
 							</div>
@@ -152,7 +152,5 @@
 <!--/////////////////////////////////////////////////////////////
 //////////////////////////////     FOOTER.php  //////////////////
 /////////////////////////////////////////////////////////////////-->
-
-
 
     </body>
