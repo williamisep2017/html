@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-
-<!--/////////////////////////////////////////////////////////////////////////////
-//////////////////////////////     HEADER   /////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////-->
-<head>
+ <head>
         <meta charset="utf-8" />
         <title>Proxipotage</title>
 		<link rel = "stylesheet" href="Lesoffres.css" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/png" href="favicon.png" />
+			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     </head>
+<!--/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////     HEADER   /////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////-->
 
-<a href="index.html" >
+
+<a href="index.php" >
 	
     <body>
  <!--/////////////////////////////////////////////////////////////
@@ -101,11 +105,11 @@
 		<img src="images/petitpois.jpg" class="AR-logo"/></td>
 		
 		<div class="rectangle">
-			<a href="pageoffre.html"> Achat
+			<a href="Acheter.php"> Achat
 		</a>
 		</div>
 		<div class="rectangle">
-			<a href="pageoffre.html"> Echange
+			<a href="Echanger.php"> Echange
 		</a>
 		</div>
 

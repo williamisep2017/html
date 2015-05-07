@@ -32,14 +32,14 @@
 					<div class="sous-title">
 						<h2> Que souhaitez-vous faire?</h2>
 					</div>
-<form action="traitement_depot-offre.php" method="post">
+<form action="traitement_depot-offre2.php" method="post">
 	
 						<section class="QVF">
 							<div class="QVF-left">
 								
-									<input type="radio" name="choix_vente" value="Vendre"> Vendre
-									<input type="radio" name="choix_vente" value="Echanger"> Echanger
-									<input type="radio" name="choix_vente" value="Vendre et Echanger"> Vendre et Echanger
+									<input type="radio" name="choix_vente" value="Vendre" required> Vendre
+									<input type="radio" name="choix_vente" value="Echanger" required> Echanger
+									<input type="radio" name="choix_vente" value="Vendre et Echanger" required> Vendre et Echanger
 							</div>
 									<div class="QVF-right">
 										<div class="helpme">
@@ -61,18 +61,18 @@
 								<fieldset>
 									<p>
 										<label for="Cat"> Catégorie : </label>
-											<input type="radio" name="choix_produits" value="Fruits"> Fruit
-											<input type="radio" name="choix_produits" value="Légumes"> légume </br>
+											<input type="radio" name="choix_produits" value="Fruits" required> Fruit
+											<input type="radio" name="choix_produits" value="Légumes" required> légume </br>
 										<label for"NOM"> Nom :</label> 
-											<input type="text" name="NOM" id="NOM-detail_offre" placeholder="ex: Tomate" /> </br>
+											<input type="text" name="NOM" id="NOM-detail_offre" placeholder="ex: Tomate" required/> </br>
 										<!-- <label for:"VAR"> Variété : </label> 
 											<input type="text" name="VAR" id="VAR-detail_offre" placeholder="ex:Cerise" /> </br> -->
 										<label for:"Poids"> Poids : </label> 
-											<input name="pdsKg" id="Pds-detail_offre" type="number" min="0"/> <span> : Kilogrammes</span>
-											<input name="pdsG" id="Pds-detail_offre" type="number" step="100" min="0"/> <span> : Grammes</span></br>
+											<input name="pdsKg" id="Pds-detail_offre" type="number" min="0" max="50"/> <span> : Kilogrammes</span>
+											<input name="pdsG" id="Pds-detail_offre" type="number" step="100" min="0" max="999"/> <span> : Grammes</span></br>
 										<label for:"Poids"> Quantité : </label> 
-											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="0")/></br>
-										<label for:"Date"> Rammassé le : </label> <input id="NOM-detail_offre" type="date" name="date-ramassage"></br>
+											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="1" max="999")/></br>
+										<!--<label for:"Date"> Rammassé le : </label> <input id="NOM-detail_offre" type="date" name="date-ramassage"></br>-->
 									</p>
 								</fieldset>
 							</div>
@@ -96,8 +96,8 @@
 							<div class="commentaire-left">
 								<fieldset>
 						   			<p>
-						   				<label id="label-exception" for="commentaire"> Ce commentaire apparaîtra dans l'annonce</label><br/>
-											<textarea name="commentaire" id="comentaire-bloc"></textarea>
+						   				<label name="comment" id="label-exception" for="commentaire"> Ce commentaire apparaîtra dans l'annonce</label><br/>
+											<textarea name="comment" id="comentaire-bloc"></textarea>
 						   			</p>
 								</fieldset>
 							</div>
@@ -135,7 +135,7 @@
 
 		<fieldset>
 			<p>
-				<input class="submit" type="submit" value="Continuer >" />
+				<input name="blabla" class="submit" type="submit" value="Continuer >" />
 			</p>
 		</fieldset>
 		</div>

@@ -1,16 +1,26 @@
-<?php session_start();?>
-<?php include("connexion_bdd.php");?>
 <?php 
-			$reponse = $bdd->query('SELECT adresse_mail, mot_de_passe FROM utilisateurs');
- 			$donnees = $reponse->fetch();
- 			$reponse->closeCursor();
 
-			if ($_POST['adresse_mail']==$donnees['adresse_mail'] AND $_POST['mot_de_passe']==$donnees['mot_de_passe']){
-				$_SESSION['adresse_mail']=$_POST['adresse_mail'];
-				$_SESSION['mot_de_passe']=$_POST['mot_de_passe'];			
-				include("index.php");
-			}
-			else{
-				echo "désolé vous n'êtes pas encore inscrit";
-			}
-			?>
+include("connexion_bdd.php");
+
+// Hachage du mot de passe
+$pass_hache = sha1($_POST['mot_de_passe']);
+
+// Vérification des identifiants
+$req = $bdd->prepare('SELECT id FROM utilisateurs WHERE adresse_mail = :adresse_mail AND mot_de_passe = :mot_de_passe');
+$req->execute(array(
+    'adresse_mail' => $adresse_mail,
+    'mot_de_passe' => $pass_hache));
+
+$resultat = $req->fetch();
+
+if (!$resultat)
+{
+    echo 'Mauvais identifiant ou mot de passe !';
+}
+else
+{
+    session_start();
+    $_SESSION['id'] = $resultat['id'];
+    $_SESSION['pseudo'] = $pseudo;
+    echo 'Vous êtes connecté !';
+}
