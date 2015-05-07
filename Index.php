@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 
 <html>
@@ -18,7 +20,6 @@
 //////////////////////////////     HEADER.php  /////////////////////
 ////////////////////////////////////////////////////////////////////-->
 <?php include("header1.php"); ?>
-
 <!--/////////////////////////////////////////////////////////////
 //////////////////////////////     HEADER-BOTTOM  ///////////////
 /////////////////////////////////////////////////////////////////-->
@@ -27,13 +28,25 @@
 			<div class="header-bottom_bienvenue">
 				<h1>Bienvenue sur ProxiPotage,</h1>
 				<p>votre potager à proximité de chez vous !</p>
-
+<?php include("connexion_bdd.php");?>
 			</div>
-				<div id="header-bottom_inscription-txt">
-				<a href="connexion.php">Se Connecter  | </a>
-				<a href="inscription.php">S'inscrire</a> 
+			<?php
+				if (isset($_SESSION['adresse_mail'])&& isset($_SESSION['adresse_mail'])&& $_SESSION['adresse_mail']==$resultat['adresse_mail']
+					&& $_SESSION['mot_de_passe']==$resultat['mot_de_passe']) {
+			?>
+				<div id='header-bottom_inscription-txt1'>
+				<a href='deconnexion.php'>Se déconnecter  | </a>
+				<a href='inscription.php'>Mon compte</a> 
 				</div>
-					
+			<?php 
+				}
+			else {
+				?>
+				<div id='header-bottom_inscription-txt'>
+				<a href='connexion.php'>Se connecter  | </a>
+				<a href='inscription.php'>S'inscrire</a> 
+				</div>
+		<?php } ?>
 		</section>
 
 		<section class="clic">
@@ -210,6 +223,4 @@
 
    	</body>
 </html>
-
-
 
