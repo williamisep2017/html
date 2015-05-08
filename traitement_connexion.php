@@ -1,24 +1,39 @@
-<?php include("connexion_bdd.php");?>
-<?php 
-$pass_hache = sha1($_POST['mot_de_passe']);
-			$req = $bdd->prepare('SELECT adresse_mail, mot_de_passe FROM utilisateurs');
-			$req-> execute(array(
-				'adresse_mail' => $adresse_mail,
-				'mot_de_passe' => $pass_hache)); 
- 			$resultat = $req->fetch();
- 			//if (isset($_POST['adresse_mail']) && isset($_POST['mot_de_passe'])) {
- 			if(resultat){
-				//header('Location: html/index.php');
-				session_start();
-				include('index.php');
-				$_SESSION['adresse_mail']=$resultat['adresse_mail'];
-				$_SESSION['mot_de_passe']=$resultat['mot_de_passe'];
-				
- 			}
+<?php
+session_start();
+include("connexion_bdd.php");
+
+if(isset($_POST['formconnexion']))
+{
+	$adresse_mailconnect=htmlspecialchars($_POST['adresse_mailconnect']);
+	$mot_de_passeconnect = sha1($_POST['mot_de_passeconnect']);
+
+	if(!empty($adresse_mailconnect) AND !empty($mot_de_passeconnect))
+	{
+
+		$requser = $bdd->prepare("SELECT * FROM utilisateurs WHERE adresse_mail=? AND mot_de_passe=?");
+		$requser->execute(array($adresse_mailconnect, $mot_de_passeconnect));
+		$userexist = $requser->rowCount();
+		if($userexist == 1)
+		{
+			$userinfo = $requser->fetch();
+			$_SESSION['id'] = $userinfo['id'];
+			$_SESSION['adresse_mail'] = $userinfo['adresse_mail'];
 			
+			header('Location: Index.php');
+			//header("Location : profil.php?id=" . $_SESSION['id']);
 			
-			else{
-				//$_SESSION['adresse_mail']=null;	
-				echo "désolé vous n'êtes pas encore inscrit";	 
-			}
-			?>
+			echo "bonjour : " . $userinfo['adresse_mail'] . $userinfo['id'] ;
+		}
+		else{
+			$erreur = "mauvais mail ou mots de passe";
+		}
+
+	}
+	else{
+		$erreur = "Tous les champs doivent être complétés";
+	}
+}
+if(isset($erreur)) {
+	echo 'Erreur : '. $erreur;
+}
+?>

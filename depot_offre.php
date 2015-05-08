@@ -1,3 +1,4 @@
+<?php session_start();?>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -10,7 +11,9 @@
     </head>
 
     <body>
-
+<?php
+if(isset($_SESSION['id']))
+		{?>
 <!--////////////////////////////////////////////////////////////////
 //////////////////////////////     HEADER.php  /////////////////////
 ////////////////////////////////////////////////////////////////////-->
@@ -124,6 +127,14 @@
 						</div>
 							<div class="Identite-right">
 								<h3>Profil</h3>
+								<p>
+    							Adresse mail  : <?php echo $_SESSION['adresse_mail']; ?><br />
+    							identifiant d'utilisateur = <?php echo $_SESSION['id']; ?> <br />
+    							</p>
+
+    							<a href='profil.php'>Modifier les informations</a> 
+
+
 							</div>
 					</section>
 
@@ -148,9 +159,41 @@
 		</div>
 
 
-
 <!--/////////////////////////////////////////////////////////////
 //////////////////////////////     FOOTER.php  //////////////////
 /////////////////////////////////////////////////////////////////-->
 
+
+<?php 
+} //crochet du if 
+	else 
+	{
+		include("header1.php"); 
+	?>
+<div class="wrap">
+	<div class ="non_connect"> 
+		<div class ="title"> 
+			<h1>Déposer une annonce</h1>
+		</div>
+		<div class="non_connect-proposition">
+		 	<p><a href='inscription.php'> Inscrivez vous </a>
+		 		ou <a href='connexion.php'>connectez-vous</a> pour pouvoir déposer une offre.
+		 	</p>	
+		</div>
+	</div>
+</div>
+		<?php 
+		};
+		?>
+
+
+
     </body>
+
+
+
+
+
+
+
+

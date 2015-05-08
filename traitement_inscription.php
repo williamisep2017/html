@@ -1,4 +1,5 @@
 <?php 
+session
 //Connection au serveur de base de donnée
 include("connexion_bdd.php");
 
@@ -26,7 +27,6 @@ if(isset($_POST['envoyer'])) {
 		//le pseudo respect le format
 		if($password1 == $password2)
 		{
-
 		//les mots de passe sont identique
 		$req = $bdd->prepare('INSERT INTO utilisateurs(pseudo, mot_de_passe, adresse_mail) VALUES(:pseudo, :mot_de_passe, :adresse_mail)');
 		$req->execute(array(
@@ -41,16 +41,15 @@ if(isset($_POST['envoyer'])) {
 			$erreur='Le mot de passe et le mot de pase de confirmation de corresponde pas';
 		}
 		}
-
-else{
+		else{
 		$erreur="La longueur du Pseudo ou Nom complé n'a pas la bonne taille (minimum 3 et maximum 30)" ;
-}
-}
-else{
+		}
+		}
+		else{
 		$erreur='Tous les champs sont obligatoire.';
-}
-}
-?>
+		}
+		}
+	?>
 
 <?php
 if(isset($erreur)) {

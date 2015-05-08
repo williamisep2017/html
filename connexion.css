@@ -32,15 +32,16 @@ body{
 
 .bienvenue{
 
-	font-family:helvetica;
-	font-weight: lighter;
+	font-family: "oxygen" ,helvetica, Arial, sans-serif;
+    color:  black;
+    font-weight: 300;
 	font-size: 150%;
 }
 
 .bouton_connexion{
 
 	background-color: #0eb377; /*#009900;*/
-	width:350px;
+	width:290px;
 	height: 50px;
 	margin-top: 20px;
 	border-radius: 10px;

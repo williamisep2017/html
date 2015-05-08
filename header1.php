@@ -17,7 +17,7 @@
 
 
 <header class = "header">
-			<a href="traitement_connexion.php" >
+			<a href="Index.php" >
 				<img src="images/pp_blanc.png" class="header-logo"/>
 			</a>
 				<nav class="nav-header">

@@ -26,17 +26,18 @@
 
 		<section class="header-bottom">
 			<div class="header-bottom_bienvenue">
-				<h1>Bienvenue sur ProxiPotage,</h1>
-				<p>votre potager à proximité de chez vous !</p>
+				<h4>Bienvenue sur ProxiPotage,</h4>
+				<h1 id="phrase-accroche">Votre potager à proximité de chez vous !</h1>
+				<p id="phrase-explicative">Achetez, vendez, échanger des fruits et légumes entre particuliers</p>
 <?php include("connexion_bdd.php");?>
 			</div>
 			<?php
-				if (isset($_SESSION['adresse_mail'])&& isset($_SESSION['adresse_mail'])&& $_SESSION['adresse_mail']==$resultat['adresse_mail']
-					&& $_SESSION['mot_de_passe']==$resultat['mot_de_passe']) {
+				if(isset($_SESSION['id']))
+				{
 			?>
 				<div id='header-bottom_inscription-txt1'>
 				<a href='deconnexion.php'>Se déconnecter  | </a>
-				<a href='inscription.php'>Mon compte</a> 
+				<a href='profil.php'>Mon compte</a> 
 				</div>
 			<?php 
 				}
@@ -67,14 +68,14 @@
 /////////////////////////////////////////////////////////////////-->
 <section class="presentation">
 			<div class="presentation-text">
-				<h2>ProxiPotage : Achat, Echange de fruits et légumes entre particulier</h2>
+				<h2>ProxiPotage : Achat, vente, échange de fruits et légumes entre particulier</h2>
 				<p>Avec Proxipotage acheter, échanger ou vendez des fruits et légumes fraichement rammassés. 
 				Que ça soit votre propre culture ou celle d'un autre, profiter d'internet pour acheter, échanger ou vendre
 				des produits sains. 
 				</p>
 
 				<a href="#">
-					<div class="presentation-text_bouton"> 
+					<div  class="presentation-text_bouton"> 
 						En savoir plus
 					</div>
 				</a>
@@ -197,10 +198,11 @@
 						</table>
 					</div>						
 		</section>
-			
+			<a href="Lesoffres.php">
 		<div id="bouton-voir-toutes-les-offres"> 
 						<p>Voir toutes les offres</p> 
 		</div>
+		<a/>
 </div>
 
 		
