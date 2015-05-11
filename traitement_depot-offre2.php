@@ -32,7 +32,7 @@ if(isset($_POST['blabla']))
 				$comment=mysql_real_escape_string($_POST['comment']);
 
 
-					$req = $bdd->prepare('INSERT INTO annonce(choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment) VALUES(:choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment)');
+					$req = $bdd->prepare('INSERT INTO annonce(choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) VALUES(:choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
 					$req->execute(array(
 			   			 	'choix_vente' => $choix_vente,
 			    			'choix_produits' => $choix_produits,

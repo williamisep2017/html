@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
+
 <html>
  <head>
         <meta charset="utf-8" />
@@ -99,6 +101,11 @@
 	<div class ="offres">
 		<h3>Les offres</h3>
 	</div>
+	<?php include("connexion_bdd.php"); 
+$annonce = $bdd->query("SELECT * FROM annonce ORDER BY date_ajout DESC");
+
+//$produits= $annonce->fetch();
+foreach ($annonce as $produits) {?>
 <div class="produit">
 	<div class="column-left">
 	<td>
@@ -115,71 +122,41 @@
 
 
 		</div>
-				<div class="column-right">
+		
+	<div class="column-right">
 			<p>
 				Information sur le produit :</br>
-	Petit pois</br>
-	Quantité : 2 kg</br>
-	Quotas : 1 kg</br>
+	<?php echo $produits['NOM']; ?></br>
+	Quantité : <?php echo $produits['qte']; ?></br>
+	Quotas : <?php echo $produits['pdsKg']; ?></br>
 	Prix (au killo) : 5 € le killo</br>
-	Rammassé le ../../..</br>
+	Rammassé le <?php echo $produits['NOM']; ?></br>
  
 Description:</br>
-Petit pois rammassées ce matin dans mon jardin, sans traitement...</br>
+<?php echo $produits['NOM']; ?> rammassées le <?php echo $produits['date_ajout']; ?></br>
 			</p>
+
 			<div class="rectangle-offre">
 		<a href="pageoffre.html"> voir l'offre
 		</a>
 		</div>
 		</div>
-
+		
 </div>
+</br>
+</br>
+</br>
+<?php } $annonce->closeCursor();?>
 
 <!--///////////////////////////////////////////////////////////////////////////////
 //////////////////////////////      annonces 2  /////////////////////
 ///////////////////////////////////////////////////////////////////////////////////-->
-</br>
-</br>
-</br>
 
 
 
 
-<div class="produit">
-	<div class="column-left">
-	<td>
-		<img src="images/FRAISE.jpg" class="AR-logo"/></td>
-		
-		<div class="rectangle">
-			<a href="pageoffre.html"> Achat
-		</a>
-		</div>
-		<div class="rectangle">
-			<a href="pageoffre.html"> Echange
-		</a>
-		</div>
 
 
-		</div>
-				<div class="column-right">
-			<p>
-				Information sur le produit :</br>
-	Fraise</br>
-	Quantité : 5 kg</br>
-	Quotas : 1 kg</br>
-	Prix (au killo) : 5 € le killo</br>
-	Rammassé le ../../..</br>
- 
-Description:</br>
-Fraises rammassées ce matin dans mon jardin, sans traitement...</br>
-			</p>
-			<div class="rectangle-offre">
-		<a href="pageoffre.html"> voir l'offre
-		</a>
-		</div>
-		</div>
-
-</div>
 
 
 
