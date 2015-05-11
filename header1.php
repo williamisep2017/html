@@ -17,7 +17,7 @@
 
 
 <header class = "header">
-			<a href="Index.php" >
+			<a href="index.php" >
 				<img src="images/pp_blanc.png" class="header-logo"/>
 			</a>
 				<nav class="nav-header">
@@ -25,7 +25,7 @@
 					<a href="depot_offre.php" class="menu-item">Déposer une annonce</a>
 					<a href="Lesoffres.php" class="menu-item">Les offres</a>
 					<a href="Pres_chez_vous.php" class="menu-item">Près de chez vous</a>
-					<a href="traitement_connexion.php" class="menu-item">Accueil</a>
+					<a href="index.php" class="menu-item">Accueil</a>
 						<div id="search">	
 					<form class="barre-recherchetxt" method="post" action="traitement.php">
 					   <p>
