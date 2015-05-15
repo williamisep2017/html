@@ -1,3 +1,6 @@
+/*/////////////////////////////////////////////////////////////////////
+//////////////////////////////     BASE   /////////////////////////////
+///////////////////////////////////////////////////////////////////////*/
 .wrap {position: relative;
   		width: 960px;
   		margin: 0px auto;}
@@ -5,6 +8,10 @@
 a{  color : inherit;
 	text-decoration: none;}
 
+h4{
+	margin: 0;
+	padding: 0;
+}
 body{
  	margin: 0;
 	padding: 0;
@@ -15,202 +22,100 @@ body{
  	background-position: center top;
  	overflow-X:hidden	
  }
-h1{
-	font-size: 1.8rem;
-	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
-	font-weight: 400;
-	color: rgba(0, 0, 0, 0.4);
-	margin: 0px;
-}
-h2{
-	font-size: 1.3em;
-	font-weight: 700;
-	font-family: 'Oxygen', helvetica, Verdana, sans-serif;
-	color: rgba(0, 0, 0, 0.4);
-	margin: 0px;
-}
-
-p{
+span{
+	font-family: "Oxygen", helvetica, Verdana, Arial, sans-serif;
+	font-weight: bold;
+	color: black;
 	font-size: 1em;
-	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
-	font-weight: 400;
-	padding-left: 2em;
-
 }
 
-
-
-/*///////////////////////////////////////////////////////////////////////////////
-//////////////////////////////     BLOC RECHERCEH AVANCEE   /////////////////////
-/////////////////////////////////////////////////////////////////////////////////*/
-
-.recherche-avance {
-  position: relative;
-  color: white;
-  color: #616972;
-  padding-right:1em; 
-  padding-left: 1em;
-  padding-top: 1.3em;
-  padding-bottom: 1.3em;
-  background-color: #e9e5e7;
-  box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.35) inset;
-  margin-bottom: 20px;
-}
-
-
-/*//////////////////////////////////////////
-///////////////     LES LISTES   ///////////
-////////////////////////////////////////////*/
-.liste{
-	display: table;
-}
-.liste-left{
-	display: table-cell;
-	width: 490px;
-
-}
-.liste-lieu{
-	width: 150px;
-	float: left;
-	margin-right: 20px;
-}
-.liste-producteur{
-	width: 150px;
-}
-.liste-right{
-	display: table-cell;
-	width: 490px;
-}
-
-.liste-fruit{
-	width: 150px;
-	position: relative;
-	float: left;
-}
-.liste-legume{
-	margin-left: 20px;
-	width: 150px;
-}
-
-
+/*///////////////////////////////////////////////////////////////////////////
+//////////////////////////////     title vert   /////////////////////////////
+/////////////////////////////////////////////////////////////////////////////*/
 
 .offres{
 	background-color: #0eb377;
 	height: 96px;
 	margin-bottom: 2em;
 	position: relative;
-
 }
-
-h3{	font-size: 2.3em;
+.title-lesoffres{	
+	font-size: 2.3em;
 	font-weight: 700;
 	font-family: 'Oxygen', helvetica, Verdana, sans-serif;
 	color: rgba(0, 0, 0, 0.3);
 	margin-left: 2em;
 	line-height: 96px;
-
 }
 
 
-
-
-
-/*/////////////////////////////////////////////////////////////////////
-//////////////////////////////     LES PRODUITS   /////////////////////
-///////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////     LES ANNONCE ou produit en ligne   /////////////////////
+////////////////////////////////////////////////////////////////////////////////////////*/
 .produit {
 display: table;
 margin: 0px;
 position: relative;
 table-layout: fixed;
 width: 960px;
-}
-
-.AR-logo{
-	padding-left: 1.6em;
-	padding-right:1.6em;
-}
-
- .rectangle {
-  height: 25px;
-  width: 200px;
-  text-align : center;
-  line-height:25px;
-  background-color: #565656;
-  border-radius: 5px;
-  margin-right: 0px;
-  margin-top: 5px;
-  margin-left: 1.6em;
-}
-
- .rectangle-offre {
-  height: 25px;
-  width: 200px;
-  text-align : center;
-  line-height:25px;
-  background-color: orange;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-left: 1.6em;
-  margin-bottom: 10px;
-  float:right;
-}
-
-.column-right {
- background-color: rgba(0,0 , 0, 0.3);;
-  display: table-cell;
-  width:708px;
-  vertical-align: top;
+border-bottom: solid 1px #D1D1D7;
+padding-bottom: 1em;
+margin-bottom: 1em;
 }
 .column-left{
 	background-color: rgba(0, 0, 0, 0);;
 	width: 252;
 	display: table-cell;
 }
+.box-images{
+	width:210px;
+	height:120px; 
+	box-sizing:border-box;
+}
+ .rectangle {
+  height: 25px;
+  width: 210px;
+  text-align : center;
+  line-height:25px;
+  background-color: #565656;
+  border-radius: 5px;
+  margin-right: 0px;
+  margin-top: 5px;
+ font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
+ color: white;
+}
 
-.cb{  /* cb qui sert à éviter que le header déscende*/
-	clear: both;
+.column-right {
+ background-color: #e7e7e7;
+  display: table-cell;
+  width:708px;
+  vertical-align: top;
+}
+.title-blocright{
+	color: white;
+	font-size: 1em;
+	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
+	font-weight: 400;
+	padding-left: 2em;
+	background-color: #565656;
+}
+.description-offre{
+	font-size: 1em;
+	font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
+	font-weight: 400;
+	padding-left: 3em;
 }
 
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////                                       ///////////////////////////////////////
+//////////////////////////            /!\ RESPONSIVE  /!\        ///////////////////////////////////////
+//////////////////////////                                       ///////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 
 
-
-
-/*/////////////////////////////////////////////////////////////////////
-//////////////////////////////     FOOTER   ///////////////////////////
-///////////////////////////////////////////////////////////////////////*/
-
-footer{  /*/// barre grise du footer ///*/
-		position: relative; 
-		background-color:#666666;
-		height: 60px;
-		padding-bottom: 0;
-		margin-top: 400px;
-}
-.footer-txt{
-	 	font-family: helvetica;
-		font-weight: lighter;
-		font-size: 16px;
-		color:white;
-		text-align: right;
-		padding-right: 180px;
-		padding-left: 180px;	
-}
-
-.tabcenter-footer { /*/// Pour centrer les élement dans le footer ///*/
-   margin-left:auto;
-   margin-right:auto;
-   vertical-align: middle;
-   line-height: 55px; 
-}
-
-
-/*a:active {color: white;
-		border-bottom: 15px solid #e56262;
-	}
 
 
 

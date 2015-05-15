@@ -10,7 +10,7 @@
 include("connexion_bdd.php");
 
 // Vérification de la validité des informations
-if(isset($_POST['blabla'])) 
+if(isset($_POST['formpush'])) 
 	{
 		/*if(isset($_POST['choix_vente']) AND !empty($_POST['choix_vente'])
 			AND isset($_POST['choix_produits']) AND !empty($_POST['choix_produits'])

@@ -1,27 +1,63 @@
 footer{  /*/// barre grise du footer ///*/
-		
-		background-color:#666666;
-		height: 60px;
-		padding-bottom: 0;
-		margin-top: 100px;
-        width: 100%;
-                
+        position: relative; 
+        background-color:rgba(68, 68, 68, 1);;
+        height: 60px;
+        padding-bottom: 0;
+        margin-top: 100px;
+}
+.footer-txt{
+        font-family: helvetica;
+        font-weight: lighter;
+        font-size: 16px;
+        color:white;
+        text-align: center;
+        padding-right: 120px;
+        padding-left: 120px;
+}
+.tabcenter-footer { /*/// Pour centrer les élement dans le footer ///*/
+   margin-left:auto;
+   margin-right:auto;
+   vertical-align: middle;
+   line-height: 55px; 
+}
+.follow-us{
+    margin: 0 auto;
+    text-align: center;
+}
+.logo_follow-us{
+    width: 50px;
+}
+.info-footer{
+  background-color: #555;
+  box-sizing:border-box;
 }
 
-			
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////                                       ///////////////////////////////////////
+//////////////////////////            /!\ RESPONSIVE  /!\        ///////////////////////////////////////
+//////////////////////////                                       ///////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (max-width: 960px){
+.footer-txt{
+        padding-right: 50px;
+        padding-left: 50px;
 
-.footer_txt {
-                font-family: helvetica;
-                font-weight: lighter;
-                font-size: 16px;
-                color: white;
-                text-align: center;
-                padding-right: 90px;
-		padding-left: 90px;
-                
+}
 }
 
-.tabcenter-footer table tr td {
-    width: 50%;
+@media all and (max-width: 580px){
+.footer-txt{
+        padding-right: 20px;
+        padding-left: 20px;
+
+}
+}
+
+@media all and (max-width: 410px){
+.footer-txt{
+        padding-right: 10px;
+        padding-left: 10px;
+
+}
 }

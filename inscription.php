@@ -54,11 +54,26 @@ function verifPass(champ)
       return true;
    }
 }
+/* TEST
+function verifPassConfirmation(champ)
+{
+   if(champ.value.length < 6 || champ.value.length > 255)
+   {
+      surligne(champ, true);
+      return false;
+   }
+   else
+   {
+      surligne(champ, false);
+      return true;
+   }
+}
+/* END TEST*/
 
 function verifForm(f)
 {
    var pseudoOk = verifPseudo(f.pseudo);
-   var mailOk = verifMail(f.mail);
+   var mailOk = verifMail(f.adresse_mail);
    var pass1Ok = verifAge(f.password1);
    
 

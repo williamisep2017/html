@@ -1,10 +1,10 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8" />
         <title>Proxipotage</title>
-		<link rel = "stylesheet" href="header2.css" />
+		<link rel = "stylesheet" href="header1-responsive.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />
@@ -12,19 +12,33 @@
     </head>
 
     <body>
-
-
+    	<div class="site-container">
+<div class="site-pusher">
 
 <header class = "header">
 			<a href="index.php" >
 				<img src="images/pp_blanc.png" class="header-logo"/>
 			</a>
 				<nav class="nav-header">
-					<a href="connexion.php" class="menu-item2">Connexion</a>
+					<div class="nav-header_hamburger" id="nav-header_hamburger"></div>
+					<div class="menu">
+					<a href="forum.php" class="menu-item">Forum</a>
+					<a href="depot_offre.php" class="menu-item">Déposer une annonce</a>
 					<a href="Lesoffres.php" class="menu-item">Les offres</a>
 					<a href="Pres_chez_vous.php" class="menu-item">Près de chez vous</a>
 					<a href="index.php" class="menu-item">Accueil</a>
-				</nav>
+				</div>
+						<div id="search">	
+							<form class="barre-recherchetxt" method="post" action="traitement.php">
+							   <p>
+							 	<label id="label-header" for ="recherche"></label> 
+							 		<input class="input-recherche" type="text" name="recherche" id="recherche" placeholder="Recherche" style="height: 24px "/>
+									<input type="submit" value="">
+							   </p>
+							</form>
+						</div>
 
-		</header>
-	</body>
+				</nav>
+</header>
+</body>
+</html>

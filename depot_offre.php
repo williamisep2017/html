@@ -17,8 +17,13 @@ if(isset($_SESSION['id']))
 <!--////////////////////////////////////////////////////////////////
 //////////////////////////////     HEADER.php  /////////////////////
 ////////////////////////////////////////////////////////////////////-->
-<?php include("header1.php"); ?>
+<div class="site-container"> <!--Utile pour le responsive du header seulement-->
+<div class="site-pusher"><!--Utile pour le responsive du header seulement-->
 
+<?php include("header1-responsive.php"); ?>
+
+<div class="site-content"><!--Utile pour le responsive du header seulement-->
+	<div class="container"><!--Utile pour le responsive du header seulement-->
 <!--/////////////////////////////////////////////////////////////
 //////////////////////////////     CONTENU  /////////////////////
 /////////////////////////////////////////////////////////////////-->
@@ -66,8 +71,23 @@ if(isset($_SESSION['id']))
 										<label for="Cat"> Catégorie : </label>
 											<input type="radio" name="choix_produits" value="Fruits" required> Fruit
 											<input type="radio" name="choix_produits" value="Légumes" required> légume </br>
-										<label for"NOM"> Nom :</label> 
-											<input type="text" name="NOM" id="NOM-detail_offre" placeholder="ex: Tomate" required/> </br>
+											<label for="listefruit"> Fruits : </label>
+											<select name="NOM" style="width:200px">
+												<?php
+												include("connexion_bdd.php");
+												 
+												 	$reponse = $bdd->query('SELECT * FROM fruits');
+												 	foreach ($reponse as $donnees)	
+													//while ($donnees =  mysql_fetch_array($reponse))
+														{
+												?>
+													<option value="<?php echo $donnees['fruit'] ?>"><?php echo $donnees['fruit'] ?></option>
+												   <?php
+												   		}
+												   ?>
+												</select> </br></br>
+										<!--<label for"NOM"> Nom :</label> 
+											<input type="text" name="NOM" id="NOM-detail_offre" placeholder="ex: Tomate" required/> </br>-->
 										<!-- <label for:"VAR"> Variété : </label> 
 											<input type="text" name="VAR" id="VAR-detail_offre" placeholder="ex:Cerise" /> </br> -->
 										<label for:"Poids"> Poids : </label> 
@@ -146,7 +166,7 @@ if(isset($_SESSION['id']))
 
 		<fieldset>
 			<p>
-				<input name="blabla" class="submit" type="submit" value="Continuer >" />
+				<input name="formpush" class="submit" type="submit" value="Continuer >" />
 			</p>
 		</fieldset>
 		</div>
@@ -157,7 +177,17 @@ if(isset($_SESSION['id']))
 
 
 		</div>
+</div><!-- container-->
+</div> <!-- site content-->
 
+<div class="site-cache" id="site-cache"></div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/responsive_header.js"></script>
+</div> <!-- site pusher-->
+</div> <!-- site container-->
 
 <!--/////////////////////////////////////////////////////////////
 //////////////////////////////     FOOTER.php  //////////////////
@@ -185,6 +215,9 @@ if(isset($_SESSION['id']))
 		<?php 
 		};
 		?>
+
+
+
 
 
 
