@@ -1,22 +1,22 @@
 .wrap-new{
 	position: relative;
-    width: 1000px;
+    width: 90%;
     margin: 0px auto;
-    display: table;
 }
-
 .box-new{
 	background-image:url(images/fraise2.jpg);
-	width:230px;
+	width: 230px;
 	height:200px; 
 	margin:10px;
 	padding: 15px;
 	box-sizing:border-box;
+	display: inline-block;
+	cursor: pointer;
 }
-
-
+.box-new :hover{
+	background-color: rgba(102, 102, 102, 0.9);;
+}
 .paragraph_white-text{
-
 	background-color: rgba(102, 102, 102, 0.6);
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -24,8 +24,8 @@
 	font-weight: 300;
 	font-size: 20px;
 	color: #fff;
+	text-align: left;
 }
-
 .link_offre-new{
 	margin-top: 10px;
 	margin-bottom: 0px;
@@ -33,14 +33,16 @@
 	font-weight: 300;
 	font-size: 15px;
 	color: #fff;
-	text-decoration:underline; 
+	padding-top: 1%;
+	text-decoration: underline;
+	text-align: left;
+	
+}
+.column-new{
+	margin-bottom: 20px;
+	text-align: center;
 }
 
-.column-new{
-	display: table-cell;
-	margin-left: 20px;
-	margin-bottom: 20px;
-}
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////                                       ///////////////////////////////////////
 //////////////////////////            /!\ RESPONSIVE  /!\        ///////////////////////////////////////
@@ -53,23 +55,17 @@
 	margin:10px;
 	padding: 15px;
 }
-	.wrap-new{
-		width: 880px;
-	}
+
 }
 
 @media all and (max-width: 880px){
 	.box-new{
-	width:150px;
-	height:100px; 
+	width:220px;
+	height:190px; 
 	margin:5px;
 	padding: 5px;
 }
-	.wrap-new{
-		width: 440px;
-	}
-	.paragraph_white-text{
-	font-size: 13px;
 	
-}
+
+
 }

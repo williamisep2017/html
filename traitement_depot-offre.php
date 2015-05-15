@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Proxipotage</title>
-		<link rel = "stylesheet" href="traitement_depot-offre.css" />
+		<link rel = "stylesheet" href="css/traitement_depot-offre.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />

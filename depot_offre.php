@@ -1,9 +1,10 @@
 <?php session_start();?>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <title>Proxipotage</title>
-		<link rel = "stylesheet" href="depot_offre.css" />
+		<link rel = "stylesheet" href="css/depot_offre.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />
@@ -24,6 +25,8 @@ if(isset($_SESSION['id']))
 
 <div class="site-content"><!--Utile pour le responsive du header seulement-->
 	<div class="container"><!--Utile pour le responsive du header seulement-->
+
+
 <!--/////////////////////////////////////////////////////////////
 //////////////////////////////     CONTENU  /////////////////////
 /////////////////////////////////////////////////////////////////-->
@@ -90,11 +93,11 @@ if(isset($_SESSION['id']))
 											<input type="text" name="NOM" id="NOM-detail_offre" placeholder="ex: Tomate" required/> </br>-->
 										<!-- <label for:"VAR"> Variété : </label> 
 											<input type="text" name="VAR" id="VAR-detail_offre" placeholder="ex:Cerise" /> </br> -->
-										<label for:"Poids"> Poids : </label> 
+										<label for="Poids"> Poids : </label> 
 											<input name="pdsKg" id="Pds-detail_offre" type="number" min="0" max="50"/> <span> : Kilogrammes</span>
 											<input name="pdsG" id="Pds-detail_offre" type="number" step="100" min="0" max="999"/> <span> : Grammes</span></br>
-										<label for:"Poids"> Quantité : </label> 
-											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="1" max="999")/></br>
+										<label for="Poids"> Quantité : </label> 
+											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="1" max="999"/></br>
 										<!--<label for:"Date"> Rammassé le : </label> <input id="NOM-detail_offre" type="date" name="date-ramassage"></br>-->
 									</p>
 								</fieldset>
@@ -144,6 +147,13 @@ if(isset($_SESSION['id']))
 					<section class="Identite">
 						<div class="Identite-left">
 							<h3>Localisation</h3>
+								<!--<div class="input-localisation">
+									<fieldset>
+									<p>
+										<input name="localisation" class="" type="texte" value="Adresse" />
+									</p>
+									</fieldset>
+								</div>-->
 						</div>
 							<div class="Identite-right">
 								<h3>Profil</h3>
@@ -177,17 +187,7 @@ if(isset($_SESSION['id']))
 
 
 		</div>
-</div><!-- container-->
-</div> <!-- site content-->
 
-<div class="site-cache" id="site-cache"></div>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="js/responsive_header.js"></script>
-</div> <!-- site pusher-->
-</div> <!-- site container-->
 
 <!--/////////////////////////////////////////////////////////////
 //////////////////////////////     FOOTER.php  //////////////////
@@ -203,7 +203,7 @@ if(isset($_SESSION['id']))
 <div class="wrap">
 	<div class ="non_connect"> 
 		<div class ="title"> 
-			<h1>Déposer une annonce</h1>
+			<h1 class="title-depot">Déposer une annonce</h1>
 		</div>
 		<div class="non_connect-proposition">
 		 	<p><a href='inscription.php'> Inscrivez vous </a>
@@ -215,15 +215,25 @@ if(isset($_SESSION['id']))
 		<?php 
 		};
 		?>
+		<?php include("footer.php");?>
+
+
+</div><!-- container-->
+</div> <!-- site content-->
+
+<div class="site-cache" id="site-cache"></div>
 
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/responsive_header.js"></script>
+</div> <!-- site pusher-->
+</div> <!-- site container-->
 
 
     </body>
 
-
+</html>
 
 
 

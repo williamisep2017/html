@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Proxipotage</title>
-	<link rel = "stylesheet" href="Aide_2.css" />
+	<link rel = "stylesheet" href="css/Aide_2.css" />
     </head>
 
     <body>
