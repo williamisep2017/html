@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
 <html>
-
     <head>
         <meta charset="utf-8" />
         <title>Proxipotage</title>
-		<link rel = "stylesheet" href="inscription.css" />
+		<link rel = "stylesheet" href="css/inscription.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />
@@ -55,11 +54,26 @@ function verifPass(champ)
       return true;
    }
 }
+/* TEST
+function verifPassConfirmation(champ)
+{
+   if(champ.value.length < 6 || champ.value.length > 255)
+   {
+      surligne(champ, true);
+      return false;
+   }
+   else
+   {
+      surligne(champ, false);
+      return true;
+   }
+}
+/* END TEST*/
 
 function verifForm(f)
 {
    var pseudoOk = verifPseudo(f.pseudo);
-   var mailOk = verifMail(f.mail);
+   var mailOk = verifMail(f.adresse_mail);
    var pass1Ok = verifAge(f.password1);
    
 

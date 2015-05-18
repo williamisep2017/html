@@ -1,207 +1,89 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
+
 <html>
  <head>
         <meta charset="utf-8" />
         <title>Proxipotage</title>
-		<link rel = "stylesheet" href="Lesoffres.css" />
+		<link rel = "stylesheet" href="css/Lesoffres.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />
 			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
-    </head>
-<!--/////////////////////////////////////////////////////////////////////////////
-//////////////////////////////     HEADER   /////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////-->
-
-
-<a href="index.php" >
-	
+   </head>
+   
     <body>
- <!--/////////////////////////////////////////////////////////////
-//////////////////////////////     HEADER.php  /////////////////////
-/////////////////////////////////////////////////////////////////-->
-<?php include("header1.php"); ?>
-<div class="cb"></div>  	
-  
+ 
+<div class="site-container"> <!--Utile pour le responsive du header seulement-->
+<div class="site-pusher"><!--Utile pour le responsive du header seulement-->
+
+<?php include("header1-responsive.php"); ?>
+
+<div class="site-content"><!--Utile pour le responsive du header seulement-->
+	<div class="container"><!--Utile pour le responsive du header seulement-->
 
 
-<!--/////////////////////////////////////////////////////////////////////////////
-//////////////////////////////     Bloc recherche avancée   /////////////////////
-/////////////////////////////////////////////////////////////////////////////////-->
-
-
-
-<div class="recherche-avance">
-	<div class="wrap">
-			<h1>Recherche avancée</h1>
-			
-					<div class="liste">
-						<div class="liste-left">
-							<h2> Produit</h2>
-				    			<FORM>
-							    	<SELECT class="liste-fruit"name="les produits" size="1">
-							    		<OPTION selected>Fruits
-							    		<OPTION>Choux
-							    		<OPTION>Tomate
-							    		<OPTION>Pomme
-							    		<OPTION>salade
-							    		<OPTION>carotte    <!-- certainement faire UNE option avec une vairable $produits -->
-							    	</SELECT>
-				    			</FORM>
-				    			<FORM>
-				    	<SELECT class="liste-legume"name="les produits" size="1">
-				    		<OPTION selected>Légumes
-				    		<OPTION>Aucun
-				    		<OPTION>Tomate
-				    		<OPTION>Pomme
-				    		<OPTION>salade
-				    		<OPTION>carotte    <!-- certainement faire UNE option avec une vairable $produits -->
-				    	</SELECT>
-				    			</FORM>
-						</div>
-			
-						<div class="liste-right">
-							<h2>lieu</h2>
-					  		<FORM>
-				    			<SELECT class="liste-lieu"name="les lieux" size="1">
-						    		<OPTION selected>Lieux
-						    		<OPTION>Aucun
-						    		<OPTION>Tomate
-						    		<OPTION>Pomme
-						    		<OPTION>salade
-						    		<OPTION>carotte    <!-- certainement faire UNE option avec une vairable $produits -->
-				    			</SELECT>
-				    		</FORM>
-				    		<FORM>
-				    			<SELECT class="liste-producteur"name="les producter" size="1">
-						    		<OPTION selected>producteurs
-						    		<OPTION>Aucun
-						    		<OPTION>Tomate
-						    		<OPTION>Pomme
-						    		<OPTION>salade
-						    		<OPTION>carotte    <!-- certainement faire UNE option avec une vairable $produits -->
-				    			</SELECT>
-				    		</FORM>
-							</div>
-					
-					</div>	
-	</div>
-</div>
-
-
-
+<?php include("recherche-avance.php"); ?>
 
 <!--///////////////////////////////////////////////////////////////////////////////
 //////////////////////////////     Les différentes annonces   /////////////////////
 ///////////////////////////////////////////////////////////////////////////////////-->
 <div class="wrap">
-
 	<div class ="offres">
-		<h3>Les offres</h3>
+		<h3 class="title-lesoffres">Les offres</h3>
 	</div>
-<div class="produit">
-	<div class="column-left">
-	<td>
-		<img src="images/petitpois.jpg" class="AR-logo"/></td>
-		
-		<div class="rectangle">
-			<a href="Acheter.php"> Achat
-		</a>
-		</div>
-		<div class="rectangle">
-			<a href="Echanger.php"> Echange
-		</a>
-		</div>
+	
+	<?php include("connexion_bdd.php"); 
+		$annonce = $bdd->query("SELECT * FROM annonce ORDER BY date_ajout DESC");
+		foreach ($annonce as $produits) {?>
+	
+	<div class="produit">
+			
+			<div class="column-left">
+					<img src="images/petitpois.jpg" class="box-images"/>
+					
+					<div class="rectangle">
+						<a href="listederoulante.php"> Acheter</a>
+					</div>
+					<div class="rectangle">
+						<a href="Echanger.php"> Echanger</a>
+					</div>
+					<div class="rectangle">
+						<a href="Echanger.php"> + de détails</a>
+					</div>
+			</div>
 
-
-		</div>
-				<div class="column-right">
-			<p>
-				Information sur le produit :</br>
-	Petit pois</br>
-	Quantité : 2 kg</br>
-	Quotas : 1 kg</br>
-	Prix (au killo) : 5 € le killo</br>
-	Rammassé le ../../..</br>
- 
-Description:</br>
-Petit pois rammassées ce matin dans mon jardin, sans traitement...</br>
-			</p>
-			<div class="rectangle-offre">
-		<a href="pageoffre.html"> voir l'offre
-		</a>
-		</div>
-		</div>
-
-</div>
-
-<!--///////////////////////////////////////////////////////////////////////////////
-//////////////////////////////      annonces 2  /////////////////////
-///////////////////////////////////////////////////////////////////////////////////-->
-</br>
-</br>
-</br>
-
-
-
-
-<div class="produit">
-	<div class="column-left">
-	<td>
-		<img src="images/FRAISE.jpg" class="AR-logo"/></td>
-		
-		<div class="rectangle">
-			<a href="pageoffre.html"> Achat
-		</a>
-		</div>
-		<div class="rectangle">
-			<a href="pageoffre.html"> Echange
-		</a>
-		</div>
-
-
-		</div>
-				<div class="column-right">
-			<p>
-				Information sur le produit :</br>
-	Fraise</br>
-	Quantité : 5 kg</br>
-	Quotas : 1 kg</br>
-	Prix (au killo) : 5 € le killo</br>
-	Rammassé le ../../..</br>
- 
-Description:</br>
-Fraises rammassées ce matin dans mon jardin, sans traitement...</br>
-			</p>
-			<div class="rectangle-offre">
-		<a href="pageoffre.html"> voir l'offre
-		</a>
-		</div>
-		</div>
-
-</div>
-
-
-
-<div class="cb"></div>
-
-
+		<div class="column-right">
+			<h4 class="title-blocright">Ajouté le : <?php echo $produits['date_ajout']; ?></h4>
+				<p class="description-offre">
+					<?php echo $produits['choix_produits']; ?></br>
+					<span><?php echo $produits['NOM']; ?> </span></br>
+					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>g
+					Quantité : <?php echo $produits['qte']; ?></br>
+					Prix (au killo) : 5 € le killo</br>
+					Lieu : <?php echo $produits['adresse_mail']; ?>
+					<!--Commentaire :</br>
+					<?php echo $produits['comment']; ?>-->
+				</p>	
+		</div>	
+	</div>
+<?php } $annonce->closeCursor();?>
 </div>  <!-- fin du wrap -->
 
 
+<?php include("footer.php");?>
 
-<!--/////////////////////////////////////////////////////////////
-//////////////////////////////     FOOTER   /////////////////////
-/////////////////////////////////////////////////////////////////-->
+</div><!-- container-->
+</div> <!-- site content-->
+
+<div class="site-cache" id="site-cache"></div>
 
 
-<footer>
-	<table class="tabcenter-footer"><tr>
-		<td> <a href="#" class="footer-txt">Plan du site</a> </td>
-		<td> <a href="#" class="footer-txt">A Propos</a> </td>
-		<td> <a href="#" class="footer-txt">Aide</a> </td>
-	</tr></table>
-</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/responsive_header.js"></script>
+</div> <!-- site pusher-->
+</div> <!-- site container-->
 
 	</body>
 </html>

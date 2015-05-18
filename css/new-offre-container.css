@@ -1,0 +1,71 @@
+.wrap-new{
+	position: relative;
+    width: 90%;
+    margin: 0px auto;
+}
+.box-new{
+	background-image:url(images/fraise2.jpg);
+	width: 230px;
+	height:200px; 
+	margin:10px;
+	padding: 15px;
+	box-sizing:border-box;
+	display: inline-block;
+	cursor: pointer;
+}
+.box-new :hover{
+	background-color: rgba(102, 102, 102, 0.9);;
+}
+.paragraph_white-text{
+	background-color: rgba(102, 102, 102, 0.6);
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: "oxygen" ,helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	color: #fff;
+	text-align: left;
+}
+.link_offre-new{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-family: "oxygen" ,helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	color: #fff;
+	padding-top: 1%;
+	text-decoration: underline;
+	text-align: left;
+	
+}
+.column-new{
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////                                       ///////////////////////////////////////
+//////////////////////////            /!\ RESPONSIVE  /!\        ///////////////////////////////////////
+//////////////////////////                                       ///////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (max-width: 1000px){
+	.box-new{
+	width:200px;
+	height:170px; 
+	margin:10px;
+	padding: 15px;
+}
+
+}
+
+@media all and (max-width: 880px){
+	.box-new{
+	width:220px;
+	height:190px; 
+	margin:5px;
+	padding: 5px;
+}
+	
+
+
+}

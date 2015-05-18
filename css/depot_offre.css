@@ -8,7 +8,7 @@ body{
 	background-color: #F4F4F7;
  	background-repeat:no-repeat;
  	background-position: center top;
- 	overflow-X:hidden	
+ 	overflow-X:hidden;	
  }
 h1{	font-size: 2.3em;
 	font-weight: 700;
@@ -40,13 +40,12 @@ a{color : inherit;
 /* /////////////////////////////////////////////////////////////////////////
 /////////////////////////////// CONTENT /////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////*/
+
+
 input{
 	margin-bottom: 15px;
 
 }
-
-	
-
 
 fieldset{
 	border: 0 none;
@@ -174,7 +173,7 @@ background-color:#e7e7e7;
  	padding: 0em 0em 0em 2em;
  	display: table;
  	width: 928px;
- 		font-size: 1em;
+ 	font-size: 1em;
 	font-weight: 300;
 	font-family:'Oxygen',helvetica, Verdana, sans-serif;
 	margin-bottom: 0px;
@@ -275,9 +274,30 @@ text-align: center;
 
 
 
+/*--------------------------------------------------*\
 
+						$RESPONSIVE
 
+\*--------------------------------------------------*/
 
+@media all and (max-width: 960px){
+.wrap {position: relative;
+  		width: 800px;
+  		margin: 0px auto;}
+
+@media all and (max-width: 800px){
+.wrap {position: relative;
+  		width: 680px;
+  		margin: 0px auto;}
+
+@media all and (max-width: 680px){
+.wrap {position: relative;
+  		width: 500px;
+  		margin: 0px auto;}
+@media all and (max-width: 500px){
+.wrap {position: relative;
+  		width: 400px;
+  		margin: 0px auto;}
 
 
 
