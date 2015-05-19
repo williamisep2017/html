@@ -11,11 +11,15 @@
 		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     </head>
 		<body>
-<?php include('connexion_bdd.php');?>
+
+
+
+
+
 <?php
  
   {
-
+  	
     $sql = "SELECT * FROM annonce WHERE NOM LIKE '%". stripslashes( $articles ) . "%'"; // stripslashs =(evite les injections SQL)
     // Création d'une variable sql qui selectionne toute les infos de la table 'produit' et qui compare le login de la bbd avec le mot taper par l'utilisateur ('%le mot en question%')
     $action = mysql_query( $sql, $connect) OR die( "Impossible d'exécuter la requête !" ); // Envoie la requête au serveur MySQL avec en paramètre la bdd et la table
@@ -48,7 +52,6 @@
 ?>
 			
 
-<?php include('footer.php');?>
 
 	</body>
 </html>
