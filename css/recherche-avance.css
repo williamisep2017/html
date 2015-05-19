@@ -30,11 +30,8 @@
   margin-bottom: 20px;
 }
 
-.liste{
-	display: table;
-}
+
 .liste-left{
-	display: table-cell;
 	width: 490px;
 
 }
@@ -59,4 +56,15 @@
 .liste-legume{
 	margin-left: 20px;
 	width: 150px;
+}
+
+
+/*--------------------------------------------------*\
+
+						$RESPONSIVE
+
+\*--------------------------------------------------*/
+@media all and (max-width: 320px){
+	.recherche-avance{padding-left: 0;
+		margin-left:0;}
 }

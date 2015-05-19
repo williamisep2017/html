@@ -223,8 +223,6 @@ padding-top: 0.5em;
 	color:  #404852;
 	margin-top: 0px;
 	margin-bottom: 0.2em;
-	font-size: 2.5em;
-	font-weight: bold;
 }
 .content p{
 	margin-bottom: 1.25rem;
@@ -388,7 +386,15 @@ padding-top: 0.5em;
 }
 
 
-
+@media all and (max-width: 320px){
+	#header-bottom_inscription-txt{
+	margin-right: 0em;
+}
+.content h1{
+	margin-bottom: 0.2em;
+	font-size: 1em;
+}
+}
 
 
 

@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>Proxipotage</title>
 		<link rel = "stylesheet" href="css/header1-responsive.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
@@ -29,7 +30,7 @@
 					<a href="Accueil.php" class="menu-item">Accueil</a>
 				</div>
 						<div id="search">	
-							<form class="barre-recherchetxt" method="post" action="traitement.php">
+							<form class="barre-recherchetxt" method="post" action="traitement_recherche-textuelle.php">
 							   <p>
 							 	<label id="label-header" for ="recherche"></label> 
 							 		<input class="input-recherche" type="text" name="recherche" id="recherche" placeholder="Recherche" style="height: 24px "/>

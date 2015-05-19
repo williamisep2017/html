@@ -50,7 +50,7 @@ if(isset($_SESSION['id']))
 								
 									<input type="radio" name="choix_vente" value="Vendre" required> Vendre
 									<input type="radio" name="choix_vente" value="Echanger" required> Echanger
-									<input type="radio" name="choix_vente" value="Vendre et Echanger" required> Vendre et Echanger
+									<input type="radio" name="choix_vente" value="Vendre et Echanger" required> Vendre ou Echanger
 							</div>
 									<div class="QVF-right">
 										<div class="helpme">
@@ -97,7 +97,9 @@ if(isset($_SESSION['id']))
 											<input name="pdsKg" id="Pds-detail_offre" type="number" min="0" max="50"/> <span> : Kilogrammes</span>
 											<input name="pdsG" id="Pds-detail_offre" type="number" step="100" min="0" max="999"/> <span> : Grammes</span></br>
 										<label for="Poids"> Quantité : </label> 
-											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="1" max="999"/></br>
+											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="1" max="999"/><span> : (Unité)</span></br>
+										<label for="Poids"> PRIX : </label> 
+											<input name ="prix" id="Pds-detail_offre" type="number" step="1" min="1" max="999"/><span> : Euros</span></br>
 										<!--<label for:"Date"> Rammassé le : </label> <input id="NOM-detail_offre" type="date" name="date-ramassage"></br>-->
 									</p>
 								</fieldset>
@@ -144,18 +146,18 @@ if(isset($_SESSION['id']))
 				<div class ="title2">
 					<h1>Informations personnelles</h1>
 				</div>
-					<section class="Identite">
-						<div class="Identite-left">
+					<section class="identite">
+						<div class="identite-left">
 							<h3>Localisation</h3>
-								<!--<div class="input-localisation">
+								<div class="input-localisation">
 									<fieldset>
 									<p>
-										<input name="localisation" class="" type="texte" value="Adresse" />
+										<input name="localisation" class="adresse_de_vente" type="texte" placeholder="Adresse de localisation" required/>
 									</p>
 									</fieldset>
-								</div>-->
+								</div>
 						</div>
-							<div class="Identite-right">
+							<div class="identite-right">
 								<h3>Profil</h3>
 								<p>
     							Adresse mail  : <?php echo $_SESSION['adresse_mail']; ?><br />
@@ -176,7 +178,7 @@ if(isset($_SESSION['id']))
 
 		<fieldset>
 			<p>
-				<input name="formpush" class="submit" type="submit" value="Continuer >" />
+				<input name="formpush" class="submit" type="submit" value="Valider >" />
 			</p>
 		</fieldset>
 		</div>
@@ -197,9 +199,15 @@ if(isset($_SESSION['id']))
 <?php 
 } //crochet du if 
 	else 
-	{
-		include("header1.php"); 
-	?>
+	{?>
+				<div class="site-container"> <!--Utile pour le responsive du header seulement-->
+				<div class="site-pusher"><!--Utile pour le responsive du header seulement-->
+
+				<?php include("header1-responsive.php"); ?>
+
+				<div class="site-content"><!--Utile pour le responsive du header seulement-->
+				<div class="container"><!--Utile pour le responsive du header seulement-->
+	
 <div class="wrap">
 	<div class ="non_connect"> 
 		<div class ="title"> 

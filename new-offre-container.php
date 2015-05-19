@@ -5,6 +5,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width; initial-scale=1; user-scalable=0"/>
         <title>Proxipotage</title>
 		<link rel = "stylesheet" href="css/new-offre-container.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
@@ -18,22 +19,31 @@
     		
     			<div class="column-new">
     				
-    				<?php include("connexion_bdd.php"); 
+    				<?php include("connexion_bdd.php");
+
 					$annonce = $bdd->query("SELECT * FROM annonce ORDER BY date_ajout DESC LIMIT 12");
 					foreach ($annonce as $produits) {?>
-					<a href="#">
-					<div class="box-new" style="background-image:url(images/fraise2.jpg);">
-							<h4 class="paragraph_white-text">Tomate, <br/> Prix 5 euros <br/> poids: <?php echo $produits['pdsKg']?>kg <br/> quantité: 1</h4>
-							<p class="link_offre-new"><a href="">Voir l'offre &gt;</a></p>
-					</div></a>
+					
+					<?php echo'<a href="detail-offre.php?annonce='.$produits['id'].'">' ?>  
+						
+						<div class="box-new" style="background-image:url(images/fraise2.jpg);">
+								<div class="paragraph_white-text">
+									<?php echo $produits['NOM']?><br/> 
+									Prix:<?php echo $produits['prix']?>€<br/> 
+									poids: <?php echo $produits['pdsKg']?>kg<?php echo $produits['pdsG']?>g<br/>
+									quantité: <?php echo $produits['qte']?><br/> 
+									<!--Voir l'offre &gt;-->
+								</div>
+						</div> 
+					
+					<?php '</a>'; ?>
 					<?php } ?>
     			</div>
     	</div>
    
-
-
     </body>
 </html>
 
 
-
+<!--<div style="background-image: url('<?php //echo $query['background']; ?>');>
+	style="background-image: url('RaccourcieVersDossierImg/<?php //echo $donneeImg['bg_image']; ?>')-->

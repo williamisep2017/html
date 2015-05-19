@@ -5,6 +5,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>Proxipotage</title>
 		<link rel = "stylesheet" href="css/Accueil.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
@@ -39,7 +40,8 @@
 			?>
 				<div id='header-bottom_inscription-txt1'>
 				<a href='deconnexion.php'>Se déconnecter  | </a>
-				<a href='profil.php'>Mon compte</a> 
+				<a href='profil.php'>Mon compte</a><br/>
+				<a href='profil.php'>Mon panier()</a>
 				</div>
 			<?php 
 				}
