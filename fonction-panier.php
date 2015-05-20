@@ -72,4 +72,66 @@ function modif_qte($ref_article, $qte)
     } 
     return $modifie; 
 } 
+
+function supprim_article($ref_article) 
+{ 
+    $suppression = false; 
+    if(!isset($_SESSION['panier']['verrouille']) || $_SESSION['panier']['verrouille'] == false) 
+    { 
+        /* On vérifie que l'article à supprimer est bien présent dans le panier */ 
+        if(nombre_article($ref_article) != false) 
+        { 
+            /* création d'un tableau temporaire de stockage des articles */ 
+            $panier_tmp = array("id_article"=>array(),"qte"=>array(),"taille"=>array(),"prix"=>array()); 
+            /* Comptage des articles du panier */ 
+            $nb_articles = count($_SESSION['panier']['id_article']); 
+            /* Transfert du panier dans le panier temporaire */ 
+            for($i = 0; $i < $nb_articles; $i++) 
+            { 
+                /* On transfère tout sauf l'article à supprimer */ 
+                if($_SESSION['panier']['id_article'][$i] != $ref_article) 
+                { 
+                    array_push($panier_tmp['id_article'],$_SESSION['panier']['id_article'][$i]); 
+                    array_push($panier_tmp['qte'],$_SESSION['panier']['qte'][$i]); 
+                    array_push($panier_tmp['taille'],$_SESSION['panier']['taille'][$i]); 
+                    array_push($panier_tmp['prix'],$_SESSION['panier']['prix'][$i]); 
+                } 
+            } 
+            /* Le transfert est terminé, on ré-initialise le panier */ 
+            $_SESSION['panier'] = $panier_tmp; 
+            /* Option : on peut maintenant supprimer notre panier temporaire: */ 
+            unset($panier_tmp); 
+            $suppression = true; 
+        } 
+        else 
+        { 
+            $suppression == "absent"; 
+        } 
+    } 
+    return $suppression; 
+} 
+
+function vider_panier() 
+{ 
+    $vide = false; 
+    if(!isset($_SESSION['panier']['verrouille']) || $_SESSION['panier']['verrouille'] == false) 
+    { 
+        if(isset($_SESSION['panier'])) 
+        { 
+            unset($_SESSION['panier']); 
+            if(!isset($_SESSION['panier'])) 
+            { 
+                $vide = true; 
+            } 
+        } 
+        else 
+        { 
+            /* Le panier était déjà détruit, on renvoie une autre valeur exploitable au retour */ 
+            $vide = "inexistant"; 
+        } 
+    } 
+    return $vide; 
+}
+
+
 ?>
