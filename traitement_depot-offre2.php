@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////// Enregistrement de l'annonce dans la basse de donnée   //////////////////////////
@@ -30,10 +32,13 @@ if(isset($_POST['formpush']))
 				$pdsG=mysql_real_escape_string($_POST['pdsG']);
 				$qte=mysql_real_escape_string($_POST['qte']);
 				$comment=mysql_real_escape_string($_POST['comment']);
+				$adresse_de_vente=mysql_real_escape_string($_POST['adresse_de_vente']);
 
 
-					$req = $bdd->prepare('INSERT INTO annonce(choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) VALUES(:choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
+					$req = $bdd->prepare('INSERT INTO annonce(adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) VALUES(:adresse_de_vente, :userid, :choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
 					$req->execute(array(
+							'adresse_de_vente' => $adresse_de_vente,
+							'userid'=> $_SESSION['id'],
 			   			 	'choix_vente' => $choix_vente,
 			    			'choix_produits' => $choix_produits,
 			    			'NOM' => $NOM,

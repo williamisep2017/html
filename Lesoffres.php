@@ -61,7 +61,7 @@
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>g
 					Quantité : <?php echo $produits['qte']; ?></br>
 					Prix (au killo) : 5 € le killo</br>
-					Lieu : <?php echo $produits['adresse_mail']; ?>
+					Lieu : <?php echo $produits['adresse']; ?>
 					<!--Commentaire :</br>
 					<?php echo $produits['comment']; ?>-->
 				</p>	

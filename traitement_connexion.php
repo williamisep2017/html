@@ -16,8 +16,14 @@ if(isset($_POST['formconnexion']))
 		if($userexist == 1)
 		{
 			$userinfo = $requser->fetch();
+			$_SESSION['dte_de_naissance'] = $userinfo['dte_de_naissance'];
+			$_SESSION['pseudo'] = $userinfo['pseudo'];
 			$_SESSION['id'] = $userinfo['id'];
 			$_SESSION['adresse_mail'] = $userinfo['adresse_mail'];
+			$_SESSION['adresse'] = $userinfo['adresse'];
+			$_SESSION['num_tel'] = $userinfo['num_tel'];
+			$_SESSION['mot_de_passe'] = sha1($_POST['mot_de_passeconnect']);
+
 			
 			header('Location: Accueil.php');
 			//header("Location : profil.php?id=" . $_SESSION['id']);

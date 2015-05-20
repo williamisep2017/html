@@ -1,0 +1,134 @@
+h3{
+	margin: 0;
+	line-height: 30px;
+}
+
+
+.wrap-profil{
+	margin: 0 auto;
+	width: 980px;
+}
+
+.title-profil{
+	color: #FF5252;
+}
+.containers{
+	
+}
+
+ul{
+display: inline-table;
+margin-top: 0 auto;
+padding-left: 0px;
+list-style-type: none
+word-spacing: 100px;
+}
+
+li{
+	display: inline;
+}
+
+#header-bottom-profil{
+margin-bottom: 14px !important;
+padding: 0px;
+margin-top: 10px;
+background: none repeat scroll 0% 0% #ECECEC !important;
+  height: 50px;
+  display: block;
+  text-align: center;
+  word-spacing: 100px;
+ vertical-align: center;
+}
+
+/*.page-profil{
+	display: inline-block;
+}*/
+
+.infos-profil{
+	text-align: center;
+
+}
+/*.sous-titre{
+text-align: center;
+background-color: #ECECEC;
+height: 30px;
+color: #FF5252;
+font-weight: bold;
+margin-bottom: 14px !important;
+padding: 0px;
+margin-top: 10px;
+  height: 50px;
+  margin-bottom: 0 auto;
+margin-top: auto
+}
+*/
+
+
+.infos-tittle{
+	margin-bottom: 14px !important;
+	width: 990px;
+	background: none repeat scroll 0% 0% #ECECEC !important;
+	vertical-align: center;
+	margin:auto;
+	color: #FF5252;
+	margin-top: auto;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bold;
+	padding: auto;
+
+  
+}
+	
+.elements{
+	margin-top: 10px;
+}
+
+.mod_profil{
+    background-color: #FF5252;
+}
+
+.adresse_profil{
+	width: 300px;
+}
+
+.mod_profil{
+	margin-bottom: 14px !important;
+	width: 990px;
+	background: none repeat scroll 0% 0% #FF5252; !important;
+	vertical-align: center;
+	margin:auto;
+	color: white;
+	margin-top: auto;
+	height: 30px;
+	margin-top: 10px;
+	text-align: center;
+	padding: auto;
+	font-weight: normal;
+
+}
+
+.modif1{
+	margin:auto;
+	text-align: center;
+}
+
+.bouton_enregistrer{
+	height: 50px;
+	width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
