@@ -4,7 +4,8 @@
     margin: 0px auto;
 }
 .box-new{
-	background-image:url(images/fraise2.jpg);
+	background-size:150%;
+	background-repeat: no-repeat;
 	width: 230px;
 	height:200px; 
 	margin:10px;

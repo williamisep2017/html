@@ -35,23 +35,22 @@
 	</div>
 	
 	<?php include("connexion_bdd.php");
-		$annonce = $bdd->query("SELECT * FROM annonce ORDER BY date_ajout DESC");
+		$annonce = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout DESC");
+		$annonce = $annonce->fetchAll();
 		foreach ($annonce as $produits) {?>
 	<div class="produit">	
 			<div class="column-left">
-					<img src="images/petitpois.jpg" class="box-images"/>
+					<img src="<?php echo $produits['image_fruit']?>" class="box-images"/>
 					
 					<div class="rectangle">
 						<?php
 							$annonce = $bdd->query("SELECT * FROM annonce");?>
 							<?php echo'<a href="interface-mail.php?annonce='.$produits['id'].'">'?>
-							Achat
+							Envoyer un mail au vendeur
 							<?php '</a>'; ?>
 					</div>
-
-
 					<div class="rectangle">
-						<a href="interface-mail_echange.php"> Echanger</a>
+						<a href="interface-mail_echange.php"> Numéros de téléphone</a>
 					</div>
 					<div class="rectangle">
 						<a href="Echanger.php"> + de détails</a>
@@ -61,17 +60,16 @@
 		<div class="column-right">
 			<h4 class="title-blocright">Ajouté le : <?php echo $produits['date_ajout']; ?></h4>
 				<p class="description-offre">
-					<?php echo $produits['choix_produits']; ?></br>
-					<span><?php echo $produits['NOM']; ?> </span></br>
+					Type d'offre : <?php echo $produits['choix_vente']; ?><br/>
+					<?php echo $produits['choix_produits']; ?><br/>
+					<span><?php echo $produits['NOM']; ?> </span><br/>
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>g
-					Quantité : <?php echo $produits['qte']; ?></br>
-					Prix (au killo) : 5 € le killo</br>
+					Quantité : <?php echo $produits['qte']; ?><br/>
+					Prix (au killo) : 5 € le killo<br/>
+					Lieu : <?php echo $produits['adresse_de_vente']; ?><br/>
+					Commentaire :</br>
+					<?php echo $produits['comment']; ?>
 
-
-					Lieu : <?php echo $produits['adresse_de_vente']; ?>
-
-					<!--Commentaire :</br>
-					<?php echo $produits['comment']; ?>-->
 				</p>	
 		</div>	
 	</div>

@@ -1,4 +1,11 @@
 <?php session_start(); ?>
+<?php
+$connect = mysqli_connect( "localhost", "root", "root","Proxipotage" ) OR die( "la co a la bdd a ap marcher.<br />\nErreur MySQL '" . "'" ); // Connection à la bdd
+?>
+<?php
+ if( isset( $_GET["recherche"] ) ) $recherche = $_GET["recherche"]; // Vérification d'existence de recherche (1=oui, 0=non)
+  if( isset( $_GET["produit"] ) ) $articles = $_GET["produit"]; // Vérification si l'utilisateur a tapé un fruit/légumes
+  ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +20,9 @@
     </head>
 
     <body>
+    	<?php
+	if( empty($recherche) or $recherche == 0)
+	?>
     	<div class="site-container">
 <div class="site-pusher">
 
@@ -30,11 +40,11 @@
 					<a href="Accueil.php" class="menu-item">Accueil</a>
 				</div>
 						<div id="search">	
-							<form class="barre-recherchetxt" method="post" action="traitement_recherche-textuelle.php">
+							<form class="barre-recherchetxt" method="GET" action="traitement_recherche(textuelle).php">
 							   <p>
 							 	<label id="label-header" for ="recherche"></label> 
 							 		<input class="input-recherche" type="text" name="recherche" id="recherche" placeholder="Recherche" style="height: 24px "/>
-									<input type="submit" value="">
+									<input name="searchbutton" type="submit" methode="POST" value="">
 							   </p>
 							</form>
 						</div>

@@ -19,17 +19,19 @@
     				
     				<?php include("connexion_bdd.php");
 
-					$annonce = $bdd->query("SELECT * FROM annonce ORDER BY date_ajout DESC LIMIT 12");
+					$annonce = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout DESC LIMIT 12");
+					$annonce = $annonce->fetchAll();
 					foreach ($annonce as $produits) {?>
 					
 					<?php echo'<a href="detail-offre.php?annonce='.$produits['id'].'">' ?>  
 						
-						<div class="box-new" style="background-image:url(images/fraise2.jpg);">
+						<div class="box-new" style="background-image: url(<?php echo $produits['image_fruit']?>);">
 								<div class="paragraph_white-text">
-									<?php echo $produits['NOM']?><br/> 
+									<?php echo $produits['fruit']?><br/> 
 									Prix:<?php echo $produits['prix']?>€<br/> 
 									poids: <?php echo $produits['pdsKg']?>kg<?php echo $produits['pdsG']?>g<br/>
 									quantité: <?php echo $produits['qte']?><br/> 
+									<!--image : <img src="<?php //echo $produits['image_fruit']?>">-->
 									<!--Voir l'offre &gt;-->
 								</div>
 						</div> 
