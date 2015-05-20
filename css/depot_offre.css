@@ -76,7 +76,7 @@ fieldset{
 	position: relative;
 }
 .title2{
-	background-color: 	#FF9900;
+	background-color: 	#ef5350;
 	height: 96px;
 	position: relative;
 }
@@ -219,6 +219,10 @@ background-color:#e7e7e7;}
 }
 .identite-right{width: 50%;
 display: table-cell;}
+.adresse_de_vente{
+	width: 300px;
+	height: 25px;
+}
 
 /* /////////////////////////////////////////////////////////////////////////
 /////////////////////////////// SUBMIT /////////////////////////////////////
@@ -281,23 +285,60 @@ text-align: center;
 \*--------------------------------------------------*/
 
 @media all and (max-width: 960px){
-.wrap {position: relative;
-  		width: 800px;
-  		margin: 0px auto;}
-
+	.wrap {position: relative;
+	  		width: 800px;
+	  		margin: 0px auto;}
+	.QVF{width: 768px;}
+	.detail_offre{width: 768px;}
+	.commentaire{width: 768px;}
+	}
 @media all and (max-width: 800px){
-.wrap {position: relative;
-  		width: 680px;
-  		margin: 0px auto;}
+	.wrap {position: relative;
+	  		width: 680px;
+	  		margin: 0px auto;}
+	.QVF{width: 648px;}
+	.detail_offre{width: 648px;}
+	.commentaire{width: 648px;}
+	}
 
+	
 @media all and (max-width: 680px){
-.wrap {position: relative;
-  		width: 500px;
-  		margin: 0px auto;}
+	.wrap {position: relative;
+	  		width: 500px;
+	  		margin: 0px auto;}
+	.QVF{width: 468px;}
+	.detail_offre{width: 468px;}
+	.commentaire{width: 468px;}
+	#comentaire-bloc{
+	width: 400px;
+}
+h1{
+	text-align: center;
+	margin-left:0; 
+	
+}
+}
 @media all and (max-width: 500px){
-.wrap {position: relative;
-  		width: 400px;
-  		margin: 0px auto;}
+	
+	h1{
+		margin-left: 0;
+		text-align: center}
+	
+	.wrap {position: relative;
+	  		width: 400px;
+	  		margin: 0px auto;
+	  	}
+	
+	.QVF{width: 100%;
+		padding-left: 0;}
+	.detail_offre{width: 100%;padding-left: 0;}
+	.commentaire{width: 100%;padding-left: 0;}
+	#comentaire-bloc{
+		width: 300px;
+		padding-left: 0;
+	}
+}
+
 
 
 

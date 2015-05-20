@@ -173,8 +173,9 @@ padding-top: 60px;
 	   background-color: white;
 	}
 }
-
+/*@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){*/
 @media all  and (max-width: 890px) {
+	
 /*----------------------------------------*\
 				HAMBURGER
 \*----------------------------------------*/
@@ -216,7 +217,8 @@ padding-top: 60px;
 	    bottom: 0;
 	   	background-color: gray;
 	    width:250px;
-		transform: translateX(250px); 
+		transform: translateX(250px);
+		-webkit-transform:translateX(250px);
 	}
 	.menu a {
 		float: none;
@@ -233,6 +235,7 @@ padding-top: 60px;
 	 	padding-bottom: 0;
 	 	margin: 0;
 	 	overflow-x:hidden;
+	 	-webkit-overflow-scrolling-x:hidden;
 	 	font-size: 1em;
 	}
 	.menu-item:hover{
@@ -242,7 +245,8 @@ padding-top: 60px;
 		border-bottom: 1px solid white;	
 	}
 	.with--sidebar .site-pusher {
-	    transform: translateX(-125px); 
+	    transform: translateX(-125px);
+	    -webkit-transform:translateX(-125px);
 	}
 	.with--sidebar {
 	 	overflow: hidden;
@@ -275,6 +279,12 @@ padding-top: 60px;
 	.header-logo{
 			margin-left: 0;
 		}
+}
+
+@media all and (max-width: 320px){
+	.nav-header{
+		margin-right: 10px;
+	}
 }
 
 

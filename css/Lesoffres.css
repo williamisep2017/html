@@ -1,7 +1,7 @@
 /*/////////////////////////////////////////////////////////////////////
 //////////////////////////////     BASE   /////////////////////////////
 ///////////////////////////////////////////////////////////////////////*/
-.wrap {position: relative;
+.wrap-lesoffres{position: relative;
   		width: 960px;
   		margin: 0px auto;}
 
@@ -112,10 +112,53 @@ margin-bottom: 1em;
 //////////////////////////            /!\ RESPONSIVE  /!\        ///////////////////////////////////////
 //////////////////////////                                       ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------------*\
 
+						$RESPONSIVE
 
+\*--------------------------------------------------*/
+@media all and (max-width: 960px){
+	.wrap-lesoffres {width: 800px;}
+	.produit {width: 800px;}
+	.column-right{width: 500px;}
+}
+@media all and (max-width: 800px){
+	.wrap-lesoffres {width: 680px;}
+	.produit {width: 680px;}
+	.column-right{width: 450px;}		
+	}
+	
+@media all and (max-width: 680px){
+	.wrap-lesoffres {width: 500px;}
+	.produit {width: 500px;}
+	.column-right{width: 260px;}	
+}
 
+@media all and (max-width: 500px){
+	.wrap-lesoffres {width: 320px;}
+	.produit {width: 320px;
+			  display: block;
+	}
+	.column-right{width: 320px;
+		display: block;
+		margin-top: 10px;
+		 }
+	.column-left{
+		width: 320px;
+		text-align: center;
+		}
+	.rectangle{
+		width: 320px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+	.box-images{
+		width:252px;
+		height: 145px;
+	}
 
+}
 
 
 

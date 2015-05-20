@@ -19,7 +19,7 @@ if(isset($_POST['formconnexion']))
 			$_SESSION['id'] = $userinfo['id'];
 			$_SESSION['adresse_mail'] = $userinfo['adresse_mail'];
 			
-			header('Location: Index.php');
+			header('Location: Accueil.php');
 			//header("Location : profil.php?id=" . $_SESSION['id']);
 			
 			echo "bonjour : " . $userinfo['adresse_mail'] . $userinfo['id'] ;

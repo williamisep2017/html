@@ -24,8 +24,8 @@
                     </div>
 
                     <div class="col-footer"> <h3 class="col-footer__title">Qui sommes-nous?</h3><br/>
-                        <p class="qui-sommes-nous?"> ProxiPotage : Achat, vente, échange de fruits et légumes entre particulier</h2>
-                <p>Avec Proxipotage acheter, échanger ou vendez des fruits et légumes fraichement rammassés. 
+                        <p class="qui-sommes-nous"> ProxiPotage : Achat, vente, échange de fruits et légumes entre particulier
+                Avec Proxipotage acheter, échanger ou vendez des fruits et légumes fraichement rammassés. 
                 Que ça soit votre propre culture ou celle d'un autre, profiter d'internet pour acheter, échanger ou vendre
                 des produits sains.</p>
 
