@@ -111,9 +111,31 @@ if(isset($_SESSION['id']))
 								</div>
 							</div>
 						</section>
+<!--/////////////////////////////////////////
+/////////    ETAPE 3 :Localisation   ////////
+/////////////////////////////////////////////-->
+<div class="sous-title">
+	<h2> Localisation</h2>
+</div>
+<section class="localisation">
+	<div class="localisation-left"></div>
+			<div class="input-localisation">
+				<fieldset>
+					<p>
+					<label for="localisation"> Lieu où se trouve le bien : </label>
+					<input name="adresse_de_vente" id="adresse_de_vente" type="texte" placeholder="Adresse de localisation" required/>
+					</p>
+				</fieldset>
+			</div>
+	<div class="localisation-right">
+		<div class="helpme">
+			<a href="Aide.php" >?</a>
+		</div>
+	</div>	
+</section>
 
 <!--///////////////////////////
-/////////    ETAPE 3   ////////
+/////////    ETAPE 4   ////////
 ///////////////////////////////-->
 
 					<div class="sous-title">
@@ -148,14 +170,7 @@ if(isset($_SESSION['id']))
 				</div>
 					<section class="identite">
 						<div class="identite-left">
-							<h3>Localisation</h3>
-								<div class="input-localisation">
-									<fieldset>
-									<p>
-										<input name="localisation" class="adresse_de_vente" type="texte" placeholder="Adresse de localisation" required/>
-									</p>
-									</fieldset>
-								</div>
+							
 						</div>
 							<div class="identite-right">
 								<h3>Profil</h3>

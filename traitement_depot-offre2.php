@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start();?>
+
+
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -6,13 +8,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
+<?php
 
-<?php 
 //Connection au serveur de base de donnée
 include("connexion_bdd.php");
-
 // Vérification de la validité des informations
-if(isset($_POST['formpush'])) 
+if(isset($_POST['formpush']))
 	{
 		/*if(isset($_POST['choix_vente']) AND !empty($_POST['choix_vente'])
 			AND isset($_POST['choix_produits']) AND !empty($_POST['choix_produits'])
@@ -33,9 +34,16 @@ if(isset($_POST['formpush']))
 				$qte=mysql_real_escape_string($_POST['qte']);
 				$comment=mysql_real_escape_string($_POST['comment']);
 				$adresse_de_vente=mysql_real_escape_string($_POST['adresse_de_vente']);
+<<<<<<< HEAD
 
 
 					$req = $bdd->prepare('INSERT INTO annonce(adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) VALUES(:adresse_de_vente, :userid, :choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
+=======
+				
+
+					$req = $bdd->prepare('INSERT INTO annonce(adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) 
+						VALUES(:adresse_de_vente, :userid, :choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
+>>>>>>> origin/master
 					$req->execute(array(
 							'adresse_de_vente' => $adresse_de_vente,
 							'userid'=> $_SESSION['id'],

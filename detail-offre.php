@@ -45,10 +45,10 @@
 						Poids approximatif par lot : : <?php echo $donnees['pdsKg'], $donnees['pdsG']; ?>Grammes.<br/>
 						Nombres de lots : <?php echo $donnees['qte']; ?><br/>
 						Prix proposé : <?php echo $donnees['prix']; ?>.<br/>
-						————————————<br/>
+						<br/>
 						Commentaire du vendeur :<br/>
 						<?php echo $donnees['comment']; ?><br/>
-						————————————<br/>
+					<br/>
 						Cordonnée et lieux de vente: <?php echo $donnees['adress_vente']; ?>.
 						</p>
 
