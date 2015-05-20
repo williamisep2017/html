@@ -25,6 +25,7 @@
 
 <?php include("recherche-avance.php"); ?>
 
+
 <!--///////////////////////////////////////////////////////////////////////////////
 //////////////////////////////     Les différentes annonces   /////////////////////
 ///////////////////////////////////////////////////////////////////////////////////-->
@@ -33,20 +34,24 @@
 		<h3 class="title-lesoffres">Les offres</h3>
 	</div>
 	
-	<?php include("connexion_bdd.php"); 
+	<?php include("connexion_bdd.php");
 		$annonce = $bdd->query("SELECT * FROM annonce ORDER BY date_ajout DESC");
 		foreach ($annonce as $produits) {?>
-	
-	<div class="produit">
-			
+	<div class="produit">	
 			<div class="column-left">
 					<img src="images/petitpois.jpg" class="box-images"/>
 					
 					<div class="rectangle">
-						<a href="listederoulante.php"> Acheter</a>
+						<?php
+							$annonce = $bdd->query("SELECT * FROM annonce");?>
+							<?php echo'<a href="interface-mail.php?annonce='.$produits['id'].'">'?>
+							Achat
+							<?php '</a>'; ?>
 					</div>
+
+
 					<div class="rectangle">
-						<a href="Echanger.php"> Echanger</a>
+						<a href="interface-mail_echange.php"> Echanger</a>
 					</div>
 					<div class="rectangle">
 						<a href="Echanger.php"> + de détails</a>
@@ -61,7 +66,7 @@
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>g
 					Quantité : <?php echo $produits['qte']; ?></br>
 					Prix (au killo) : 5 € le killo</br>
-					Lieu : <?php echo $produits['adresse_mail']; ?>
+					Lieu : <?php echo $produits['adresse_de_vente']; ?>
 					<!--Commentaire :</br>
 					<?php echo $produits['comment']; ?>-->
 				</p>	

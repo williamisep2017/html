@@ -1,5 +1,4 @@
 <?php session_start();?>
-
 <!DOCTYPE html>
 
 <html>
@@ -16,7 +15,6 @@
 
     <body>
     	<div class="wrap-new">
-    		
     			<div class="column-new">
     				
     				<?php include("connexion_bdd.php");
