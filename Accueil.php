@@ -31,8 +31,15 @@
 			<div class="header-bottom_bienvenue">
 				<h4 id="header-bottom_title1">Bienvenue sur ProxiPotage,</h4>
 				<h1 id="phrase-accroche">Votre potager à proximité de chez vous !</h1>
-				<p id="phrase-explicative">Achetez, vendez, échanger des fruits et légumes entre particuliers</p>
+				<p id="phrase-explicative">Achetez, vendez, échanger des fruits et légumes entre particuliers</p>	
 <?php include("connexion_bdd.php");?>
+				<section class="clic">
+					<a href="APropos.php">
+						<div class="clic_bouton"> 
+							En savoir plus
+						</div>
+					</a>		
+				</section>
 			</div>
 			<?php
 				if(isset($_SESSION['id']))

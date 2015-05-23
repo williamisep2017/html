@@ -13,11 +13,13 @@
 			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     </head>
 <body>
-<?php 	$userid = $donnees['userid']; ?>
+
+
 <?php $id_annonce = $_GET['annonce']; ?>
+numéros annonce <?php echo $id_annonce; ?>	
 <?php include("connexion_bdd.php"); ?>
 			<?php
-				$reponse = $bdd->query("SELECT * FROM annonce WHERE id='$id_annonce]'");
+				$reponse = $bdd->query("SELECT * FROM annonce WHERE id_annonce='$id_annonce'");
 				echo '<p>Voici les informations concernant cette annonce :</p>';
 				$donnees = $reponse->fetch()
 			?>
@@ -32,7 +34,7 @@
 
 
 			<?php
-				$reponse = $bdd->query("SELECT * FROM utilisateurs Inner Join annonce ON annonce.userid = utilisateurs.id");
+				$reponse = $bdd->query("SELECT * FROM utilisateurs Inner Join annonce ON annonce.userid = utilisateurs.id WHERE annonce.id_annonce='$id_annonce'");
 				echo '<p>Voici les informations concernant cette annonce :</p>';
 				$donnees = $reponse->fetch()
 			?>

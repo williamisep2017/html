@@ -1,4 +1,27 @@
 <?php
 
 	require('vues/Accueil.php');
+	require('vues/Acheter.php');
+	require('vues/Aide_final2.php');
+	require('vues/connexion.php');
+	require('vues/connexion_bdd.php');
+	require('vues/deconnexion.php');
+	require('vues/depot_offre.php');
+	require('vues/footer.php');
+	require('vues/header1-responsive.php');
+	require('vues/header1.php');
+	require('vues/header2.php');
+	require('vues/inscription.php');
+	require('vues/Lesoffres.php');
+	require('vues/listederoulante.php');
+	require('vues/new-offre-container.php');
+	require('vues/new-offre-container2.php');
+	require('vues/Pres_chez_vous.php');
+	require('vues/profil.php');
+	require('vues/recherche-avance.php');
+	require('vues/traitement_connexion.php');
+	require('vues/traitement_connexion2.php');
+	require('vues/traitement_depot-offre.php');
+	require('vues/traitement_depot-offre2.php');
+	require('vues/traitement_inscription.php');
 ?>

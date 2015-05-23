@@ -109,6 +109,29 @@ a:hover {
 	color: #fff;
 	font-family: helvetica,"oxygen" ,helvetica, Arial, sans-serif;
 }
+.clic{
+position: relative;
+margin: 0 auto;
+text-align: center;
+padding-bottom: 3em;
+padding-top: 0.5em;
+margin-top:10px; 
+}
+.clic_bouton{
+	display: inline-block;
+	border: 1px solid white;
+	color: white;
+	border-radius: 8px;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding-bottom: 0.6em;
+	padding-top: 0.6em;
+	width: 280px;
+}
+.clic_bouton:hover{
+	background-color: white;
+	color: #ae8083;
+}
 
 #header-bottom_inscription-txt{
 	position: relative;
@@ -133,30 +156,7 @@ a:hover {
 	padding: 1.5em;
 }
 
-.clic{
-	position: relative;
 
-margin: 0 auto;
-text-align: center;
-background-color: #e9e5e7;
-padding-bottom: 3em;
-padding-top: 0.5em;
-}
-.clic_bouton{
-	display: inline-block;
-	border: 1px solid #0eb377;
-	color:#0eb377;
-	border-radius: 8px;
-	margin-right: 20px;
-	margin-left: 20px;
-	padding-bottom: 0.6em;
-	padding-top: 0.6em;
-	width: 220px;
-}
-.clic_bouton:hover{
-	background-color: rgba(14, 179, 119, 1);
-	color: #e9e5e7;
-}
 
 /* ///////////////////////////////////////////////////////////////////////////////
 //////////////////////////       SECTION CONTENU       ///////////////////////////

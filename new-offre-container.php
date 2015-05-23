@@ -23,10 +23,12 @@
 					$annonce = $annonce->fetchAll();
 					foreach ($annonce as $produits) {?>
 					
-					<?php echo'<a href="detail-offre.php?annonce='.$produits['id'].'">' ?>  
+					<?php echo'<a href="detail-offre.php?annonce='.$produits['id_annonce'].'">' ?>  
 						
 						<div class="box-new" style="background-image: url(<?php echo $produits['image_fruit']?>);">
 								<div class="paragraph_white-text">
+																		<?php echo $produits['id_annonce']?><br/> 
+
 									<?php echo $produits['fruit']?><br/> 
 									Prix:<?php echo $produits['prix']?>€<br/> 
 									poids: <?php echo $produits['pdsKg']?>kg<?php echo $produits['pdsG']?>g<br/>

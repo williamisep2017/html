@@ -31,7 +31,7 @@
 					
 					 $connect = mysqli_connect( "localhost", "root", "root","Proxipotage" ) OR die( "la co a la bdd a ap marcher.<br />\nErreur MySQL '" . "'" );
 					 $articles=$_GET['recherche'];
-					    $sql = "SELECT * FROM annonce WHERE NOM LIKE '%$articles%'"; // stripslashs =(evite les injections SQL)
+					    $sql = "SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit WHERE NOM LIKE '%$articles%' ORDER BY date_ajout DESC"; // stripslashs =(evite les injections SQL)
 					    // Création d'une variable sql qui selectionne toute les infos de la table 'produit' et qui compare le login de la bbd avec le mot taper par l'utilisateur ('%le mot en question%')
 					    $action = mysqli_query($connect,$sql) OR die( "Impossible d'exécuter la requête !" ); // Envoie la requête au serveur MySQL avec en paramètre la bdd et la table
 					    $nbr_resultat = mysqli_num_rows( $action ); // compte le nombre de résultats 
@@ -46,7 +46,7 @@
 			<div class="column-left">
 
 
-					<!--<img src="<?php echo $affichage['image_fruit']?>" class="box-images"/>-->
+					<img src="<?php echo $affichage['image_fruit']?>" class="box-images"/>
 					
 					<div class="rectangle">
 							<?php echo'<a href="interface-mail.php?annonce='.$affichage['id'].'">'?>

@@ -25,7 +25,43 @@ span{
 	color: black;
 	font-size: 1em;
 }
+ul{
+display: inline-table;
+margin-top: 0 auto;
+list-style-type: none;
+}
 
+li{
+	display: inline;
+	font-weight: 700;
+	font-family: 'Oxygen', helvetica, Verdana, sans-serif;
+	color:black;
+	padding: 0;
+	margin: 0;
+	padding: 10px 40px 10px 40px;
+}
+.a-hover{
+padding: 16px;
+}
+.a-hover:hover{
+	color: #ECECEC;
+	background-color: #FF5252;
+	width:60px;
+	height: 120px;
+}
+label{
+margin-top: 10px;
+font-family: "Titillium-Web",arial,sans-serif;
+font-weight: 300;
+}
+#header-bottom-profil{
+padding: 0px;
+margin-top: 10px;
+background: none repeat scroll 0% 0% #ECECEC !important;
+display: block;
+text-align: center;
+vertical-align: center;
+}
 /*///////////////////////////////////////////////////////////////////////////
 //////////////////////////////     title vert   /////////////////////////////
 /////////////////////////////////////////////////////////////////////////////*/
@@ -183,33 +219,9 @@ h3{
 	
 }
 
-ul{
-display: inline-table;
-margin-top: 0 auto;
-padding-left: 0px;
-list-style-type: none
-word-spacing: 100px;
-}
 
-li{
-	display: inline;
-}
 
-#header-bottom-profil{
-margin-bottom: 14px !important;
-padding: 0px;
-margin-top: 10px;
-background: none repeat scroll 0% 0% #ECECEC !important;
-  height: 50px;
-  display: block;
-  text-align: center;
-  word-spacing: 100px;
- vertical-align: center;
-}
 
-/*.page-profil{
-	display: inline-block;
-}*/
 
 .infos-profil{
 	text-align: center;

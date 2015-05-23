@@ -44,8 +44,8 @@
 					
 					<div class="rectangle">
 						<?php
-							$annonce = $bdd->query("SELECT * FROM annonce");?>
-							<?php echo'<a href="interface-mail.php?annonce='.$produits['id'].'">'?>
+							$annonce = $bdd->query("SELECT id_annonce FROM annonce");?>
+							<?php echo'<a href="interface-mail.php?annonce='.$produits['id_annonce'].'">'?>
 							Envoyer un mail au vendeur
 							<?php '</a>'; ?>
 					</div>
@@ -60,6 +60,7 @@
 		<div class="column-right">
 			<h4 class="title-blocright">Ajouté le : <?php echo $produits['date_ajout']; ?></h4>
 				<p class="description-offre">
+
 					Type d'offre : <?php echo $produits['choix_vente']; ?><br/>
 					<?php echo $produits['choix_produits']; ?><br/>
 					<span><?php echo $produits['NOM']; ?> </span><br/>

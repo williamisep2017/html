@@ -34,17 +34,13 @@ if(isset($_POST['formpush']))
 				$qte=mysql_real_escape_string($_POST['qte']);
 				$comment=mysql_real_escape_string($_POST['comment']);
 				$adresse_de_vente=mysql_real_escape_string($_POST['adresse_de_vente']);
-<<<<<<< HEAD
+		
 
+					$req = $bdd->prepare('INSERT INTO annonce(prix, adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) 
+						VALUES(:prix, :adresse_de_vente, :userid, :choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
 
-					$req = $bdd->prepare('INSERT INTO annonce(adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) VALUES(:adresse_de_vente, :userid, :choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
-=======
-				
-
-					$req = $bdd->prepare('INSERT INTO annonce(adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) 
-						VALUES(:adresse_de_vente, :userid, :choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
->>>>>>> origin/master
 					$req->execute(array(
+							'prix' => $prix,
 							'adresse_de_vente' => $adresse_de_vente,
 							'userid'=> $_SESSION['id'],
 			   			 	'choix_vente' => $choix_vente,

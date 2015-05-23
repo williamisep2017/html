@@ -29,14 +29,14 @@
 
 <div class="wrap">
 	<div class ="detail">
-		<h3 class="title-detail">Détails de l'offre N°<?php echo $_GET['annonce']; ?></h3>
+		<h3 class="title-detail">Détails de l'offre N°<?php echo $id_annonce; ?></h3>
 	</div>
 
 
 		<div class="liste-detail">	
 			<?php include("connexion_bdd.php"); ?>
 <?php
-				$reponse = $bdd->query("SELECT * FROM annonce WHERE id='$id_annonce]'");
+				$reponse = $bdd->query("SELECT * FROM annonce WHERE id_annonce='$id_annonce]'");
 				echo '<p>Voici les informations concernant cette annonce :</p>';
 				while ($donnees = $reponse->fetch())
 					{?>
@@ -49,7 +49,7 @@
 						Commentaire du vendeur :<br/>
 						<?php echo $donnees['comment']; ?><br/>
 					<br/>
-						Cordonnée et lieux de vente: <?php echo $donnees['adress_vente']; ?>.
+						Cordonnée et lieux de vente: <?php echo $donnees['adresse_de_vente']; ?>.
 						</p>
 
 					<?php } ?>

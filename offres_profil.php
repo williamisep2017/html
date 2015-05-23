@@ -26,16 +26,14 @@
 //////////////////////////////     Les différentes annonces   /////////////////////
 ///////////////////////////////////////////////////////////////////////////////////-->
 <div class="wrap-profil">
-<section id="header-bottom-profil">
-        <section id="containers"> 
-            <ul id="secondmenu" class="list-tabs">
-                <li><a href="profil.php">Profil</a></li>
-                <li><a href="modification_profil.php">Modifier</a></li>
-                <li><a href="#">Panier</a></li>
-                <li><a href="offres_profil.php">Offres</a></li>
-            </ul>
-        </section>
-    </section>
+       <div id="header-bottom-profil">
+                            <ul id="secondmenu" class="list-tabs">
+                                <li><a class="a-hover" href="profil.php">Profil</a></li>
+                                <li><a class="a-hover" href="modification_profil.php">Modifier</a></li>
+                                <li><a class="a-hover" href="#">Panier</a></li>
+                                <li><a class="a-hover" href="offres_profil.php">Offres</a></li>
+                            </ul>
+                    </div>
 </div>
 <div class="wrap-lesoffres">
     <div class ="offres">
