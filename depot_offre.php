@@ -76,8 +76,6 @@ if(isset($_SESSION['id']))
 											<input type="radio" name="choix_produits" value="Légumes" required> légume </br>
 											<label for="listefruit"> Fruits : </label>
 											<select name="NOM" style="width:200px">
-												
-
 
 												<?php
 												include("connexion_bdd.php");

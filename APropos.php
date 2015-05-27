@@ -32,17 +32,17 @@
             <section class="partie2">
                 <div class="all-horloge">
                     <div class="horloge"> 1</div><br/>
-                        <h4>Trouver une offre</h4>
+                        <h4>Trouver une offre<br></h4>
                 </div>
                 <div class="all-horloge">
                     <div class="horloge"> 2</div><br/>
-                        <h4>Contacter le vendeur</h4>
+                        <h4>Contacter le vendeur<br/></h4>
                 </div>
                 <div class="all-horloge">
                     <div class="horloge"> 3</div><br/>
                         <h4>Récuperer le produit en main propre</h4>
                 </div>
-                             </section>
+            </section>
                              
             <p class="explain">Pour trouver une offres, Vous pouvez parcourir les dernières offres en ligne dans la page d'accueil. 
                 Vous pouvez aussi trouver toutes les offres dans l'onglet “Les offres“. 
@@ -54,7 +54,7 @@
                 <br/>
                 <br/>
              <h1>Comment déposer une annonce ?</h2>
-          <section class="partie2">
+          <section class="partie4">
                 <p class="explain">
                     Pour déposer une annonce vous devez au préalapble être inscrit et connecter sur le site.
                     Ensuite dirigiez-vous dans la page “déposer une annonce“ et remplissez les champs demandés.<br/> 

@@ -15,13 +15,13 @@ include("connexion_bdd.php");
 // Vérification de la validité des informations
 if(isset($_POST['formpush']))
 	{
-		/*if(isset($_POST['choix_vente']) AND !empty($_POST['choix_vente'])
+		if(isset($_POST['choix_vente']) AND !empty($_POST['choix_vente'])
 			AND isset($_POST['choix_produits']) AND !empty($_POST['choix_produits'])
 			AND isset($_POST['NOM']) AND !empty($_POST['NOM'])
 			AND isset($_POST['pdsKg']) AND !empty($_POST['pdsKg'])
 			AND isset($_POST['pdsG']) AND !empty($_POST['pdsG'])
 			AND isset($_POST['qte']) AND !empty($_POST['qte']))
-		{*/
+		{
 			
 			
 
@@ -34,6 +34,7 @@ if(isset($_POST['formpush']))
 				$qte=mysql_real_escape_string($_POST['qte']);
 				$comment=mysql_real_escape_string($_POST['comment']);
 				$adresse_de_vente=mysql_real_escape_string($_POST['adresse_de_vente']);
+				$prix=mysql_real_escape_string($_POST['prix']);
 		
 
 					$req = $bdd->prepare('INSERT INTO annonce(prix, adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) 
@@ -54,11 +55,11 @@ if(isset($_POST['formpush']))
 					echo 'Votre annonce a été enrigestrée';
 					//include("index.php");
 			}
-		/*			
+				
 		else{
 					$erreur='Tous les champs sont obligatoire.';
 			}
-		}*/
+		}
 	
 	
 			?>

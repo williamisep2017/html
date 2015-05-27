@@ -1,5 +1,5 @@
 .wrap{
-	width: 960px;
+	width: 85%;
 	margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@ h4{margin-top: 0px;
 	font-family: "oxygen" ,helvetica, Arial, sans-serif;
 	color: black;
 	font-weight: 700;
-	font-size: 1em;
+	font-size: 90%;
 }
 
 .partie1{
@@ -52,7 +52,7 @@ padding: 20px;
 }
 .all-horloge{
 	display: inline-block;
-	width: 300px;
+	width: 30%;
 }
 .horloge{
 	display: inline-block;
@@ -69,17 +69,27 @@ padding: 20px;
 	color: #F4F4F7;
 	margin: 0 10% 0 10%;
 }
-/*;
-.horloge:hover{
-	border: 5px solid green;
-	width: 75px;
-	height: 75px;
-	line-height: 75px;
-	border-radius: 100%;
-	background-color: red;
-	;}
-*/
 
+@media all and (max-width: 1050px){
+	h4{
+		font-weight: 700;
+	font-size: 70%;
+	}
+}
 
+@media all and (max-width: 660px){
+	.horloge{
+		display: none;
+	}
+	.all-horloge{
+		display: none;
+		
+	}
+	.partie2{
+		height: 0px;
+		
+	}
+
+}
 
 
