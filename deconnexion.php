@@ -9,6 +9,6 @@
   // Destruction du tableau de session
   unset($_SESSION);
 
-  include ('index.php');
+  include ('Accueil.php');
 
 ?>

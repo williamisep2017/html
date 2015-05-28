@@ -123,8 +123,21 @@ if(isset($_SESSION['id']))
 			<div class="input-localisation">
 				<fieldset>
 					<p>
-					<label for="localisation"> Lieu où se trouve le bien : </label>
-					<input name="adresse_de_vente" id="adresse_de_vente" type="texte" placeholder="Adresse de localisation" required/>
+					<select name="REGIONS" style="width:200px">
+
+												<?php
+												include("connexion_bdd.php");
+												 
+												 	$reponse = $bdd->query('SELECT * FROM regions');
+												 	foreach ($reponse as $donnees)	
+														{
+												?>
+													<option value="<?php echo $donnees['nom_regions'] ?>"><?php echo $donnees['nom_regions'] ?></option>
+												   <?php
+												   		}
+												   ?>
+												</select> </br></br> 
+					<!-- <input name="adresse_de_vente" id="adresse_de_vente" type="texte" placeholder="Adresse de localisation" required/>-->
 					</p>
 				</fieldset>
 			</div>
