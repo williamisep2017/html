@@ -24,14 +24,12 @@
                             <a href="Aide.php" class="footer-txt">Aide</a><br/>
                            
                         
-                            <?php
-                            echo  $_SESSION['admin'];
+                            <?php                       
                            
                             if ($_SESSION['admin']==1){
-                              ?><a href="administrateur.php" class="footer-txt">Interface administrateur</a>
+                              ?><a href="administrateur.php" class="footer-txt" style="color:red;">Interface administrateur</a>
                               <?php
                             }
-
                             ?>
                     </div>
 

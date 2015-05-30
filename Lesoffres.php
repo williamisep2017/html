@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <?php session_start(); ?>
+<!DOCTYPE html>
 
 <html>
  <head>
@@ -50,7 +50,7 @@
 							<?php '</a>'; ?>
 					</div>
 					<div class="rectangle">
-						<a href="interface-mail_echange.php"> Numéros de téléphone</a>
+						<a href="interface-mail_echange.php"> Téléphone — <?php echo $produits['num_tel']; ?></a>
 					</div>
 					<div class="rectangle">
 						<a href="Echanger.php"> + de détails</a>
@@ -61,13 +61,13 @@
 			<h4 class="title-blocright">Ajouté le : <?php echo $produits['date_ajout']; ?></h4>
 				<p class="description-offre">
 
-					Type d'offre : <?php echo $produits['choix_vente']; ?><br/>
+					<span>Type d'offre : <?php echo $produits['choix_vente']; ?></span><br/>
 					<?php echo $produits['choix_produits']; ?><br/>
 					<span><?php echo $produits['NOM']; ?> </span><br/>
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>g
 					Quantité : <?php echo $produits['qte']; ?><br/>
 					Prix (au killo) : 5 € le killo<br/>
-					Lieu : <?php echo $produits['adresse_de_vente']; ?><br/>
+					Lieu : <?php echo $produits['REGIONS'];?> — <?php echo $produits['VILLES'];   ?><br/>
 					Commentaire :</br>
 					<?php echo $produits['comment']; ?>
 
@@ -91,6 +91,16 @@
 <script type="text/javascript" src="js/responsive_header.js"></script>
 </div> <!-- site pusher-->
 </div> <!-- site container-->
+
+
+
+
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////     Les différentes annonces après une recherche   /////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
 
 	</body>
 </html>
