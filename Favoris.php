@@ -26,7 +26,6 @@
 //////////////////////////////     Les différentes annonces   /////////////////////
 ///////////////////////////////////////////////////////////////////////////////////-->
 <div class="wrap-profil">
-
 <section id="header-bottom-profil">
         <section id="containers"> 
             <ul id="secondmenu" class="list-tabs">
@@ -36,25 +35,23 @@
             </ul>
         </section>
     </section>
-
 </div>
 <div class="wrap-lesoffres">
     <div class ="offres">
-        <h3 class="title-lesoffres">Mes offres</h3>
+        <h3 class="title-lesoffres">Mes favoris</h3>
     </div>
     
-    <?php include("connexion_bdd.php"); 
-    
-        $reponse = $bdd->query("SELECT * FROM annonce INNER JOIN utilisateurs  AND fruits ON utilisateurs.id = annonce.userid AND annonce.NOM = fruits.fruit WHERE id= '".$_SESSION['id']."'");
-        //$reponse = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout ");
+    <?php 
+    if ($_GET['formfavoris']) {
+     include("connexion_bdd.php"); 
+        $reponse = $bdd->query("SELECT * FROM annonce WHERE id_annonce= '".$_GET['id_annonce']."' ORDER BY date_ajout DESC");
         foreach ($reponse as $liste) {          
             ?>
         
     <div class="produit">
             
             <div class="column-left">
-               
-                    <img src="<?php echo $$lliste['image_fruit']?>" class="box-images"/>
+                    <img src="images/petitpois.jpg" class="box-images"/>
                     <div class="rectangle">
                         <a href="Echanger.php"> + de détails</a>
                     </div>
@@ -69,16 +66,18 @@
                     Quantité : <?php echo $liste['qte']; ?></br>
                     Prix (au killo) : 5 € le killo</br>
                     Lieu : <?php echo $liste['adresse']; ?>  
-                    id_annonce : <?php echo $liste['id_annonce']; ?></br>
-                    commentaire du vendeur : <?php echo $liste['comment']; ?>
-                       
+                    id_annonce : <?php echo $liste['id_annonce']; ?>
                     <div class="rectangle1">
-                        <a href="supprimer_annonce.php?id_annonce=<?php echo $liste['id_annonce'];?>"> Supprimer</a>
-                    </div>   
-                </p>   
+                        <?php  $_SESSION['id_annonce']= $liste['id_annonce']; ?>
+                        <a href="supprimer_annonce.php"> Supprimer</a>
+                    </div>
+                    
+                </p>    
         </div>  
     </div>
-<?php } $reponse->closeCursor();?>
+<?php } $reponse->closeCursor();
+    }
+   ?>
 </div>  <!-- fin du wrap -->
 
 

@@ -48,7 +48,6 @@
 				<div id='header-bottom_inscription-txt1'>
 				<a href='deconnexion.php'>Se déconnecter  | </a>
 				<a href='profil.php'>Mon compte</a><br/>
-				<a href='profil.php'>Mon panier()</a>
 				</div>
 			<?php 
 				}

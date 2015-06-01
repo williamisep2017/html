@@ -157,7 +157,21 @@ margin-bottom: 1em;
 		width:252px;
 		height: 145px;
 	}
+	.bouton_favoris{
+	background-color: #0eb377; /*#009900;*/
+	width:290px;
+	height: 50px;
+	margin-top: 20px;
+	border-radius: 10px;
+	border-style: solid;
+	border:1px;
+	cursor: pointer;
+	font-family: helvetica;
+	font-weight: lighter;
+	font-size: 100%;
+	color:white;
 
+}
 }
 
 

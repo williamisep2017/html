@@ -12,6 +12,7 @@ if(isset($_POST['formpush']))
 			AND isset($_POST['pdsG']) AND !empty($_POST['pdsG'])
 			AND isset($_POST['REGIONS']) AND !empty($_POST['REGIONS'])
 			AND isset($_POST['VILLES']) AND !empty($_POST['VILLES'])
+			AND isset($_POST['prix']) AND !empty($_POST['prix'])
 			AND isset($_POST['qte']) AND !empty($_POST['qte']))
 		{
 			

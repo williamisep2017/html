@@ -28,7 +28,8 @@ if(isset($_POST['searchpush']))
 	
 	<?php
 		$annonce = $bdd->query("SELECT * FROM annonce  WHERE NOM='".$_POST['NOM']."'");
-		echo $_POST['NOM']. $_POST['REGIONS'].$_POST['VILLES'];
+		$var="SELECT * FROM annonce  WHERE NOM='".$_POST['NOM']."'";
+		echo $var;
 		
 		$annonce = $annonce->fetchAll();
 		foreach ($annonce as $produits) {?>
