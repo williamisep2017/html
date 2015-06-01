@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,12 +16,12 @@
             <div class="tabcenter-footer">
                 <tr>
                     <div class="col-footer"> <h3 class="col-footer__title">Plan du site</h3><br/>
-                            <a href="index.php" class="footer-txt">Accueil</a><br/>
-                            <a href="index.php" class="footer-txt">Qui sommes-nous ?</a><br/>
+                            <a href="accueil.php" class="footer-txt">Accueil</a><br/>
+                            <a href="Apropos.php" class="footer-txt">Qui sommes-nous ?</a><br/>
                             <a href="Lesoffres.php" class="footer-txt">Les offres</a><br/>
-                            <a href="depot-offre.php" class="footer-txt">Déposer une offre</a><br/>
+                            <a href="depot_offre.php" class="footer-txt">Déposer une offre</a><br/>
                             <a href="index.php" class="footer-txt">Forum</a><br/>
-                            <a href="Aide.php" class="footer-txt">Aide</a><br/>
+                            <a href="Aide_final2.php" class="footer-txt">Aide</a><br/>
                            
                         
                             <?php                       
@@ -31,9 +31,7 @@
                               ?><a href="administrateur.php" class="footer-txt" style="color:red;">Interface administrateur</a>
                               <?php
 
-                              else{
-                                
-                              }
+                              
                             }
                             ?>
                     </div>

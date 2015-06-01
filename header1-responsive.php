@@ -1,6 +1,6 @@
-<?php session_start(); ?>
+
 <?php
-$connect = mysqli_connect( "localhost", "root", "root","Proxipotage" ) OR die( "la co a la bdd a ap marcher.<br />\nErreur MySQL '" . "'" ); // Connection à la bdd
+$connect = mysqli_connect( "localhost", "root", "","Proxipotage" ) OR die( "la co a la bdd a ap marcher.<br />\nErreur MySQL '" . "'" ); // Connection à la bdd
 ?>
 <?php
  if( isset( $_GET["recherche"] ) ) $recherche = $_GET["recherche"]; // Vérification d'existence de recherche (1=oui, 0=non)
