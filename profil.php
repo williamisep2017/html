@@ -23,18 +23,18 @@
 <!--////////////////////////////////////////////////////////////////
 //////////////////////////////     Content  ////////////////////////
 ////////////////////////////////////////////////////////////////////-->
-                <div class="wrap-profil">
-                    <div id="header-bottom-profil">
+
+  <div class="wrap-profil">
+                       <div id="header-bottom-profil">
                             <ul id="secondmenu" class="list-tabs">
                                 <li><a class="a-hover" href="profil.php">Profil</a></li>
                                 <li><a class="a-hover" href="modification_profil.php">Modifier</a></li>
-                                <li><a class="a-hover" href="#">Panier</a></li>
                                 <li><a class="a-hover" href="offres_profil.php">Offres</a></li>
                             </ul>
                     </div>
-                <div class="main-title">
-                <h1 class="title-profil">Mon profil</h1>
-                </div>
+                            <div class="main-title">
+                                <h1 class="title-profil">Mon profil</h1>
+                            </div>
  
                 <div class="page-profil">
                     <div class="infos-profil">

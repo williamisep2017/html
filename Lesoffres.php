@@ -38,6 +38,7 @@
 		$annonce = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout DESC");
 		$annonce = $annonce->fetchAll();
 		foreach ($annonce as $produits) {?>
+
 	<div class="produit">	
 			<div class="column-left">
 					<img src="<?php echo $produits['image_fruit']?>" class="box-images"/>
@@ -61,16 +62,19 @@
 			<h4 class="title-blocright">Ajouté le : <?php echo $produits['date_ajout']; ?></h4>
 				<p class="description-offre">
 
+
 					Type d'offre : <?php echo $produits['choix_vente']; ?><br/>
 					<?php echo $produits['choix_produits']; ?><br/>
 					<span><?php echo $produits['NOM']; ?> </span><br/>
-					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>g
+					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>
 					Quantité : <?php echo $produits['qte']; ?><br/>
 					Prix (au killo) : 5 € le killo<br/>
 					Lieu : <?php echo $produits['adresse_de_vente']; ?><br/>
 					Commentaire :</br>
 					<?php echo $produits['comment']; ?>
 
+	
+				
 				</p>	
 		</div>	
 	</div>

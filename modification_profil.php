@@ -26,12 +26,12 @@
 //////////////////////////////     Content  ////////////////////////
 ////////////////////////////////////////////////////////////////////-->
 
+
             <div class="wrap-profil">
                        <div id="header-bottom-profil">
                             <ul id="secondmenu" class="list-tabs">
                                 <li><a class="a-hover" href="profil.php">Profil</a></li>
                                 <li><a class="a-hover" href="modification_profil.php">Modifier</a></li>
-                                <li><a class="a-hover" href="#">Panier</a></li>
                                 <li><a class="a-hover" href="offres_profil.php">Offres</a></li>
                             </ul>
                     </div>
@@ -47,6 +47,9 @@
 
                 <section class="modif_global">
                                 <div class="modif1">                           
+
+                                
+
                                     <label>Pseudo : </label><input class="pseudo_profil" type="text" name="pseudo" onblur="verifPseudo(this)" value=<?php echo $_SESSION['pseudo']?>>
                                     <label>Date de naissance : </label><input type="date" name="dte_de_naissance" value= <?php echo $_SESSION['pseudo']?>>
                             </div>  

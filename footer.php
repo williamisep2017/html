@@ -25,7 +25,6 @@
                            
                         
                             <?php
-                            echo  $_SESSION['admin'];
                            
                             if ($_SESSION['admin']==1){
                               ?><a href="administrateur.php" class="footer-txt">Interface administrateur</a>
