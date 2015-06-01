@@ -17,6 +17,7 @@ if(isset($_POST['formconnexion']))
 		{
 			$userinfo = $requser->fetch();
 			$_SESSION['dte_de_naissance'] = $userinfo['dte_de_naissance'];
+			$_SESSION['admin'] = $userinfo['admin'];
 			$_SESSION['pseudo'] = $userinfo['pseudo'];
 			$_SESSION['id'] = $userinfo['id'];
 			$_SESSION['adresse_mail'] = $userinfo['adresse_mail'];

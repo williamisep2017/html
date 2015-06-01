@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +21,21 @@
                             <a href="Lesoffres.php" class="footer-txt">Les offres</a><br/>
                             <a href="depot-offre.php" class="footer-txt">Déposer une offre</a><br/>
                             <a href="index.php" class="footer-txt">Forum</a><br/>
-                            <a href="Aide.php" class="footer-txt">Aide</a>
+                            <a href="Aide.php" class="footer-txt">Aide</a><br/>
+                           
+                        
+                            <?php                       
+
+                           
+                            if ($_SESSION['admin']==1){
+                              ?><a href="administrateur.php" class="footer-txt" style="color:red;">Interface administrateur</a>
+                              <?php
+
+                              else{
+                                
+                              }
+                            }
+                            ?>
                     </div>
 
                     <div class="col-footer"> <h3 class="col-footer__title">Qui sommes-nous?</h3><br/>

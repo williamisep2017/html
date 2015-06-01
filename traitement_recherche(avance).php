@@ -13,32 +13,27 @@
    </head>
    
     <body>
- 
-<div class="site-container"> <!--Utile pour le responsive du header seulement-->
-<div class="site-pusher"><!--Utile pour le responsive du header seulement-->
+<?php
+include("connexion_bdd.php");
 
-<?php include("header1-responsive.php"); ?>
+if(isset($_POST['searchpush']))
+	{
+		
 
-<div class="site-content"><!--Utile pour le responsive du header seulement-->
-	<div class="container"><!--Utile pour le responsive du header seulement-->
-
-
-<?php include("recherche-avance.php"); ?>
-
-
-<!--///////////////////////////////////////////////////////////////////////////////
-//////////////////////////////     Les différentes annonces   /////////////////////
-///////////////////////////////////////////////////////////////////////////////////-->
-<div class="wrap-lesoffres">
+		?>
+		<div class="wrap-lesoffres">
 	<div class ="offres">
 		<h3 class="title-lesoffres">Les offres</h3>
 	</div>
 	
-	<?php include("connexion_bdd.php");
-		$annonce = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout DESC");
+	<?php
+		$annonce = $bdd->query("SELECT * FROM annonce  WHERE NOM='".$_POST['NOM']."'");
+		$var="SELECT * FROM annonce  WHERE NOM='".$_POST['NOM']."'";
+		echo $var;
+		
 		$annonce = $annonce->fetchAll();
 		foreach ($annonce as $produits) {?>
-
+		
 	<div class="produit">	
 			<div class="column-left">
 					<img src="<?php echo $produits['image_fruit']?>" class="box-images"/>
@@ -65,15 +60,13 @@
 					<span>Type d'offre : <?php echo $produits['choix_vente']; ?></span><br/>
 					<?php echo $produits['choix_produits']; ?><br/>
 					<span><?php echo $produits['NOM']; ?> </span><br/>
-					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>
+					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>g
 					Quantité : <?php echo $produits['qte']; ?><br/>
 					Prix (au killo) : 5 € le killo<br/>
 					Lieu : <?php echo $produits['REGIONS'];?> — <?php echo $produits['VILLES'];   ?><br/>
 					Commentaire :</br>
 					<?php echo $produits['comment']; ?>
 
-	
-				
 				</p>	
 		</div>	
 	</div>
@@ -81,29 +74,15 @@
 </div>  <!-- fin du wrap -->
 
 
-<?php include("footer.php");?>
-
-</div><!-- container-->
-</div> <!-- site content-->
-
-<div class="site-cache" id="site-cache"></div>
+<?php
 
 
+			
+	}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="js/responsive_header.js"></script>
-</div> <!-- site pusher-->
-</div> <!-- site container-->
+?>
 
 
 
-
-
-
-<!--///////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////     Les différentes annonces après une recherche   /////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-
-	</body>
+</body>
 </html>

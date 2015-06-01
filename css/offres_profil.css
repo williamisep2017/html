@@ -117,6 +117,18 @@ margin-bottom: 1em;
  font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
  color: white;
 }
+.rectangle1 {
+  height: 25px;
+  width: 210px;
+  text-align : center;
+  line-height:25px;
+  background-color: #FF5252;
+  border-radius: 5px;
+  margin-right: 0px;
+  margin-top: 5px;
+ font-family: "Titillium Web", helvetica, Verdana, Arial, sans-serif;
+ color: white;
+}
 
 .column-right {
  background-color: #e7e7e7;

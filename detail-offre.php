@@ -37,11 +37,11 @@
 			<?php include("connexion_bdd.php"); ?>
 <?php
 				$reponse = $bdd->query("SELECT * FROM annonce WHERE id_annonce='$id_annonce]'");
-				echo '<p>Voici les informations concernant cette annonce :</p>';
+			
 				while ($donnees = $reponse->fetch())
 					{?>
-						<p>Le vendeur propose de <?php echo $donnees['choix_vente']; ?> 
-							des <?php echo $donnees['NOM']; ?>s (<?php echo $donnees['choix_produits']; ?>).
+						<p class="detail-offre-texte">Le vendeur propose de <?php echo $donnees['choix_vente']; ?> 
+							des <?php echo $donnees['NOM']; ?>s (<?php echo $donnees['choix_produits']; ?>).<br/>
 						Poids approximatif par lot : : <?php echo $donnees['pdsKg'], $donnees['pdsG']; ?>Grammes.<br/>
 						Nombres de lots : <?php echo $donnees['qte']; ?><br/>
 						Prix proposé : <?php echo $donnees['prix']; ?>.<br/>

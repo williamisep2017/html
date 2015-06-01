@@ -2,7 +2,7 @@
 //////////////////////////////     BASE   /////////////////////////////
 ///////////////////////////////////////////////////////////////////////*/
 .wrap {position: relative;
-  		width: 960px;
+  		width: 75%;
   		margin: 0px auto;}
 
 a{  color : inherit;
@@ -13,17 +13,19 @@ h4{
 	padding: 0;
 }
 body{
+font-family: "oxygen" ,helvetica, Arial, sans-serif;
+    color:  #616972;
+    font-weight: 300;
  	margin: 0;
 	padding: 0;
-	margin-bottom: 0px;
-	background-color: white ;
-	/*background-image:url(images/panier_fruits_legumes.jpg);*/
- 	background-repeat:no-repeat;
- 	background-position: center top;
- 	overflow-X:hidden	
+	margin-bottom: 80px;
+	background-color: #F4F4F7;
+ 	overflow-X:hidden;
  }
 
-
+.detail-offre-texte{
+	color: black;
+}
 
 
  .detail{
@@ -42,4 +44,15 @@ body{
 }
 .liste-detail{
 	background-color: #eeeeee;
+}
+
+@media all and (max-width: 585px){
+.title-detail{
+	font-size: 1.2em;
+	line-height: 40px;
+	margin-left: 0;
+}
+.detail{
+		height: 40px;
+}
 }

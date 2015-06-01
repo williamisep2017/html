@@ -40,6 +40,13 @@ if(isset($_SESSION['id']))
 		<div class ="title">
 				<h1>Déposer une annonce</h1>
 		</div>
+		<div style="color:red; font-family:arial; font-size:20px;">
+		<?php 
+		if (isset($_GET['msg']))
+		{
+			echo $_GET['msg'];
+		}
+		?></div>
 					<div class="sous-title">
 						<h2> Que souhaitez-vous faire?</h2>
 					</div>
@@ -76,9 +83,6 @@ if(isset($_SESSION['id']))
 											<input type="radio" name="choix_produits" value="Légumes" required> légume </br>
 											<label for="listefruit"> Fruits : </label>
 											<select name="NOM" style="width:200px">
-												
-
-
 												<?php
 												include("connexion_bdd.php");
 												 
@@ -125,8 +129,39 @@ if(isset($_SESSION['id']))
 			<div class="input-localisation">
 				<fieldset>
 					<p>
-					<label for="localisation"> Lieu où se trouve le bien : </label>
-					<input name="adresse_de_vente" id="adresse_de_vente" type="texte" placeholder="Adresse de localisation" required/>
+						<label for="REGIONS"> Régions : </label> 
+					<select name="REGIONS" style="width:200px">
+
+												<?php
+												include("connexion_bdd.php");
+												 	?><optgroup label="//Régions"> <?php
+												 	$reponse = $bdd->query('SELECT * FROM regions');
+												 	foreach ($reponse as $donnees)	
+														{
+												?>	
+													<option value="<?php echo $donnees['nom_regions'] ?>"><?php echo $donnees['nom_regions'] ?></option></optgroup>
+												   <?php
+												   		}
+												   ?>
+					</select> </br></br>
+					<label for="VILLES"> Villes : </label> 
+					<select name="VILLES" style="width:200px">
+
+												<?php
+												include("connexion_bdd.php");
+												 	?><optgroup label="//Villes"> <?php
+												 	$reponse = $bdd->query('SELECT * FROM villes');
+												 	foreach ($reponse as $donnees)	
+														{
+												?>	
+													<option value="<?php echo $donnees['nom_villes'] ?>"><?php echo $donnees['nom_villes'] ?></option></optgroup>
+												   <?php
+												   		}
+												   ?>
+					</select> </br></br>
+
+											
+					<!-- <input name="adresse_de_vente" id="adresse_de_vente" type="texte" placeholder="Adresse de localisation" required/>-->
 					</p>
 				</fieldset>
 			</div>
@@ -179,6 +214,7 @@ if(isset($_SESSION['id']))
 								<h3>Profil</h3>
 								<p>
     							Adresse mail  : <?php echo $_SESSION['adresse_mail']; ?><br />
+    							Téléphone  — <?php echo $_SESSION['num_tel']; ?><br />
     							identifiant d'utilisateur = <?php echo $_SESSION['id']; ?> <br />
     							</p>
 

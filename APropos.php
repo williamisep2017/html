@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable-x=no" />
         <title>Proxipotage</title>
         <link rel = "stylesheet" href="css/APropos.css" />
         <link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
