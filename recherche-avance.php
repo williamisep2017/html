@@ -20,7 +20,7 @@
 					<div class="liste">
 						<div class="liste-left">
 							<h2 class="title-bis"> Produit</h2>
-				    			<select name="fruit" style="width:200px">
+				    			<select name="NOM" style="width:200px">
 				    				<option selected>Fruits
 												<?php
 													include("connexion_bdd.php");	 
@@ -71,7 +71,6 @@
 			</form>
 	</div>
 </div>
-
 </body>
 </html>
 

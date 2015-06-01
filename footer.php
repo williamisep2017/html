@@ -29,6 +29,10 @@
                             if ($_SESSION['admin']==1){
                               ?><a href="administrateur.php" class="footer-txt" style="color:red;">Interface administrateur</a>
                               <?php
+
+                              else{
+                                
+                              }
                             }
                             ?>
                     </div>

@@ -49,7 +49,6 @@ if(isset($_POST['formpush']))
 			    			'comment' => $comment));
 
 					header('Location: depot_offre.php?msg=Votre annonce a été pris en compte');
-					//include("index.php");
 			}
 				
 		else{

@@ -1,17 +1,24 @@
-<?php session_start();?>
+<?php session_start(); ?>
+<!DOCTYPE html>
 
-
+<html>
+ <head>
+        <meta charset="utf-8" />
+        <title>Proxipotage</title>
+		<link rel = "stylesheet" href="css/Lesoffres.css" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/png" href="favicon.png" />
+			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
+   </head>
+   
+    <body>
 <?php
 include("connexion_bdd.php");
 
 if(isset($_POST['searchpush']))
 	{
-		$REGIONS=($_POST['REGIONS']);
-		$VILLES=($_POST['VILLES']);
-		$fruits=($_POST['fruit']);
-
-
-
+		
 
 		?>
 		<div class="wrap-lesoffres">
@@ -20,9 +27,12 @@ if(isset($_POST['searchpush']))
 	</div>
 	
 	<?php
-		$annonce = $bdd->query("SELECT * FROM annonce  WHERE fruit='figue' AND REGIONS='Alsace' AND VILLES='Paris' ORDER BY date_ajout DESC");
+		$annonce = $bdd->query("SELECT * FROM annonce  WHERE NOM='".$_POST['NOM']."'");
+		echo $_POST['NOM']. $_POST['REGIONS'].$_POST['VILLES'];
+		
 		$annonce = $annonce->fetchAll();
 		foreach ($annonce as $produits) {?>
+		
 	<div class="produit">	
 			<div class="column-left">
 					<img src="<?php echo $produits['image_fruit']?>" class="box-images"/>
@@ -70,3 +80,8 @@ if(isset($_POST['searchpush']))
 	}
 
 ?>
+
+
+
+</body>
+</html>

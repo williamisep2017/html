@@ -72,9 +72,7 @@
 				<textarea class = "commentaire"name="content_mail"></textarea><br/>
 				<input class="bouton_envoie" type="submit" name="bouton_envoie" color="blue" value="Envoyer mail"> 
 			</form>
-			<br/>
 			
-
 				<p><a href="Accueil.php">Retour à la page d'accueil</a> </p>
 
 
