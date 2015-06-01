@@ -6,6 +6,7 @@
         <meta charset="utf-8" />
         <title>Proxipotage</title>
 		<link rel = "stylesheet" href="css/header1.css" />
+		<link rel = "stylesheet" href="css/footer.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />

@@ -32,8 +32,7 @@
 									Prix:<?php echo $produits['prix']?>€<br/> 
 									poids: <?php echo $produits['pdsKg']?>kg<?php echo $produits['pdsG']?>g<br/>
 									quantité: <?php echo $produits['qte']?><br/> 
-									<!--image : <img src="<?php //echo $produits['image_fruit']?>">-->
-									<!--Voir l'offre &gt;-->
+									
 								</div>
 						</div> 
 					
@@ -44,7 +43,3 @@
    
     </body>
 </html>
-
-
-<!--<div style="background-image: url('<?php //echo $query['background']; ?>');>
-	style="background-image: url('RaccourcieVersDossierImg/<?php //echo $donneeImg['bg_image']; ?>')-->

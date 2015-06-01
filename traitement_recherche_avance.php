@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-
 <html>
  <head>
         <meta charset="utf-8" />
@@ -13,24 +12,24 @@
    </head>
    
     <body>
+
 <?php
 include("connexion_bdd.php");
 
-if(isset($_POST['searchpush']))
-	{
-		
-
+if(isset($_GET['searchpush'])){
 		?>
 		<div class="wrap-lesoffres">
 	<div class ="offres">
-		<h3 class="title-lesoffres">Les offres</h3>
+		<h3 class="title-lesoffres">Les offres correspondantes à votre recherche</h3>
 	</div>
 	
 	<?php
-		$annonce = $bdd->query("SELECT * FROM annonce  WHERE NOM='".$_POST['NOM']."'");
-		$var="SELECT * FROM annonce  WHERE NOM='".$_POST['NOM']."'";
-		echo $var;
-		
+		$annonce = $bdd->query("   SELECT * FROM annonce  INNER JOIN fruits ON annonce.NOM = fruits.fruit 
+								WHERE   NOM='".$_GET['NOM']."' OR REGIONS='".$_GET['REGIONS']."' OR VILLES='".$_GET['VILLES']."'
+								ORDER BY date_ajout DESC");
+
+		//$annonce = $bdd->query("SELECT * FROM annonce  WHERE NOM='".$_GET['NOM']."' OR  REGIONS='".$_GET['REGIONS']."' OR VILLES='".$_GET['VILLES']."' ");
+		//echo "SELECT * FROM annonce  WHERE NOM='".$_GET['NOM']."' AND  REGIONS='".$_GET['REGIONS']."' AND VILLES='".$_GET['VILLES']."' ";
 		$annonce = $annonce->fetchAll();
 		foreach ($annonce as $produits) {?>
 		
@@ -70,17 +69,12 @@ if(isset($_POST['searchpush']))
 				</p>	
 		</div>	
 	</div>
-<?php } $annonce->closeCursor();?>
-</div>  <!-- fin du wrap -->
-
-
-<?php
-
-
-			
-	}
-
+<?php 	
+}
+	
+}
 ?>
+</div>  <!-- fin du wrap -->
 
 
 

@@ -1,18 +1,5 @@
+<footer>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Proxipotage</title>
-        <link rel = "stylesheet" href="css/footer.css" />
-        <link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'/>
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'/>
-        <link rel="icon" type="image/png" href="favicon.png"/>
-            <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
-    </head>
-    <body>
-       
-           <footer>
             <div class="tabcenter-footer">
                 <tr>
                     <div class="col-footer"> <h3 class="col-footer__title">Plan du site</h3><br/>
@@ -28,17 +15,9 @@
 
                            
                             if ($_SESSION['admin']==1){
-                              ?><a href="administrateur.php" class="footer-txt" style="color:red;">Interface administrateur</a>
+                              ?> <a href="administrateur.php" class="footer-txt" style="color:red;">Interface administrateur</a>
                               <?php }
-
-   
-                            }
-
-                              else{
-                                
-                              }
-                            
-                            ?>
+                                ?>
                     </div>
 
                     <div class="col-footer"> <h3 class="col-footer__title">Qui sommes-nous?</h3><br/>
@@ -60,7 +39,7 @@
                 <a href="#"><img class="logo_follow-us" src="images/twiter-logo.png" alt= "logo twiter"></a>
                 <a href="#"><img class="logo_follow-us" src="images/fluxrss-logo.png" alt= "logo flux rss"></a>
             </div>
-        </footer>
+</footer>
      
 
     </body>

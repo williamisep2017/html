@@ -1,7 +1,6 @@
-
-<?php
-$connect = mysqli_connect( "localhost", "root", "","Proxipotage" ) OR die( "la co a la bdd a ap marcher.<br />\nErreur MySQL '" . "'" ); // Connection à la bdd
-?>
+<?php session_start(); ?>
+<!DOCTYPE html>
+<?php include('connexion_bdd.php') ?>
 <?php
  if( isset( $_GET["recherche"] ) ) $recherche = $_GET["recherche"]; // Vérification d'existence de recherche (1=oui, 0=non)
   if( isset( $_GET["produit"] ) ) $articles = $_GET["produit"]; // Vérification si l'utilisateur a tapé un fruit/légumes
@@ -13,6 +12,8 @@ $connect = mysqli_connect( "localhost", "root", "","Proxipotage" ) OR die( "la c
         <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>Proxipotage</title>
 		<link rel = "stylesheet" href="css/header1-responsive.css" />
+		<link rel = "stylesheet" href="css/recherche-avance.css" />
+		<link rel = "stylesheet" href="css/footer.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />

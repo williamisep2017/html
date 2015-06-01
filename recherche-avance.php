@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-
-
-<html>
- <head>
-        <meta charset="utf-8" />
-        <title>Proxipotage</title>
-		<link rel = "stylesheet" href="css/recherche-avance.css" />
-		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
-		<link rel="icon" type="image/png" href="favicon.png" />
-  </head>
-
-<body>
 <div class="recherche-avance">
 	<div class="wrap">
-		<form metode="POST" action="traitement_recherche(avance).php">
+		<form method="GET" action="traitement_recherche_avance.php">
 			<h1 class="title-recherche-avance">Recherche avancée</h1>
+
 			
 					<div class="liste">
 						<div class="liste-left">
@@ -68,9 +55,13 @@
 							</div>
 					</div>
 					<input class="RA-button" name="searchpush" type="submit" value="Rechercher">
+					<?php
+					if (isset($_GET['msg']))
+		{
+			echo $_GET['msg'];
+		}?>
 			</form>
 	</div>
 </div>
-</body>
-</html>
+
 

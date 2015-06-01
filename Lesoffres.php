@@ -62,6 +62,7 @@
 			<h4 class="title-blocright">Ajouté le : <?php echo $produits['date_ajout']; ?></h4>
 				<p class="description-offre">
 
+
 					<span>Type d'offre : <?php echo $produits['choix_vente']; ?></span><br/>
 					<?php echo $produits['choix_produits']; ?><br/>
 					<span><?php echo $produits['NOM']; ?> </span><br/>
@@ -103,6 +104,11 @@
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////     Les différentes annonces après une recherche   /////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
 
 
 	</body>
