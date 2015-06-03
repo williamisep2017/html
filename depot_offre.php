@@ -15,9 +15,7 @@
 <?php
 if(isset($_SESSION['id']))
 		{?>
-<!--////////////////////////////////////////////////////////////////
-//////////////////////////////     HEADER.php  /////////////////////
-////////////////////////////////////////////////////////////////////-->
+
 <div class="site-container"> <!--Utile pour le responsive du header seulement-->
 <div class="site-pusher"><!--Utile pour le responsive du header seulement-->
 
@@ -81,25 +79,29 @@ if(isset($_SESSION['id']))
 										<label for="Cat"> Catégorie : </label>
 											<input type="radio" name="choix_produits" value="Fruits" required> Fruit
 											<input type="radio" name="choix_produits" value="Légumes" required> légume </br>
-											<label for="listefruit"> Fruits : </label>
+											<label for="listefruit"> Produits : </label>
 											<select name="NOM" style="width:200px">
+												<option selected>Sélectionner un produits
+				    						<optgroup label="//fruits">
 												<?php
-												include("connexion_bdd.php");
-												 
-												 	$reponse = $bdd->query('SELECT * FROM fruits');
+													include("connexion_bdd.php");	 
+												 	$reponse = $bdd->query("SELECT * FROM fruits WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28);");
 												 	foreach ($reponse as $donnees)	
-													//while ($donnees =  mysql_fetch_array($reponse))
-														{
-												?>
+													{?>
 													<option value="<?php echo $donnees['fruit'] ?>"><?php echo $donnees['fruit'] ?></option>
-												   <?php
-												   		}
-												   ?>
+												<?php
+												   	}?>
+											<optgroup label="//legumes">
+												 <?php
+													include("connexion_bdd.php");	 
+												 	$reponse = $bdd->query("SELECT * FROM fruits WHERE id IN (29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73);");
+												 	foreach ($reponse as $donnees)	
+													{?>
+													<option value="<?php echo $donnees['fruit'] ?>"><?php echo $donnees['fruit'] ?></option>
+												<?php
+												   	}?>
 												</select> </br></br> 
-										<!--<label for"NOM"> Nom :</label> 
-											<input type="text" name="NOM" id="NOM-detail_offre" placeholder="ex: Tomate" required/> </br>-->
-										<!-- <label for:"VAR"> Variété : </label> 
-											<input type="text" name="VAR" id="VAR-detail_offre" placeholder="ex:Cerise" /> </br> -->
+										
 										<label for="Poids"> Poids : </label> 
 											<input name="pdsKg" id="Pds-detail_offre" type="number" min="0" max="50"/> <span> : Kilogrammes</span>
 											<input name="pdsG" id="Pds-detail_offre" type="number" step="100" min="0" max="999"/> <span> : Grammes</span></br>
@@ -107,14 +109,13 @@ if(isset($_SESSION['id']))
 											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="1" max="999"/><span> : (Unité)</span></br>
 										<label for="Poids"> PRIX : </label> 
 											<input name ="prix" id="Pds-detail_offre" type="number" step="1" min="1" max="999"/><span> : Euros</span></br>
-										<!--<label for:"Date"> Rammassé le : </label> <input id="NOM-detail_offre" type="date" name="date-ramassage"></br>-->
 									</p>
 								</fieldset>
 							</div>
 
 							<div class="detail_offre-right">
 								<div class="helpme"> 
-									<a href="Aide.html" >?</a>
+									<a href="Aide.php" >?</a>
 								</div>
 							</div>
 						</section>
@@ -160,8 +161,6 @@ if(isset($_SESSION['id']))
 												   ?>
 					</select> </br></br>
 
-											
-					<!-- <input name="adresse_de_vente" id="adresse_de_vente" type="texte" placeholder="Adresse de localisation" required/>-->
 					</p>
 				</fieldset>
 			</div>
@@ -207,20 +206,15 @@ if(isset($_SESSION['id']))
 					<h1>Informations personnelles</h1>
 				</div>
 					<section class="identite">
-						<div class="identite-left">
-							
-						</div>
-							<div class="identite-right">
+							<div class="identite-left">
 								<h3>Profil</h3>
 								<p>
     							Adresse mail  : <?php echo $_SESSION['adresse_mail']; ?><br />
     							Téléphone  — <?php echo $_SESSION['num_tel']; ?><br />
     							identifiant d'utilisateur = <?php echo $_SESSION['id']; ?> <br />
     							</p>
-
-    							<a href='profil.php'>Modifier les informations</a> 
-
-
+    							<br/>
+    							<a href='profil.php' style="color:#0EB377;">Modifier les informations</a> 
 							</div>
 					</section>
 
@@ -241,60 +235,51 @@ if(isset($_SESSION['id']))
 
 </form>
 
+</div><!--fin du wrap-->
 
-		</div>
 
 
-<!--/////////////////////////////////////////////////////////////
-//////////////////////////////     FOOTER.php  //////////////////
-/////////////////////////////////////////////////////////////////-->
 
 
 <?php 
 } //crochet du if 
 	else 
 	{?>
-				<div class="site-container"> <!--Utile pour le responsive du header seulement-->
-				<div class="site-pusher"><!--Utile pour le responsive du header seulement-->
+<div class="site-container"> <!--Utile pour le responsive du header seulement-->
+<div class="site-pusher"><!--Utile pour le responsive du header seulement-->
+<?php include("header1-responsive.php"); ?>
+<div class="site-content"><!--Utile pour le responsive du header seulement-->
+<div class="container"><!--Utile pour le responsive du header seulement-->
 
-				<?php include("header1-responsive.php"); ?>
 
-				<div class="site-content"><!--Utile pour le responsive du header seulement-->
-				<div class="container"><!--Utile pour le responsive du header seulement-->
-	
-<div class="wrap">
-	<div class ="non_connect"> 
-		<div class ="title"> 
-			<h1 class="title-depot">Déposer une annonce</h1>
-		</div>
-		<div class="non_connect-proposition">
-		 	<p><a href='inscription.php'> Inscrivez vous </a>
-		 		ou <a href='connexion.php'>connectez-vous</a> pour pouvoir déposer une offre.
-		 	</p>	
+	<div class="wrap">
+		<div class ="non_connect"> 
+			<div class ="title"> 
+				<h1 class="title-depot">Déposer une annonce</h1>
+			</div>
+			<div class="non_connect-proposition">
+			 	<p><a href='inscription.php'> Inscrivez vous </a>
+			 		ou <a href='connexion.php'>connectez-vous</a> pour pouvoir déposer une offre.
+			 	</p>	
+			</div>
 		</div>
 	</div>
-</div>
 		<?php 
-		};
+			};
 		?>
 		<?php include("footer.php");?>
 
 
-</div><!-- container-->
-</div> <!-- site content-->
-
+</div>
+</div> 
 <div class="site-cache" id="site-cache"></div>
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/responsive_header.js"></script>
-</div> <!-- site pusher-->
-</div> <!-- site container-->
+</div> 
+</div>
 
 
     </body>
-
 </html>
 
 

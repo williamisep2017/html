@@ -9,7 +9,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />
-			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     </head>
 
     <body>
@@ -22,8 +21,8 @@
 	<div class="container"><!--Utile pour le responsive du header seulement-->
 
 <div class="wrap-lesoffres">
-	<div class ="offres" style="background-color:#651fff;">
-		<h3 class="title-lesoffres" style="color:white;">Résulats recherche</h3>
+	<div class ="offres">
+		<h3 class="title-lesoffres">Résulats recherche</h3>
 	</div>
 		<?php
 			$connect = mysqli_connect( "localhost", "root", "root","Proxipotage" ) OR die( "la co a la bdd a ap marcher.<br />\nErreur MySQL '" . "'" );
@@ -53,7 +52,7 @@
 			<div class="column-right">
 				<h4 class="title-blocright">Ajouté le : <?php echo $affichage['date_ajout']; ?></h4>
 					<p class="description-offre">
-						id : <?php echo $affichage['id']; ?><br/>
+						id : <?php echo $affichage['id_annonce']; ?><br/>
 						<span>Type d'offre : <?php echo $affichage['choix_vente']; ?></span><br/>
 						<?php echo $affichage['choix_produits']; ?><br/>
 						<span><?php echo $affichage['NOM']; ?> </span><br/>

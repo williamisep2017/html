@@ -14,10 +14,10 @@
 		<link rel = "stylesheet" href="css/header1-responsive.css" />
 		<link rel = "stylesheet" href="css/recherche-avance.css" />
 		<link rel = "stylesheet" href="css/footer.css" />
+		<link rel = "stylesheet" href="css/new-offre-container.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />
-			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     </head>
 
     <body>
@@ -29,17 +29,17 @@
 
 <header class = "header">
 			<a href="Accueil.php" >
-				<img src="images/pp_blanc.png" class="header-logo"/>
+				<img src="css/images/pp_blanc.png" class="header-logo"/>
 			</a>
 				<nav class="nav-header">
 					<div class="nav-header_hamburger" id="nav-header_hamburger"></div>
-					<div class="menu">
-					<a href="forum.php" class="menu-item">Forum</a>
-					<a href="depot_offre.php" class="menu-item">Déposer une annonce</a>
-					<a href="Lesoffres.php" class="menu-item">Les offres</a>
-					<a href="APropos.php" class="menu-item">A Propos</a>
-					<a href="Accueil.php" class="menu-item">Accueil</a>
-				</div>
+						<div class="menu">
+							<a href="forum.php" class="menu-item">Forum</a>
+							<a href="depot_offre.php" class="menu-item">Déposer une annonce</a>
+							<a href="Lesoffres.php" class="menu-item">Les offres</a>
+							<a href="APropos.php" class="menu-item">A Propos</a>
+							<a href="Accueil.php" class="menu-item">Accueil</a>
+						</div>
 						<div id="search">	
 							<form class="barre-recherchetxt" method="GET" action="traitement_recherche(textuelle).php">
 							   <p>
@@ -49,7 +49,6 @@
 							   </p>
 							</form>
 						</div>
-
 				</nav>
 </header>
 </body>

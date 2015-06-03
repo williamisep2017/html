@@ -1,7 +1,7 @@
 /*/////////////////////////////////////////////////////////////////////
 //////////////////////////////     BASE   /////////////////////////////
 ///////////////////////////////////////////////////////////////////////*/
-.wrap {position: relative;
+.wrap-depo {position: relative;
   		width: 75%;
   		margin: 0px auto;}
 
@@ -42,9 +42,7 @@ font-family: "oxygen" ,helvetica, Arial, sans-serif;
 	margin-left: 2em;
 	line-height: 96px;
 }
-.liste-detail{
-	background-color: #eeeeee;
-}
+
 
 @media all and (max-width: 585px){
 .title-detail{

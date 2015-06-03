@@ -19,7 +19,7 @@
     <div class="container"><!--Utile pour le responsive du header seulement-->
          
 
-         <div class="wrap">
+         <div class="wrap-apropos">
             <section class="partie1">
                  <h1>Qui sommes nous ?</h1>
                  <p class="explain">Proxipotage est un site internet d'Achat, d'échange et de vente de fruits et légumes entre particulier.

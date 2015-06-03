@@ -54,21 +54,7 @@ function verifPass(champ)
       return true;
    }
 }
-/* TEST
-function verifPassConfirmation(champ)
-{
-   if(champ.value.length < 6 || champ.value.length > 255)
-   {
-      surligne(champ, true);
-      return false;
-   }
-   else
-   {
-      surligne(champ, false);
-      return true;
-   }
-}
-/* END TEST*/
+
 
 function verifForm(f)
 {
@@ -96,22 +82,18 @@ function surligne(champ, erreur)
 
 -->
 </script>
-
-
     </head>
    
 
     <body>
+<div class="site-container"> <!--Utile pour le responsive du header seulement-->
+<div class="site-pusher"><!--Utile pour le responsive du header seulement-->
 
+<?php include("header2-responsive.php"); ?>
 
-<!--/////////////////////////////////////////////////////////////
-//////////////////////////////     HEADER.php  //////////////////
-/////////////////////////////////////////////////////////////////-->
-<?php include("header2.php"); ?>
+<div class="site-content"><!--Utile pour le responsive du header seulement-->
+   <div class="container"><!--Utile pour le responsive du header seulement-->
 
-<!--/////////////////////////////////////////////////////////////
-//////////////////////////////     CONTENT  /////////////////////
-/////////////////////////////////////////////////////////////////-->
 <div class="centrage">
 		
 			<section> 
@@ -121,15 +103,11 @@ function surligne(champ, erreur)
 						<div class="wrap">
 							<div class="wrap2">
 								<p>
-							<!--<label>Nom:</label> </br>--> <input class="identite" type="text" name="pseudo" placeholder="Nom complet / Pseudo" onblur="verifPseudo(this)" required> <!--<input class="identite" type="text" name="nom" placeholder="Nom" required> -->
-							<!--<label>Localisation automatique:</label>    <input href="#" type="checkbox" /><label>autoriser</label>  </br></br>-->
-							<!--<label>Adresse:</label> <input id="localisation" type="text" name="localisation" placeholder="Adresse exemple : 52 Avenue du Général Leclerc"></br></br>-->
-
-							<!-- <label>Adresse mail:</label></br>--> <input id="mail" type="email" name="adresse_mail" placeholder="Adresse Mail"  onblur="verifMail(this)" required> 
-							<!--<label>Mot de passe:</label></br>--> <input id="password1" type="password" name= "password1" placeholder="Mot de passe (6 carractères minimum)" onblur="verifPass(this)" required> 
-							<!--<label>Confirmation Mot de passe:</label></br>--> <input id="password2" type="password" name= "password2" placeholder="Confirmation mot de passe"required>  
-							<!--<label>Numéros de téléphone</label>:<input id="number" type="tel" name="numéros" placeholder="Télephone">--></br>  
-							<input type="checkbox"  id="conditions-utilisation"  name="connditions" required/> <label class="condition1" for="conditions-utilisation" required>J'accepte les <a href="#" class="condition">Condition d'utilisation</a> et les <a href="#" class="condition">Règles de confidentialitées</a> de ProxiPotage </label>
+							<input class="identite" type="text" name="pseudo" placeholder="Nom complet / Pseudo" onblur="verifPseudo(this)" required> 
+							<input id="mail" type="email" name="adresse_mail" placeholder="Adresse Mail"  onblur="verifMail(this)" required> 
+							<input id="password1" type="password" name= "password1" placeholder="Mot de passe (6 carractères minimum)" onblur="verifPass(this)" required> 
+							<input id="password2" type="password" name= "password2" placeholder="Confirmation mot de passe"required>  
+							<input type="checkbox"  id="conditions-utilisation"  name="connditions" required/> <label class="condition1" for="conditions-utilisation" required>J'accepte les <a href="mention_legal.php" class="condition">Condition d'utilisation et les Règles de confidentialitées</a> de ProxiPotage </label>
 							<input name="envoyer" class="bouton_inscrire" type="submit" value="Valider" /></br>
 							</p>
 						</div>
@@ -139,10 +117,13 @@ function surligne(champ, erreur)
 			</section>
 </div>
 
-
-<footer>
-	
-</footer>
+</div><!-- container-->
+</div> <!-- site content-->
+<div class="site-cache" id="site-cache"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/responsive_header.js"></script>
+</div> <!-- site pusher-->
+</div> <!-- site container-->
 
 
 	</body>

@@ -87,9 +87,9 @@ a:hover {
 #header-bottom_title1{
 	margin-top: 0px;
 	margin-bottom: 0px;
-	font-family: helvetica,"oxygen" ,helvetica, Arial, sans-serif;
+	font-family: "Lobster", helvetica,"oxygen" ,helvetica, Arial, sans-serif;
 	font-weight: 300;
-	font-size: 20px;
+	font-size: 28px;
 	color: #fff;
 }
 
@@ -323,7 +323,6 @@ margin-top:10px;
 	width: 600px;
 	overflow: hidden;
 	overflow: scroll;
-	/*background-color: #cec4bb;*/
 	background: #F4F4F7;
 	background: -moz-linear-gradient(top, #F4F4F7 0%, #cec4bb 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4F4F7), color-stop(100%,#cec4bb));
@@ -393,14 +392,9 @@ margin-top:10px;
 }
 .content h1{
 	margin-bottom: 0.2em;
-	font-size: 1em;
+	font-size: 0.8em;
 }
 }
-
-
-
-
-
 
 
 

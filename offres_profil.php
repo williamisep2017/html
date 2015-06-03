@@ -45,7 +45,7 @@
     
     <?php include("connexion_bdd.php"); 
     
-        $reponse = $bdd->query("SELECT * FROM annonce INNER JOIN utilisateurs AND fruits ON utilisateurs.id = annonce.userid AND annonce.NOM = fruits.fruit WHERE id= '".$_SESSION['id']."'");
+        $reponse = $bdd->query("SELECT * FROM annonce INNER JOIN utilisateurs  ON utilisateurs.id = annonce.userid  WHERE id= '".$_SESSION['id']."'");
         //$reponse = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout ");
         foreach ($reponse as $liste) {          
             ?>
@@ -54,7 +54,7 @@
             
             <div class="column-left">
                
-                    <img src="<?php echo $$lliste['image_fruit']?>" class="box-images"/>
+                    <img src="<?php echo $liste['image_fruit']?>" class="box-images"/>
                     <div class="rectangle">
                         <a href="Echanger.php"> + de détails</a>
                     </div>

@@ -8,8 +8,6 @@
 		<link rel = "stylesheet" href="css/Lesoffres.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
-		<link rel="icon" type="image/png" href="favicon.png" />
-			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
    </head>
    
     <body>
@@ -95,20 +93,6 @@
 <script type="text/javascript" src="js/responsive_header.js"></script>
 </div> <!-- site pusher-->
 </div> <!-- site container-->
-
-
-
-
-
-
-<!--///////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////     Les différentes annonces après une recherche   /////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-
-
-
-
 
 
 	</body>

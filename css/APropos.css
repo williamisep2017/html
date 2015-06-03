@@ -1,4 +1,4 @@
-.wrap{
+.wrap-apropos{
 	width: 85%;
 	margin: 0 auto;
 }
@@ -77,7 +77,7 @@ padding: 20px;
 	}
 }
 
-@media all and (max-width: 660px){
+@media all and (max-width: 760px){
 	.horloge{
 		display: none;
 	}

@@ -5,11 +5,12 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta id="viewport" name="viewport" content ="width=768, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>Proxipotage</title>
 		<link rel = "stylesheet" href="css/Accueil.css" />
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="favicon.png" />
 			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     </head>

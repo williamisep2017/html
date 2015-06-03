@@ -13,7 +13,7 @@
 			<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     </head>
 
-<a href="index.php" >
+<a href="Accueil.php" >
 		<img src="images/LogoPPblacknom2.png" class="header-logo"/>
 	</a>
 
@@ -25,27 +25,19 @@
 		<div class="wrap-mail">
 <div align=center>
 <?php $id_annonce = $_GET['annonce']; ?>
-<!--le numéro de l'annonce est : <strong> <?php echo $id_annonce; ?> </strong> -->
 <?php include("connexion_bdd.php"); ?>
 
 
 			<?php
 				$reponse = $bdd->query("SELECT * FROM annonce WHERE id_annonce='$id_annonce'");
-				 //'<p>Voici les differentes informations concernant cette annonce :<p>';
+				
 				$donnees = $reponse->fetch()
 			?>
-						<p>
-
-							<!--numéro du vendeur:<?php $donnees['userid']; ?></br> -->
-
-						</p>
-
 			<?php 
 			$reponse->closeCursor();
 			?>
 
-			<!--numéro d'utilisateur:<?php echo $_SESSION['id']; ?> </br> -->
-							<!--Compte : <?php echo $_SESSION['adresse_mail'] ?> -->
+			
 
 			</div>
 			<?php
@@ -56,11 +48,12 @@
 						<p>
 							Email : &nbsp <strong><?php echo $donnees['adresse_mail']; ?></br> </strong>
 							Pseudo : &nbsp <strong><?php echo $donnees['pseudo']; ?></br> </strong>
+							Option choix vente : <strong><?php echo $donnees['choix_vente']; ?></br> </strong>
 							<!--Adresse de vente:<strong><?php  $donnees['adresse']; ?></br> </strong> -->
 						</p>
 
 										<p class="info"> L'envoi du mail vous permettra de prendre contact avec le vendeur. <br/>
-											Dans le cas d'un échange, précisez ce que vous comptez échanger avec lui. <br/>
+											Si vous souhaitez proposez un échnage, précisez le ou les produits proposé en échange. <br/>
 										 </p>
 			<?php 
 			$reponse->closeCursor();

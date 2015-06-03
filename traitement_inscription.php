@@ -34,7 +34,6 @@ if(isset($_POST['envoyer'])) {
     			'mot_de_passe' => $pass_hache,
     			'adresse_mail' => $mail));
 		echo 'Votre inscription a été pris en compte';
-		//include("index.php");
 		}
 
 		else {

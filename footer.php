@@ -15,7 +15,7 @@
 
                            
                             if ($_SESSION['admin']==1){
-                              ?> <a href="administrateur.php" class="footer-txt" style="color:red;">Interface administrateur</a>
+                              ?> <a href="administration_annonce.php" class="footer-txt" style="color:red;">Interface administrateur</a>
                               <?php }
                                 ?>
                     </div>
@@ -35,9 +35,9 @@
             
             
             <div class="follow-us">
-                <a href="#"><img class="logo_follow-us" src="images/facebook-logo.png" alt= "logo facebook"></a>
-                <a href="#"><img class="logo_follow-us" src="images/twiter-logo.png" alt= "logo twiter"></a>
-                <a href="#"><img class="logo_follow-us" src="images/fluxrss-logo.png" alt= "logo flux rss"></a>
+                <a href="#"><img class="logo_follow-us" src="css/images/facebook-logo.png" alt= "logo facebook"></a>
+                <a href="#"><img class="logo_follow-us" src="css/images/twiter-logo.png" alt= "logo twiter"></a>
+                <a href="#"><img class="logo_follow-us" src="css/images/fluxrss-logo.png" alt= "logo flux rss"></a>
             </div>
 </footer>
      
