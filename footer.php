@@ -8,7 +8,7 @@
                             <a href="Lesoffres.php" class="footer-txt">Les offres</a><br/>
                             <a href="depot_offre.php" class="footer-txt">Déposer une offre</a><br/>
                             <a href="index.php" class="footer-txt">Forum</a><br/>
-                            <a href="Aide_final2.php" class="footer-txt">Aide</a><br/>
+                            <a href="Aide.php" class="footer-txt">Aide</a><br/>
                            
                         
                             <?php                       
@@ -28,6 +28,8 @@
 
                     </div>
                     <div class="col-footer"><h3 class="col-footer__title">Nous contacter</h3><br/>
+                        service-client@Proxipotage.fr
+
 
                     </div>
                 </tr>

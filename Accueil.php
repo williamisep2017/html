@@ -68,7 +68,7 @@
 //////////////////////////////////////////////////////////////////////////////-->
 	<div class="content">	
 			<div class="cb"></div>
-		<h1 class="title-new">Parcourir les offres récemment mis en ligne</h1>
+		<h1 class="title-new">Parcourir les offres récemment mises en ligne</h1>
 	</div>
 		<?php include("new-offre-container.php"); ?>							
 				<a href="Lesoffres.php">

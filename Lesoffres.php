@@ -59,7 +59,6 @@
 					<div class="rectangle">
 						<a href="interface-mail_echange.php"> Téléphone — <?php echo $produits['num_tel']; ?></a>
 					</div>
-				
 			</div>
 
 		<div class="column-right">
@@ -72,9 +71,9 @@
 					<span><?php echo $produits['NOM']; ?> </span><br/>
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>
 					Quantité : <?php echo $produits['qte']; ?><br/>
-					Prix (au kilos) : 5 € le kilos<br/>
+					Prix (au kilo) : 5 € le kilo<br/>
 					Lieu : <?php echo $produits['REGIONS'];?> — <?php echo $produits['VILLES'];   ?><br/>
-					Commentaire :</br>
+					Commentaire :
 					<?php echo $produits['comment']; ?>
 
 	

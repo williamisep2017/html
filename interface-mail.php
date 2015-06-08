@@ -37,8 +37,6 @@
 			$reponse->closeCursor();
 			?>
 
-			
-
 			</div>
 			<?php
 				$reponse = $bdd->query("SELECT * FROM utilisateurs Inner Join annonce ON annonce.userid = utilisateurs.id WHERE annonce.id_annonce='$id_annonce'");
@@ -92,7 +90,7 @@ $mail->IsHTML(true);
 $mail->Username = "proxipotage@gmail.com";
 $mail->Password = "proxipotage2015";
 $mail->CharSet = "utf-8";
-$mail->SetFrom('poisson2@gmail.com', $_SESSION['adresse_mail']);
+$mail->SetFrom('proxipotage@gmail.com', $_SESSION['adresse_mail']);
 $mail->AddReplyTo($_SESSION['adresse_mail']);
 $mail->Subject = 'Réponse à votre annonce'; ?> </br> <?php
 $mail->Body = $msg;

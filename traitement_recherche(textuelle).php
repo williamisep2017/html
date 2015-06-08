@@ -52,13 +52,12 @@
 			<div class="column-right">
 				<h4 class="title-blocright">Ajouté le : <?php echo $affichage['date_ajout']; ?></h4>
 					<p class="description-offre">
-						id : <?php echo $affichage['id_annonce']; ?><br/>
 						<span>Type d'offre : <?php echo $affichage['choix_vente']; ?></span><br/>
 						<?php echo $affichage['choix_produits']; ?><br/>
 						<span><?php echo $affichage['NOM']; ?> </span><br/>
 						Poids : <?php echo $affichage['pdsKg']; ?>Kg et <?php echo $affichage['pdsG']; ?>g
 						Quantité : <?php echo $affichage['qte']; ?><br/>
-						<span>Prix (au killo) : 5 € le killo</span><br/>
+						<span>Prix : <?php echo $affichage['prix'];?> €</span><br/>
 						Lieu : <?php echo $affichage['adresse_de_vente']; ?><br/>
 						Commentaire :</br>
 						<?php echo $affichage['comment']; ?>

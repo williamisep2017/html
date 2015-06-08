@@ -13,7 +13,7 @@
     <body>
 <div class="site-container"> <!--Utile pour le responsive du header seulement-->
 <div class="site-pusher"><!--Utile pour le responsive du header seulement-->
-<?php include("header1-responsive.php"); ?>
+<?php include("header2-responsive.php"); ?>
 <div class="site-content"><!--Utile pour le responsive du header seulement-->
 <div class="container"><!--Utile pour le responsive du header seulement-->
 

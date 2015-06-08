@@ -64,7 +64,7 @@ if(isset($_GET['searchpush'])){
 					<span><?php echo $produits['NOM']; ?> </span><br/>
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>g
 					Quantité : <?php echo $produits['qte']; ?><br/>
-					Prix (au killo) : 5 € le killo<br/>
+					Prix (au kilo) : 5 € le kilo<br/>
 					Lieu : <?php echo $produits['REGIONS'];?> — <?php echo $produits['VILLES'];   ?><br/>
 					Commentaire :</br>
 					<?php echo $produits['comment']; ?>

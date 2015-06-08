@@ -12,10 +12,10 @@ if(isset($_POST['envoyer'])) {
 	
 	{
 		//Tous les champs sont remplis
-		$pseudo=mysql_escape_string($_POST['pseudo']);
-		$mail=mysql_escape_string($_POST['adresse_mail']);
-		$password1=mysql_escape_string($_POST['password1']);
-		$password2=mysql_escape_string($_POST['password2']);
+		$pseudo=mysql_real_escape_string($_POST['pseudo']);
+		$mail=mysql_real_escape_string($_POST['adresse_mail']);
+		$password1=mysql_real_escape_string($_POST['password1']);
+		$password2=mysql_real_escape_string($_POST['password2']);
 
 		// Hachage du mot de passe
 		$pass_hache = sha1($_POST['password1']);
