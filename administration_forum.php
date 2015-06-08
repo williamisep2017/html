@@ -43,22 +43,17 @@
                 <tr class="tete_colonne">
                     <th class="th">
                         <p class="champs_tab">
-                            ID
+                            titre
                         </p>
                     </th>
                     <th class="th">
                         <p class="champs_tab">
-                            Pseudo
+                            id
                         </p>
                     </th>
                     <th class="th">
                         <p class="champs_tab">
-                            localisation
-                        </p>
-                    </th>
-                    <th class="th">
-                        <p class="champs_tab">
-                            mail
+                            date
                         </p>
                     </th>
                      <th class="th">
@@ -70,15 +65,14 @@
             <tbody> 
       <?php
         include("connexion_bdd.php");
-         $us = $bdd->query("SELECT * FROM utilisateurs");
-        $us = $us->fetchAll();
-        foreach ($us as $ut) {?>
+         $su = $bdd->query("SELECT * FROM sujet");
+        $su = $su->fetchAll();
+        foreach ($su as $jet) {?>
                 <tr class="tr"> 
-                <td class="td"><p> <?php echo $ut['id']; ?></p></td>
-                <td class="td"><p> <?php echo $ut['pseudo']; ?></p></td>
-                <td class="td"><p> <?php echo $ut['adresse']; ?></p></td>
-                <td class="td"><p> <?php echo $ut['adresse_mail']; ?></p></td>
-                 <td class="td"><p> <a href="administration_supr(user).php?id=<?php echo $ut['id'];?>"> Supprimer</a></p></td>
+                <td class="td"><p> <?php echo $jet['name']; ?></p></td>
+                <td class="td"><p> <?php echo $jet['id_sujet']; ?></p></td>
+                <td class="td"><p> <?php echo $jet['heure']; ?></p></td>
+                 <td class="td"><p> <a href="administration_supr(forum).php?id_sujet=<?php echo $jet['id_sujet'];?>"> Supprimer</a></p></td>
                 </tr>
                  <?php } ?>
             </tbody>

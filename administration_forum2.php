@@ -48,17 +48,7 @@
                     </th>
                     <th class="th">
                         <p class="champs_tab">
-                            Pseudo
-                        </p>
-                    </th>
-                    <th class="th">
-                        <p class="champs_tab">
-                            localisation
-                        </p>
-                    </th>
-                    <th class="th">
-                        <p class="champs_tab">
-                            mail
+                            contenu
                         </p>
                     </th>
                      <th class="th">
@@ -70,15 +60,13 @@
             <tbody> 
       <?php
         include("connexion_bdd.php");
-         $us = $bdd->query("SELECT * FROM utilisateurs");
+         $us = $bdd->query("SELECT * FROM comm");
         $us = $us->fetchAll();
         foreach ($us as $ut) {?>
                 <tr class="tr"> 
-                <td class="td"><p> <?php echo $ut['id']; ?></p></td>
-                <td class="td"><p> <?php echo $ut['pseudo']; ?></p></td>
-                <td class="td"><p> <?php echo $ut['adresse']; ?></p></td>
-                <td class="td"><p> <?php echo $ut['adresse_mail']; ?></p></td>
-                 <td class="td"><p> <a href="administration_supr(user).php?id=<?php echo $ut['id'];?>"> Supprimer</a></p></td>
+                <td class="td"><p> <?php echo $ut['id_comm']; ?></p></td>
+                <td class="td"><p> <?php echo $ut['contenu']; ?></p></td>
+                 <td class="td"><p> <a href="administration_supr(comm).php?id=<?php echo $ut['id_comm'];?>"> Supprimer</a></p></td>
                 </tr>
                  <?php } ?>
             </tbody>

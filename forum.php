@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php session_start(); ?>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -36,7 +36,8 @@
                 ?>
 
                 <div class="ajouter">
-               <div align="center" class"bouton_sujet"> <a href="addPost.php">Ajouter un sujet</a> </div>
+               <div align="center" class"bouton_sujet"><?php if (isset($_SESSION['id'])){?> <a href="addPost.php">Ajouter un sujet</a> <?php } 
+            else{?> <a href="non-inscrit(forum).php">Ajouter un sujet</a> <?php } ?></div>
            </div>
 
         <?php 
@@ -46,7 +47,8 @@
             while($affichage=$req->fetch()){
             ?>
             <div class="cadre"><p> <div class="sujet"><strong> <?= $affichage['name']; ?> <strong></br> </div><i><?= $affichage['contenu']?></i></p> </div>
-            <div align="center" class"bouton_commenter"> <a href="reponse.php?id_sujet=<?php echo $affichage['id_sujet']; ?>">Commenter</a> </div> 
+            <div align="center" class"bouton_commenter"> <?php if (isset($_SESSION['id'])){?><a href="reponse.php?id_sujet=<?php echo $affichage['id_sujet']; ?>">Commenter</a> <?php } 
+            else{?> <a href="non-inscrit(forum).php">Commenter</a> <?php } ?> </div> 
 
             <div class="petitcadre">
             <?php

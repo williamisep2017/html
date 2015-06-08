@@ -71,10 +71,7 @@
 					Prix : 5 €<br/>
 					Lieu : <?php echo $produits['REGIONS'];?> — <?php echo $produits['VILLES'];   ?><br/>
 					Commentaire :
-					<?php echo $produits['comment']; ?>
-
-	
-				
+					<?php echo $produits['comment'];?>				
 				</p>	
 		</div>	
 	</div>
@@ -88,9 +85,6 @@
 </div> <!-- site content-->
 
 <div class="site-cache" id="site-cache"></div>
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/responsive_header.js"></script>
 </div> <!-- site pusher-->

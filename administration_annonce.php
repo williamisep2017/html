@@ -33,7 +33,8 @@
                             <ul id="secondmenu" class="list-tabs">
                                 <li><a class="a-hover" href="administration_annonce.php">Annonces</a></li>
                                 <li><a class="a-hover" href="administration_user.php">Utilisateurs</a></li>
-                                <li><a class="a-hover" href="#">Forum</a></li>
+                                <li><a class="a-hover" href="administration_forum.php">Forum(sujets)</a></li>
+                                <li><a class="a-hover" href="administration_forum2.php">Forum(commentaires)</a></li>
                             </ul>
                     </div>
         </div>
