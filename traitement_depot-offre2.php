@@ -12,8 +12,7 @@ if(isset($_POST['formpush']))
 			AND isset($_POST['pdsG']) AND !empty($_POST['pdsG'])
 			AND isset($_POST['REGIONS']) AND !empty($_POST['REGIONS'])
 			AND isset($_POST['VILLES']) AND !empty($_POST['VILLES'])
-			AND isset($_POST['prix']) AND !empty($_POST['prix'])
-			AND isset($_POST['qte']) AND !empty($_POST['qte']))
+			AND isset($_POST['prix']) AND !empty($_POST['prix']))
 		{
 			
 			
@@ -24,7 +23,6 @@ if(isset($_POST['formpush']))
 				$NOM=mysql_real_escape_string($_POST['NOM']);
 				$pdsKg=mysql_real_escape_string($_POST['pdsKg']);
 				$pdsG=mysql_real_escape_string($_POST['pdsG']);
-				$qte=mysql_real_escape_string($_POST['qte']);
 				$comment=mysql_real_escape_string($_POST['comment']);
 				$REGIONS=mysql_real_escape_string($_POST['REGIONS']);
 				$VILLES=mysql_real_escape_string($_POST['VILLES']);
@@ -32,8 +30,8 @@ if(isset($_POST['formpush']))
 				$prix=mysql_real_escape_string($_POST['prix']);
 		
 
-					$req = $bdd->prepare('INSERT INTO annonce(REGIONS, VILLES, prix, adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, qte, comment, date_ajout) 
-						VALUES(:REGIONS, :VILLES, :prix, :adresse_de_vente, :userid, :choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :qte, :comment, NOW())');
+					$req = $bdd->prepare('INSERT INTO annonce(REGIONS, VILLES, prix, adresse_de_vente, userid, choix_vente, choix_produits, NOM, pdsKg, pdsG, comment, date_ajout) 
+						VALUES(:REGIONS, :VILLES, :prix, :adresse_de_vente, :userid, :choix_vente, :choix_produits, :NOM, :pdsKg, :pdsG, :comment, NOW())');
 
 					$req->execute(array(
 							'REGIONS'=>$REGIONS,
@@ -46,7 +44,6 @@ if(isset($_POST['formpush']))
 			    			'NOM' => $NOM,
 			    			'pdsKg' => $pdsKg,
 			    			'pdsG' => $pdsG,
-			    			'qte' => $qte,
 			    			'comment' => $comment));
 
 					header('Location: depot_offre.php?msg=Votre annonce a été pris en compte');

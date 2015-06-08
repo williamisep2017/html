@@ -48,16 +48,20 @@ $annonce = $annonce->fetchAll();
 					<img src="<?php echo $produits['image_fruit']?>" class="box-images"/>
 					
 					<div class="rectangle">
-						<?php
-							$annonce = $bdd->query("SELECT id_annonce FROM annonce");?>
-							<?php echo'<a href="interface-mail.php?annonce='.$produits['id_annonce'].'">'?>
+						<?php $annonce = $bdd->query("SELECT id_annonce FROM annonce");?>
+						<?php if (isset($_SESSION['id'])) {?>
+							 <a 
+							 href="interface-mail.php?annonce=<?php echo $produits['id_annonce'] ;?>"> 
 							Envoyer un mail au vendeur
-							<?php '</a>'; ?>
+							</a> <?php }
+							else {?>
+							 <a href="non_inscrit.php"> 
+							Envoyer un mail au vendeur
+							</a> <?php }?>
 					</div>
 					<div class="rectangle">
 						<a href="interface-mail_echange.php"> Téléphone — <?php echo $produits['num_tel']; ?></a>
 					</div>
-					
 			</div>
 
 		<div class="column-right">

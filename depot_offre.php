@@ -105,8 +105,6 @@ if(isset($_SESSION['id']))
 										<label for="Poids"> Poids : </label> 
 											<input name="pdsKg" id="Pds-detail_offre" type="number" min="0" max="50"/> <span> : Kilogrammes</span>
 											<input name="pdsG" id="Pds-detail_offre" type="number" step="100" min="0" max="999"/> <span> : Grammes</span></br>
-										<label for="Poids"> Quantité : </label> 
-											<input name ="qte" id="Pds-detail_offre" type="number" step="1" min="1" max="999"/><span> : (Unité)</span></br>
 										<label for="Poids"> PRIX : </label> 
 											<input name ="prix" id="Pds-detail_offre" type="number" step="1" min="1" max="999"/><span> : Euros</span></br>
 									</p>
@@ -211,7 +209,6 @@ if(isset($_SESSION['id']))
 								<p>
     							Adresse mail  : <?php echo $_SESSION['adresse_mail']; ?><br />
     							Téléphone  — <?php echo $_SESSION['num_tel']; ?><br />
-    							identifiant d'utilisateur = <?php echo $_SESSION['id']; ?> <br />
     							</p>
     							<br/>
     							<a href='profil.php' style="color:#0EB377;">Modifier les informations</a> 

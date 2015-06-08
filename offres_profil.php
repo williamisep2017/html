@@ -44,7 +44,7 @@
     </div>
     
     <?php include("connexion_bdd.php");     
-    $reponse = $bdd->query("SELECT * FROM annonce INNER JOIN utilisateurs ON utilisateurs.id = annonce.userid WHERE id= '".$_SESSION['id']."'");
+    $reponse = $bdd->query("SELECT * FROM annonce INNER JOIN utilisateurs ON utilisateurs.id = annonce.userid WHERE id= '".$_SESSION['id']."' ORDER BY date_ajout DESC");
     //$reponse = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout ");
     foreach ($reponse as $liste) {     
     $fruit = $liste['NOM'];    
@@ -66,8 +66,7 @@
                 <p class="description-offre">
                     <?php echo $liste['choix_produits']; ?></br>
                     <span><?php echo $liste['NOM']; ?> </span></br>
-                    Poids : <?php echo $liste['pdsKg']; ?>Kg et <?php echo $liste['pdsG']; ?>g
-                    Quantité : <?php echo $liste['qte']; ?></br>
+                    Poids : <?php echo $liste['pdsKg']; ?>Kg et <?php echo $liste['pdsG']; ?>
                     Prix (au kilo) : 5 € le kilo</br>
                     Lieu : <?php echo $liste['adresse']; ?>  
                     id_annonce : <?php echo $liste['id_annonce']; ?></br>

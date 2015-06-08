@@ -41,7 +41,7 @@ if(isset($_POST['envoyer'])) {
 		}
 		}
 		else{
-		header('Location: inscription.php?msg2_inscription= mots de passen :entre 3 à 30 caractères');
+		header('Location: inscription.php?msg2_inscription= pseudo : entre 3 à 30 caractères');
 		}
 		}
 		else{
