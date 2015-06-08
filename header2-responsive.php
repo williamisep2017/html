@@ -21,7 +21,7 @@
 				<nav class="nav-header">
 					<div class="nav-header_hamburger" id="nav-header_hamburger"></div>
 						<div class="menu">
-							<a href="forum.php" class="menu-item" style="color:#0EB377;">Connexion</a>
+							<a href="connexion.php" class="menu-item" style="color:#0EB377;">Connexion</a>
 							<a href="APropos.php" class="menu-item">A Propos</a>
 							<a href="Accueil.php" class="menu-item">Accueil</a>
 						</div>

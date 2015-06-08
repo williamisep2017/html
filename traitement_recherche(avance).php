@@ -34,6 +34,7 @@ if(isset($_GET['searchpush'])){
 										WHERE   NOM='".$_GET['NOM']."' OR REGIONS='".$_GET['REGIONS']."' OR VILLES='".$_GET['VILLES']."'
 										ORDER BY date_ajout DESC");
 		
+		
 		$annonce = $annonce->fetchAll();
 		foreach ($annonce as $produits) {?>
 		

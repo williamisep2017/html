@@ -14,7 +14,7 @@
     </head>
 
 <a href="Accueil.php" >
-		<img src="images/LogoPPblacknom2.png" class="header-logo"/>
+		<img src="css/images/LogoPPblacknom2.png" class="header-logo"/>
 	</a>
 
 <body>
@@ -53,7 +53,7 @@
 						</p>
 
 										<p class="info"> L'envoi du mail vous permettra de prendre contact avec le vendeur. <br/>
-											Si vous souhaitez proposez un échnage, précisez le ou les produits proposé en échange. <br/>
+											Si vous souhaitez proposez un échange, précisez le ou les produits proposé en échange. <br/>
 										 </p>
 			<?php 
 			$reponse->closeCursor();

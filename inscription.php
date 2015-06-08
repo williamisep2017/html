@@ -98,6 +98,24 @@ function surligne(champ, erreur)
 		
 			<section> 
 				<h1> Créer votre compte ProxiPotage </h1>
+                        <div style="color:red; font-family:arial; font-size:20px; text-align:center; background-color:white;">
+      <?php 
+      if (isset($_GET['msg1_inscription']))
+      {
+         echo $_GET['msg1_inscription'];     
+      }
+
+       if (isset($_GET['msg2_inscription']))
+      {
+         echo $_GET['msg2_inscription'];     
+      }
+
+       if (isset($_GET['msg3_inscription']))
+      {
+         echo $_GET['msg3_inscription'];     
+      }
+
+      ?></div>
 				 <div id="zone-inscription">
 					<form method ="post" action="traitement_inscription.php" onsubmit="return verifForm(this)">
 						<div class="wrap">

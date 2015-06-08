@@ -32,12 +32,13 @@ if(isset($_POST['formconnexion']))
 			echo "bonjour : " . $userinfo['adresse_mail'] . $userinfo['id'] ;
 		}
 		else{
-			$erreur = "mauvais mail ou mots de passe";
+
+			header('Location: connexion.php?msg_connexion=Mot de passe incorrecte');
 		}
 
 	}
 	else{
-		$erreur = "Tous les champs doivent être complétés";
+			header('Location: connexion.php?msg_connexion=Veuillez remplir tous les champs');
 	}
 }
 if(isset($erreur)) {

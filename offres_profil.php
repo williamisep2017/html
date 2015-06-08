@@ -43,22 +43,23 @@
         <h3 class="title-lesoffres">Mes offres</h3>
     </div>
     
-    <?php include("connexion_bdd.php"); 
-    
-        $reponse = $bdd->query("SELECT * FROM annonce INNER JOIN utilisateurs  ON utilisateurs.id = annonce.userid  WHERE id= '".$_SESSION['id']."'");
-        //$reponse = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout ");
-        foreach ($reponse as $liste) {          
-            ?>
-        
+    <?php include("connexion_bdd.php");     
+    $reponse = $bdd->query("SELECT * FROM annonce INNER JOIN utilisateurs ON utilisateurs.id = annonce.userid WHERE id= '".$_SESSION['id']."'");
+    //$reponse = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout ");
+    foreach ($reponse as $liste) {     
+    $fruit = $liste['NOM'];    
+    ?>   
     <div class="produit">
-            
-            <div class="column-left">
-               
-                    <img src="<?php echo $liste['image_fruit']?>" class="box-images"/>
+        <div class="column-left">
+        <?php $rep = $bdd->query("SELECT * FROM fruits WHERE fruit= '".$fruit."'");
+        //$reponse = $bdd->query("SELECT * FROM annonce INNER JOIN fruits ON annonce.NOM = fruits.fruit ORDER BY date_ajout ");
+        foreach ($rep as $an) { ?>                              
+                    <img src="<?php echo $an['image_fruit']?>" class="box-images"/>   <?php }?>                          
                     <div class="rectangle">
                         <a href="Echanger.php"> + de détails</a>
                     </div>
-            </div>
+        </div>
+     
 
         <div class="column-right">
             <h4 class="title-blocright">Ajouté le : <?php echo $liste['date_ajout']; ?></h4>
@@ -78,8 +79,8 @@
                 </p>   
         </div>  
     </div>
-<?php } $reponse->closeCursor();?>
-</div>  <!-- fin du wrap -->
+                    <?php } $reponse->closeCursor();?>
+    </div>  <!-- fin du wrap -->
 
 
 <?php include("footer.php");?>

@@ -33,19 +33,19 @@ if(isset($_POST['envoyer'])) {
    			 	'pseudo' => $pseudo,
     			'mot_de_passe' => $pass_hache,
     			'adresse_mail' => $mail));
-		echo 'Votre inscription a été pris en compte';
+		header('Location: connexion.php?msg4_inscription=votre inscription a été prise en compte');
 		}
 
 		else {
-			$erreur='Le mot de passe et le mot de pase de confirmation de corresponde pas';
+			header('Location: inscription.php?msg1_inscription=Les mots de passe ne correspondent pas');
 		}
 		}
 		else{
-		$erreur="La longueur du Pseudo ou Nom complé n'a pas la bonne taille (minimum 3 et maximum 30)" ;
+		header('Location: inscription.php?msg2_inscription= mots de passen :entre 3 à 30 caractères');
 		}
 		}
 		else{
-		$erreur='Tous les champs sont obligatoire.';
+		header('Location: inscription.php?msg3_inscription=veuillez remplir tous les champs');
 		}
 		}
 	?>

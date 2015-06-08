@@ -44,16 +44,22 @@
 					<div class="rectangle">
 						<?php
 							$annonce = $bdd->query("SELECT id_annonce FROM annonce");?>
-							<?php echo'<a href="interface-mail.php?annonce='.$produits['id_annonce'].'">'?>
+							<?php if (isset($_SESSION['id'])) {?>
+							 <a 
+							 href="interface-mail.php?annonce=<?php echo $produits['id_annonce'] ;?>"> 
 							Envoyer un mail au vendeur
-							<?php '</a>'; ?>
+							</a> <?php }
+							else {?>
+							 <a href="non_inscrit.php"> 
+							Envoyer un mail au vendeur
+							</a> <?php }?>
+
+							
 					</div>
 					<div class="rectangle">
 						<a href="interface-mail_echange.php"> Téléphone — <?php echo $produits['num_tel']; ?></a>
 					</div>
-					<div class="rectangle">
-						<a href="Echanger.php"> + de détails</a>
-					</div>
+				
 			</div>
 
 		<div class="column-right">
@@ -66,7 +72,7 @@
 					<span><?php echo $produits['NOM']; ?> </span><br/>
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>
 					Quantité : <?php echo $produits['qte']; ?><br/>
-					Prix (au killo) : 5 € le killo<br/>
+					Prix (au kilos) : 5 € le kilos<br/>
 					Lieu : <?php echo $produits['REGIONS'];?> — <?php echo $produits['VILLES'];   ?><br/>
 					Commentaire :</br>
 					<?php echo $produits['comment']; ?>
