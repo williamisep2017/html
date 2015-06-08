@@ -67,9 +67,8 @@
                     <?php echo $liste['choix_produits']; ?></br>
                     <span><?php echo $liste['NOM']; ?> </span></br>
                     Poids : <?php echo $liste['pdsKg']; ?>Kg et <?php echo $liste['pdsG']; ?>
-                    Prix (au kilo) : 5 € le kilo</br>
-                    Lieu : <?php echo $liste['adresse']; ?>  
-                    id_annonce : <?php echo $liste['id_annonce']; ?></br>
+                    Prix : 5 €</br>
+                    Lieu : <?php echo $liste['adresse']; ?>  </br>
                     commentaire du vendeur : <?php echo $liste['comment']; ?>
                        
                     <div class="rectangle1">

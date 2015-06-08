@@ -67,11 +67,11 @@
 
 
 					<span>Type d'offre : <?php echo $produits['choix_vente']; ?></span><br/>
-					<?php echo $produits['choix_produits']; ?><br/>
+					<?php echo $produits['choix_produits'] ; ?>
 					<span><?php echo $produits['NOM']; ?> </span><br/>
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>
 					Quantité : <?php echo $produits['qte']; ?><br/>
-					Prix (au kilo) : 5 € le kilo<br/>
+					Prix : 5 €<br/>
 					Lieu : <?php echo $produits['REGIONS'];?> — <?php echo $produits['VILLES'];   ?><br/>
 					Commentaire :
 					<?php echo $produits['comment']; ?>
