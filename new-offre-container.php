@@ -13,7 +13,7 @@
 					<div class="box-new" style="background-image: url(<?php echo $produits['image_fruit']?>);">
 						<div class="paragraph_white-text">
 							<?php echo $produits['fruit']?><br/> 
-							Prix:<?php echo $produits['prix']?>€<br/> 
+							Prix: <?php echo $produits['prix']?>€<br/> 
 							poids: <?php echo $produits['pdsKg']?>kg<?php echo $produits['pdsG']?>g<br/>			
 						</div>
 					</div> 

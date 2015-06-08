@@ -1,12 +1,11 @@
-	
-				-- phpMyAdmin SQL Dump
--- version 4.4.1.1
+-- phpMyAdmin SQL Dump
+-- version 4.3.10
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:3306
--- Généré le :  Lun 08 Juin 2015 à 10:59
+-- Généré le :  Lun 08 Juin 2015 à 19:41
 -- Version du serveur :  5.5.42
--- Version de PHP :  5.6.7
+-- Version de PHP :  5.6.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -36,25 +35,32 @@ CREATE TABLE `annonce` (
   `REGIONS` varchar(255) NOT NULL,
   `VILLES` varchar(255) NOT NULL,
   `num_tel` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `annonce`
 --
 
 INSERT INTO `annonce` (`id_annonce`, `choix_vente`, `choix_produits`, `NOM`, `pdsKg`, `pdsG`, `prix`, `comment`, `date_ajout`, `userid`, `adresse_de_vente`, `REGIONS`, `VILLES`, `num_tel`) VALUES
-(42, 'Vendre', 'Fruits', 'Cassis', 1, 100, 1, 'les fruits sont encore frais', '2015-06-08 10:13:47', '15', '', 'Limousin', 'Limoges', ''),
-(43, 'Echanger', 'Fruits', 'Citron', 3, 200, 2, '', '2015-06-08 10:15:22', '15', '', 'Ile-de-France', 'Paris', ''),
-(44, 'Vendre et Echanger', 'Fruits', 'Kiwi', 2, 200, 2, '', '2015-06-08 10:18:09', '26', '', 'Ile-de-France', 'Paris', ''),
-(46, 'Echanger', 'Fruits', 'Banane', 1, 200, 2, '', '2015-06-08 10:24:55', '26', '', 'Ile-de-France', 'Paris', ''),
-(47, 'Echanger', 'Fruits', 'Kaki', 1, 100, 1, '', '2015-06-08 10:25:34', '26', '', 'Provence-Alpes-Côte-d\\''Azur', 'Marseille', ''),
-(48, 'Vendre et Echanger', 'Légumes', 'Cerise', 1, 200, 1, '', '2015-06-08 10:26:04', '26', '', 'Ile-de-France', 'Paris', ''),
-(49, 'Echanger', 'Fruits', 'Grenade', 1, 200, 1, '', '2015-06-08 10:26:41', '26', '', 'Limousin', 'Limoges', ''),
-(50, 'Echanger', 'Fruits', 'Kiwi', 1, 200, 1, '', '2015-06-08 10:27:25', '26', '', 'Provence-Alpes-Côte-d\\''Azur', 'Marseille', ''),
-(51, 'Vendre', 'Fruits', 'Melon', 1, 200, 1, '', '2015-06-08 10:34:27', '26', '', 'Ile-de-France', 'Paris', ''),
-(52, 'Vendre', 'Fruits', 'Ananas', 2, 200, 2, '', '2015-06-08 10:35:52', '15', '', 'Provence-Alpes-Côte-d\\''Azur', 'Marseille', ''),
-(56, 'Vendre', 'Fruits', 'Datte', 1, 200, 2, '', '2015-06-08 10:42:17', '15', '', 'Limousin', 'Limoges', ''),
-(57, 'Vendre', 'Fruits', 'Fraise', 2, 100, 2, '', '2015-06-08 10:44:44', '15', '', 'Ile-de-France', 'Paris', '');
+(2, 'Vendre', 'Fruits', 'Tomate', 2, 0, 0, '', '0000-00-00 00:00:00', '0', '', '', '', ''),
+(3, 'Vendre et Echanger', 'Légumes', 'carotte', 4, 0, 0, '', '0000-00-00 00:00:00', '0', '', '', '', ''),
+(9, 'Echanger', 'Fruits', 'Tomate', 3, 0, 0, '', '0000-00-00 00:00:00', '0', '', '', '', ''),
+(10, 'Vendre', 'Fruits', 'abricot', 1, 100, 0, '', '0000-00-00 00:00:00', '0', '', '', '', ''),
+(11, 'Vendre', 'Fruits', 'abricot', 1, 100, 0, '', '0000-00-00 00:00:00', '0', '', '', '', ''),
+(14, 'Echanger', 'Légumes', 'choux', 2, 200, 0, 'aaaaaaaaaa', '0000-00-00 00:00:00', '0', '', '', '', ''),
+(15, 'Vendre', 'Fruits', 'tomate', 3, 400, 0, 'bonjour voici ma première annoce', '0000-00-00 00:00:00', '0', '', '', '', ''),
+(16, 'Echanger', 'Fruits', 'ezfse', 1, 100, 0, 'rzer', '0000-00-00 00:00:00', '0', '', '', '', ''),
+(21, 'Vendre et Echanger', 'Fruits', 'Banane', 2, 200, 0, 'bonne banane ', '2015-05-12 01:05:29', '0', '', '', '', ''),
+(22, 'Vendre', 'Fruits', 'Melon', 0, 0, 6, '', '2015-05-18 17:18:02', '0', '', '', '', ''),
+(23, 'Echanger', 'Fruits', 'Mandarine', 2, 300, 4, 'test bdd', '2015-05-19 16:13:23', '0', '', '', '', ''),
+(24, 'Echanger', 'Fruits', 'Cerise', 8, 900, 10, '', '2015-05-19 19:23:59', '', '', '', '', ''),
+(25, 'Echanger', 'Fruits', 'Kaki', 6, 900, 4, '', '2015-05-19 19:32:05', '7', '', '', '', ''),
+(26, 'Vendre', 'Fruits', 'Litchi', 3, 900, 7, '', '2015-05-19 19:32:27', '7', '', '', '', ''),
+(27, 'Vendre et Echanger', 'Fruits', 'Grenade', 3, 900, 5, 'ça marche?', '2015-05-19 23:25:48', '7', '', '', '', ''),
+(28, 'Vendre', 'Fruits', 'Cassis', 2, 900, 8, '', '2015-05-19 23:28:10', '7', 'marseille', '', '', ''),
+(35, 'Vendre et Echanger', 'Légumes', 'Cresson', 0, 500, 1, '', '2015-06-05 20:04:28', '16', '', 'Alsace', 'Paris', ''),
+(36, 'Vendre et Echanger', 'Légumes', 'Artichaut', 1, 100, 2, 'SUPER BON', '2015-06-08 09:46:56', '17', '', 'Nord-Pas-de-Calais', 'Dijon', ''),
+(38, 'Echanger', 'Légumes', 'Chou rouge', 1, 100, 1, '', '2015-06-08 10:31:43', '16', '', 'Alsace', 'Paris', '');
 
 --
 -- Index pour les tables exportées
@@ -74,4 +80,4 @@ ALTER TABLE `annonce`
 -- AUTO_INCREMENT pour la table `annonce`
 --
 ALTER TABLE `annonce`
-  MODIFY `id_annonce` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=58;
+  MODIFY `id_annonce` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
