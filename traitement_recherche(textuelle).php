@@ -39,13 +39,20 @@
 		<div class="produit">	
 			<div class="column-left">
 				<img src="<?php echo $affichage['image_fruit']?>" class="box-images"/>
-					<div class="rectangle">
-						<?php echo'<a href="interface-mail.php?annonce='.$affichage['id'].'">'?>
+						<div class="rectangle">
+						<?php
+							$annonce = $bdd->query("SELECT num_tel FROM utilisateurs WHERE");?>
+							<?php if (isset($_SESSION['id'])) {?>
+							 <a 
+							 href="interface-mail.php?annonce=<?php echo $produits['id_annonce'] ;?>"> 
 							Envoyer un mail au vendeur
-						<?php '</a>'; ?>
-					</div>
-					<div class="rectangle">
-						<a href="Echanger.php"> Voir le numéros du vendeur</a>
+							</a> <?php }
+							else {?>
+							 <a href="non_inscrit.php"> 
+							Envoyer un mail au vendeur
+							</a> <?php }?>
+
+							
 					</div>
 			</div>					  
 
@@ -56,7 +63,6 @@
 						<?php echo $affichage['choix_produits']; ?><br/>
 						<span><?php echo $affichage['NOM']; ?> </span><br/>
 						Poids : <?php echo $affichage['pdsKg']; ?>Kg et <?php echo $affichage['pdsG']; ?>g
-						Quantité : <?php echo $affichage['qte']; ?><br/>
 						<span>Prix : <?php echo $affichage['prix'];?> €</span><br/>
 						Lieu : <?php echo $affichage['adresse_de_vente']; ?><br/>
 						Commentaire :</br>

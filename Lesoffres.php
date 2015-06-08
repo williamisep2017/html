@@ -43,7 +43,7 @@
 					
 					<div class="rectangle">
 						<?php
-							$annonce = $bdd->query("SELECT id_annonce FROM annonce");?>
+							$annonce = $bdd->query("SELECT num_tel FROM utilisateurs WHERE");?>
 							<?php if (isset($_SESSION['id'])) {?>
 							 <a 
 							 href="interface-mail.php?annonce=<?php echo $produits['id_annonce'] ;?>"> 
@@ -56,9 +56,7 @@
 
 							
 					</div>
-					<div class="rectangle">
-						<a href="interface-mail_echange.php"> Téléphone — <?php echo $produits['num_tel']; ?></a>
-					</div>
+					
 			</div>
 
 		<div class="column-right">
@@ -70,7 +68,6 @@
 					<?php echo $produits['choix_produits'] ; ?>
 					<span><?php echo $produits['NOM']; ?> </span><br/>
 					Poids : <?php echo $produits['pdsKg']; ?>Kg et <?php echo $produits['pdsG']; ?>
-					Quantité : <?php echo $produits['qte']; ?><br/>
 					Prix : 5 €<br/>
 					Lieu : <?php echo $produits['REGIONS'];?> — <?php echo $produits['VILLES'];   ?><br/>
 					Commentaire :

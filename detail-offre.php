@@ -31,7 +31,7 @@
 
 <div class="wrap-depo">
 	<div class ="offres">
-		<h3 class="title-lesoffres">Détails de l'offre N°<?php echo $id_annonce; ?></h3>
+		<h3 class="title-lesoffres">Détails de l'offre </h3>
 	</div>
 
 
@@ -59,9 +59,7 @@ $annonce = $annonce->fetchAll();
 							Envoyer un mail au vendeur
 							</a> <?php }?>
 					</div>
-					<div class="rectangle">
-						<a href="interface-mail_echange.php"> Téléphone — <?php echo $produits['num_tel']; ?></a>
-					</div>
+					
 			</div>
 
 		<div class="column-right">
